@@ -1,0 +1,91 @@
+###
+### i2tm labs root htaccess file
+###
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+
+<ifModule mod_headers.c>
+	Header set Connection keep-alive
+</ifModule>
+
+AddDefaultCharset UTF-8
+DefaultLanguage en-US
+DefaultType text/html
+
+AddType application/json .json
+AddType application/x-nanofw .nano
+AddType video/ogg  .ogv
+AddType video/mp4  .mp4
+AddType video/webm .webm
+AddType video/x-flv .flv
+AddType application/x-mpegURL .m3u8
+AddType video/3gpp .3gp
+AddType video/quicktime .mov
+AddType video/x-msvideo .avi
+AddType video/x-ms-wmv .wmv
+
+
+### set default directory index files
+DirectoryIndex index.php index.html index.nano
+
+### Enable file compression
+SetEnvIfNoCase Request_URI \.(og[gv]|mp4|m4v|webm|flv|m3u8|3gp|mov|avi|wmv)$ no-gzip dont-vary
+AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript image/jpg
+
+# caching year
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|mp3|mp4|ttf|woff|svg)$">
+Header set Cache-Control "public"
+Header set Expires "Thu, 15 Apr 2010 20:00:00 GMT"
+Header unset Last-Modified
+</FilesMatch>
+
+#2 hours
+<FilesMatch "\.(html|htm|xml|txt|xsl)$">
+Header set Cache-Control "max-age=7200, must-revalidate"
+</FilesMatch>
+
+<FilesMatch "\.(js|css|json|nano)$">
+SetOutputFilter DEFLATE
+Header set Expires "Thu, 15 Apr 2010 20:00:00 GMT"
+</FilesMatch>
+
+## Mod_rewrite in use.
+RewriteEngine On
+RewriteBase /
+
+#rewrite for Nano FW Applications
+
+# http://localhost/i2tmlabs.com/apps/index.php?pub={i2tm}&app={solwelker}&bld={debug}
+RewriteRule (/apps/)([^/]+)/([^/]+)/([^/]+)/ /apps/index.php?pub=$2&app=$3&bld=$4 [L]
+RewriteRule (/apps/)([^/]+)/([^/]+)/ /apps/index.php?pub=$2&app=$3&bld=release [L]
+
+# http://i2tmlabs.com/apps/{i2tm}/{solwelker}/{debug}/
+RewriteRule (apps/)([^/]+)/([^/]+)/([^/]+)/ index.php?pub=$2&app=$3&bld=$4 [L]
+RewriteRule (apps/)([^/]+)/([^/]+)/ index.php?pub=$2&app=$3 [L]
+
+# http://apps.i2tmlabs.com/{i2tm}/{solwelker}/{|release|debug}/
+#RewriteRule ^([^/]+)/([^/]+)/([^/]+) /index.php?pub=$1&app=$2&bld=$3 [L]
+#RewriteRule ^([^/]+)/([^/]+) /index.php?pub=$1&app=$2 [NC]
+
+### Detect static and cdn and redirect to cdn
+RewriteCond %{HTTP_HOST} ^([^.]+)\.i2tmlabs\.com$ [NC]
+RewriteCond %{HTTP_HOST} (^cdn|^static).i2tmlabs.com$ [NC]   
+RewriteCond %{HTTP_HOST} ^cdn.i2tmlabs.com$ [NC]
+RewriteRule http://cdn.i2tmlabs.com/$1 [R=301,NC,L]
+
+
+#Options Indexes
+ErrorDocument 400 http://apps.i2tmlabs.com/i2tm/apperror/cloudapp.json?err=400
+ErrorDocument 401 http://apps.i2tmlabs.com/i2tm/apperror/cloudapp.json?err=401
+ErrorDocument 403 http://apps.i2tmlabs.com/i2tm/apperror/cloudapp.json?err=403
+#ErrorDocument 404 http://apps.i2tmlabs.com/i2tm/apperror/cloudapp.json?err=404
+ErrorDocument 408 http://apps.i2tmlabs.com/i2tm/apperror/cloudapp.json?err=408
+ErrorDocument 410 http://apps.i2tmlabs.com/i2tm/apperror/cloudapp.json?err=410
+ErrorDocument 500 http://apps.i2tmlabs.com/i2tm/apperror/cloudapp.json?err=500
+
+Redirect permanent /home/i2tmlabs/public_html/portal /public_html/set/landing/index.html?$1&$2
+Redirect permanent /home/i2tmlabs/public_html/demo /public_html/set/landing/index.html?$1&$2
+Redirect permanent /home/i2tmlabs/public_html/resources /public_html/set/landing/index.html?$1&$2
+
+order deny,allow

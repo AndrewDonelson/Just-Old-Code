@@ -1,0 +1,105 @@
+<style>
+@media all{
+	body{color:white;font-size:18px}
+	h2{color:#444;letter-spacing:3px}
+	div.item img{width: 100%}
+	.btn-more{margin-left:1em;text-align:center;padding: 0px 14px 0px 0px}
+	.main{background-color: black;color:silver;padding-top: 1em}	
+	.carousel-inner>.item{-webkit-transition: 1s ease-in-out left;-o-transition: 1s ease-in-out left;transition: 1s ease-in-out left}
+	.headerDIV{display:block;text-align:center}
+	.headerBig{font-size:170%;color:#333;padding-right:0.5em}
+	.headerSmall{font-size:50%;color:#ddd;text-transform: uppercase}
+	.formatted,p {font-size: 100%;text-indent: 1em;text-align: justify;padding:1em;line-height:1.75em;}
+	
+	::-webkit-scrollbar {				/* Scrollbars */
+		width: .5em
+	}	
+	::-webkit-scrollbar-track {			/* Track */
+		-webkit-box-shadow: inset 0 0 .25em rgba(128,128,128,0.3);
+		-webkit-border-radius: .5em;
+		border-radius: .5em
+	}
+	::-webkit-scrollbar-thumb {			/* Handle */
+		-webkit-border-radius: .5em;border-radius: .5em;
+		background: rgba(128,128,128,0.8);
+		-webkit-box-shadow: inset 0 0 .25em rgba(0,128,0,0.5)
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: rgba(128,128,128,0.4)
+	}
+}
+
+@media (max-width: 767px) {
+	.copyright{font-size:64%}
+	.main{padding-top:.25em}
+}
+
+</style>
+
+<div class="container main">
+	<div class="row">
+		<div class="col-xs-12">
+			<div id="maestro-carousel" class="carousel slide" data-ride="carousel" data-interval="8500">
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active"><img src="assets/img/slide01-whatismaestro.jpg"></div>			
+					<div class="item"><img src="assets/img/slide02-simplicity.jpg"></div>
+					<div class="item"><img src="assets/img/slide03-neverworry.jpg"></div>
+					<div class="item"><img src="assets/img/slide04-integration.jpg"></div>
+					<div class="item"><img src="assets/img/slide05-blackbox.jpg"></div>
+					<div class="item"><img src="assets/img/slide06-imagine.jpg"></div>
+					<div class="item"><img src="assets/img/slide07-create.jpg"></div>
+					<div class="item"><img src="assets/img/slide08-live.jpg"></div>				
+					<div class="item"><img src="assets/img/slide09-gotyourback.jpg"></div>				
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#maestro-carousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#maestro-carousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	 
+	<div class="row">
+		<div id="viewport" class="col-xs-12">
+			<div class="row autoheight">
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">
+					<div><h2 class="headerBig">Sound&nbsp;<small class="headerSmall">Platform</small></h2><hr></div>
+					<p>We have already done the work for you. The latest versions of Bootstrap, jQuery, Modernizr, Font-Awesome and Nano Framework are already perfectly integrated and have been tested with <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google Page Speed Insights</a> and has scored 100/100 on both Desktop and Mobile. Oh, and did we mention that it also comes with a fully integrated Debug Console for all devices, especially mobile.</p>
+				</div><!--/span-->
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">
+					<div><h2 class="headerBig">Modular&nbsp;<small class="headerSmall">Design</small></h2><hr></div>
+					<p>Everything about Maestro is modular. The goal is modular with maximum amount of Re-usability and performance. Whether it be the PHP script that creates the HTML5/CSS3 document that is the basis for all CloudApps, or an Applet, a Component or entire Library. From Graphics and Sounds, to Fonts and Glyphs...It is all designed to be Modular, Efficient and Fast.</p>
+				</div><!--/span-->
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">
+					<div><h2 class="headerBig">Prototypal&nbsp;<small class="headerSmall">Inheritance</small></h2><hr></div>
+					<p>Maestro also provides the Interface and Inheritance foundation that is used by the Nano Framework as well as the Developer API and 2DGame Engine API. Interfaces are similar to Microsoft COM Objects (Think DirectX). Every CloudApp, Applet and Component has a UUID that represents that publishers software and allows for easy upgrading but also allows your to request a older version if a comparability problem arises.</p>
+				</div><!--/span-->
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">
+					<div><h2 class="headerBig">Bootstrap&nbsp;<small class="headerSmall">Enhancements</small></h2><hr></div>
+					<p>Bootstrap is a great platform to use once you figure it out, so instead of reinventing the wheel just just upgraded a few things, added some bling to help your get more out of it. This includes a Drop Up menu, Auto Sizing Row Cells, Perfect Paragraph, Call Outs, Backgrounds Tiled and Full-screen Cover and more.</p>
+				</div><!--/span-->
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">
+					<div><h2 class="headerBig">Applets & &nbsp;<small class="headerSmall">Components</small></h2><hr></div>
+					<p>Applets, Hmm... Ever watch a good action Movie notice the screen mess up and you see blocks? MPEG updates just what has changed, That's kind of what applets are. They allow you to break your Application or document up into smaller reusable parts and also allows you to embed the styling and JavaScript directly - an to top it off they are compiled, encoded and compressed then are ready for use.</p>
+				</div><!--/span-->
+				<div class="col-xs-12 col-sm-6 col-lg-4 ">
+					<div><h2 class="headerBig">Content&nbsp;<small class="headerSmall">Heading</small></h2><hr></div>
+					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+				</div><!--/span-->
+			</div><!--/row-->
+		</div><!--/span-->
+	</div><!--/row-->
+
+	<hr>
+
+	<footer>
+		<p class="copyright">Copyright 2012-2014 by i2tm Labs - All rights reserved.</p>
+	</footer>
+
+</div>

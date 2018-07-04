@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+@import url('i2tm-animations.css');
+@import url('starfield.css');
+@import url('scrollingtext.css');
+
+body {
+	font-size: 16px;
+	margin: 0 auto;
+	background: black;
+}
+
+

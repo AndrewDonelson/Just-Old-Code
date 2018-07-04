@@ -1,0 +1,25 @@
+{
+	"tags"      : {
+		"allowUnknownTags" : true
+	},
+	"plugins"   : ["plugins/markdown"],
+	"templates" : {
+		"cleverLinks"     : false,
+		"monospaceLinks"  : false,
+		"default"         : {
+			"outputSourceFiles" : false
+		},
+		"systemName"      : "Nano Framework",
+		"footer"          : "",
+		"copyright"       : "Nano Framework and Maestro Copyright © 2012-2014 by i2tm Labs",
+		"navType"         : "vertical",
+		"theme"           : "cyborg",
+		"linenums"        : false,
+		"collapseSymbols" : false,
+		"inverseNav"      : true
+	},
+	"markdown"  : {
+		"parser"   : "gfm",
+		"hardwrap" : true
+	}
+}

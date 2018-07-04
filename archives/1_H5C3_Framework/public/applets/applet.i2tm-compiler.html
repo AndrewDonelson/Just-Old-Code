@@ -1,0 +1,268 @@
+<div 
+	data-role="applet" 
+	data-name="i2tm-compiler" 
+	data-version="1.3.1" 
+	data-uuid="ec321120-8a15-4579-9f96-afa28d993e08"
+	data-author="Andrew Donelson" 
+	data-copyright="2013 by i2tm Labs - All rights reserved."
+	data-scale="1" 
+	data-location-preferred="viewport" 
+/>
+
+<style data-role="applet" data-type="style">
+.box-style1 {
+	background: #111;
+	display: inline-block;
+	margin-top: .15em;
+	margin-bottom: .15em;
+	text-align: left;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+	padding: .8em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: .25em solid #346634;
+}
+h5 {	
+	background: -webkit-gradient(linear, 80% 20%, 0% 100%, from(#111), to(#34AA34));
+	color: #000;
+	text-shadow: 0.11em 0.11em .44em #000000;
+	-webkit-border-radius: 0.2em;
+	border-radius: 0.2em;
+	padding-left: 0.25em;
+	padding-top: 0.35em;
+	padding-bottom: 0.35em;	
+}
+ul {
+padding-left: 1em;
+}
+</style>
+
+<div id="compiler" data-role="applet" data-type="content">
+	<div id="content" class="container center" style="padding:0em">
+		<form name="daForm">
+			<div class="row">
+				<!-- Left Column-->
+				<div>
+					<div class="cell pct30 box-style1">
+						<h5>Source:</h5>
+						<textarea id="orig" rows="10" cols="60" placeholder="Load applet HTML or Copy & Paste here."></textarea>
+						<small id="src_len">0</small>
+					</div>
+					<div class="cell pct30 box-style1">
+						<h5>Encoded:</h5>
+						<textarea id="enco"  rows="10" cols="60" readonly></textarea>
+						<small id="enc_len">0</small>
+					</div>
+					<div class="cell pct30 box-style1">
+						<h5>Compressed:</h5>
+						<textarea id="comp"  rows="10" cols="60" readonly></textarea>
+						<small id="lzw_len">0</small>
+					</div>
+					<div class="cell pct30 box-style1">
+						<h5>Destination:</h5>
+						<textarea id="dest" rows="10" cols="60" readonly></textarea>
+						<small id="dst_len">0</small>
+					</div>
+				</div>
+				
+				<!-- Right Column-->
+				<div>
+					<div class="cell pct60 box-style1 right" style="min-height:12em">
+						<div style="min-width:100%">
+							<input type="file" id="files" class="button left" name="files[]" multiple />
+							<input id="btnCompile" type="button" onclick="readBlob()" value="Process File(s)" class="button right">
+						</div>
+						<div class="left" style="width:100%">
+							<h5>Requested Task:</h5>
+							<output id="list"></output>	
+							<span id="status"></span>										
+						</div>
+					</div>						
+				</div>
+				
+			</div>
+			
+			<div class="cell pct90 box-style1 right">
+				<h5>Simulated Client Output</h5>
+				<div style="width:100%;height:17em;overflow:auto">
+					<iframe id="client" width="100%" height="100%" style="background-color: white;" allowtransparency="false"></iframe>
+				</div>
+			</div>
+			
+		</form>
+	</div>
+</div>
+<script data-role="applet" data-type="script">
+var applets = [];
+
+var Download = {
+	click : function($node) {
+		var ev = document.createEvent("MouseEvents");
+		ev.initMouseEvent("click", true, false, self, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+		return $node.dispatchEvent(ev);
+	},
+	encode : function($data, $isBin) {
+			if ($isBin)
+				return 'data:application/octet-stream;base64,' + atob( $data );
+			else 
+				return 'data:application/octet-stream;base64,' + btoa( $data );
+			
+	},
+	link : function($data, $name){
+		var a = document.createElement('a');
+		a.download = $name || self.location.pathname.slice(self.location.pathname.lastIndexOf('/')+1);
+		a.href = $data || self.location.href;
+		return a;
+	}
+};
+Download.save = function($data, $name, $isBin){
+	this.click(	this.link( this.encode( $data, $isBin ),$name) );
+};
+			
+function h5c3_save_applet(a) {
+	var 
+		fileName = 'applet.'+a.applet.dataset.name+'-'+a.applet.dataset.version,
+		srcName = fileName+'.js',
+		binName = fileName+'bin.js';
+		
+		//Send Source back to user to optionally save
+		Download.save(a.applet.outerHTML, srcName,false);
+		//Send Binary to user to save
+		//Download.save($('#comp').val(), binName,true);
+}
+
+function h5c3_applet_validate(help) {
+	var uuid,name,version,wrapper,content = false;
+	var applet = new h5c3.Applet();
+	$("#status").html("Validating...");
+	var a = $("iframe#client").contents().find( "div" ).each(function(index,value) {
+		if (index===0) {
+			var b = applet.verify(value,help);
+			if (b.result===0 && ! help) {
+				$("#status").css("color","green");
+				h5c3_save_applet(b);
+				//Send Source back to user to optionally save
+				//Download.save(b.applet.outerHTML, srcName,false);
+				//Send Binary to user to save
+				//Download.save($('#comp').val(), binName,true);
+			} else {
+				if (!help) {
+					$("#status").css("color","red");
+					b.message+="&nbsp;<a href='javascript:h5c3_applet_validate(1);'>Need Assistance?</a>"
+				}
+			}
+
+			if(help){
+				$("#status").css("color","cyan");
+				b.message+="&nbsp;You still need to change GIVE_ME_A_NAME in the Source window. Then you may <a href='javascript:h5c3_applet_compile(null,1);'>Process Again.</a>";
+			}
+
+			var status = $("#status");
+			$("#status").html(b.message);
+			if (help) {
+				$('#orig').val(function(i, text) {return b.applet.outerHTML;});
+				$('#enco').val(function(i, text) {return ''});
+				$('#comp').val(function(i, text) {return ''});
+			}
+			updateSizes();					
+			return b;
+		}
+		
+	});
+}
+
+function h5c3_applet_compile(s,pass2) {
+	if (pass2!=true) {
+		$("#btnCompile").hide();
+		$('#orig').val(function(i, text) { return s; });									
+	}
+	var original = $('#orig').val();
+	
+	if ($VLD(original)) {
+		var encoded = encodeURIComponent(original);
+		var compressed = h5c3.lzw.encode(encoded);
+		$('#comp').val(function(i, text) { return compressed; });					
+		$('#enco').val(function(i, text) { return encoded; });					
+		
+		//Now Undo it
+		var dst_org = $('#comp').val();
+		var uncompressed = h5c3.lzw.decode(dst_org);
+		var decoded = decodeURIComponent(uncompressed);
+		$('#dest').val(function(i, text) { return decoded; });
+
+		var iframe =  $('iframe#client');
+		var idoc = iframe[0].contentDocument;
+		idoc.open();
+		idoc.write(decoded);
+		idoc.close();
+		
+		return h5c3_applet_validate();
+	}
+	updateSizes();
+}
+
+function updateSizes() {
+	$("#src_len").text($("#orig").val().length);
+	$("#lzw_len").text($("#comp").val().length);
+	$("#enc_len").text($("#enco").val().length);
+	$("#dst_len").text($("#dest").val().length);
+}
+
+function handleFileSelect(evt) {
+	if (window.File && window.FileReader && window.FileList && window.Blob) {
+	  // Great success! All the File APIs are supported.
+	} else {
+	  alert('The File APIs are not fully supported in this browser.');
+	}
+	
+	$("#files").hide();	
+	var files = evt.target.files; // FileList object
+	if (files.length>1) {
+		$("#btnCompile").value="Compile package."
+	} else {
+		$("#btnCompile").value="Compile applet."
+	}
+	$("#btnCompile").show();				
+	
+	// files is a FileList of File objects. List some properties.
+	var output = [];
+	for (var i = 0, f; f = files[i]; i++) {
+	  output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+				  f.size, ' bytes, last modified: ',
+				  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+				  '</li>');
+	}
+	document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+}
+
+function readBlob(opt_startByte, opt_stopByte) {
+	var files = document.getElementById('files').files;
+	if (!files.length) {
+	  alert('Please select a file!');
+	  return;
+	}
+	
+	for (var i = 0, f; f = files[i]; i++) {
+		var file = files[i];
+		var start = parseInt(opt_startByte) || 0;
+		var stop = parseInt(opt_stopByte) || file.size - 1;
+
+		var reader = new FileReader();
+		// If we use onloadend, we need to check the readyState.
+		reader.onloadend = function(evt) {
+		  if (evt.target.readyState == FileReader.DONE) { // DONE == 2
+			var result = h5c3_applet_compile(evt.currentTarget.result);
+
+		  }
+		};
+
+		var blob = file.slice(start, stop + 1);
+		reader.readAsBinaryString(blob);
+	}
+}
+
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>

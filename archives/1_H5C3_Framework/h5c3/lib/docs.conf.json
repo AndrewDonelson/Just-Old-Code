@@ -1,0 +1,25 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": ["header.js","core/","engine/","r2wl/","application","framework/","footer.js"],
+        "exclude": [],
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": [],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "opts": {
+        "template": "default",    
+        "encoding": "utf8",       
+        "destination": "../docs/",  
+        "recurse": true,          
+        "tutorials": "../tutorials",
+        "private": true,                 
+        "lenient": true,                 
+    }
+}

@@ -1,0 +1,18 @@
+CACHE MANIFEST
+# 2012-02-21 v1.0.0
+/theme.css
+/logo.gif
+/main.js
+
+
+#The NETWORK section below specifies that the file "login.asp" should never be cached, 
+#and will not be available offline:
+#An asterisk can be used to indicate that all other resources/files require an internet connection
+NETWORK:
+*
+
+
+#The FALLBACK section below specifies that "offline.html" will be served in place 
+#of all files in the /html/ catalog, in case an internet connection cannot be established:
+FALLBACK:
+/html/ /offline.html

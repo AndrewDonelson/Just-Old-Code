@@ -1,0 +1,74 @@
+<!doctype html>
+<html data-role="application" 
+	  data-name="devzone" 
+	  data-version="0.1.0" 
+	  data-author="Andrew Donelson" 
+	  data-copyright="2013 by i2tm Labs - All rights reserved."
+	  data-uuid="4473182a-b5e9-4989-aac6-479f2b9ee49a"
+	  data-layout="absolute-all" 
+	  data-skin="i2tm-dark" 
+	  data-style="default"
+	  data-applet="devzone-welcome"
+>
+<head>
+	<title>Welcome to the H5C3 Tour</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0,  maximum-scale=1.0"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"/> 
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="stylesheet" href="assets/css/r2wl.css" type="text/css" title="Style" />	
+	<link rel="stylesheet" href="assets/css/h5c3.ui.default.css" type="text/css" title="Style" />	
+	<script src="assets/config.js"></script>
+	<script src="file:///D:/Android_Dev/GitHUB/H5C3-Dev/_DISTROS/h5c3.debug.cat.js" data-config="assets/config.js"></script>
+	<!--
+	<script src="file:///D:/Android_Dev/GitHUB/H5C3-Dev/_DISTROS/h5c3.debug.closure.advanced.js" data-config="assets/config.js"></script>
+	-->
+	
+	<style>	
+		#DESKTOP {background-image: url(assets/img/backgrounds/ide01.jpg);background-repeat: repeat;}
+		#WRAPPER {position:absolute;min-height: 100%;min-width: 100%;height: 100% !important;height: 100% !important;overflow:hidden}
+		#HEADER {position: fixed;z-index: 10000;width: 100% !important;top: 0;height: 5em !important;}
+		#CONTENT {position: absolute;right: 12.5em;left: 15em;top: 5em;bottom: 5em;padding:0em;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;overflow: hidden;}
+		#LEFTBAR {position:fixed;z-index: 9999;top:5em;bottom:5em;left:0px;width: 15em;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+		#RIGHTBAR {position:fixed;z-index: 9999;top:5em;bottom:5em;right:0px;width: 12.5em;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+		#FOOTER {position: fixed;z-index:10000;width:100%;height:5em !important;bottom:0;}
+		#VIEWPORT {width: 100%;height: 100%;overflow: auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}		
+	</style>
+</head>
+<body id="DESKTOP">
+	<div id="WRAPPER" data-type="application" data-layout="absolute-all">
+		
+		<!-- Always on top: Position Fixed-->
+		<div id="HEADER" class="fadeIn">
+			<div data-applet="i2tm-header" class="left"></div>
+		</div>
+		
+		<!-- Fixed size after header-->
+		<div id="CONTENT">
+			<!-- Always on top. Fixed position, fixed width, relative to content width-->
+			<div id="LEFTBAR">
+				<div data-applet="h5c3-ui-default-mainmenu"></div>
+				<div data-applet="socialBar"></div>
+				<div data-applet="h5c3-version"></div>
+			</div>
+			
+			<!-- Scrollable div with main content -->
+			<div id="VIEWPORT" style="padding:1em;z-index:2;">
+				<div data-applet="i2tm-ide"></div>				
+				<!--<div data-applet="devzone-welcome"></div>				-->
+			</div>
+			
+			<!-- Always on top. Fixed position, fixed width, relative to content width -->
+			<div id="RIGHTBAR"></div>
+			
+		</div><!-- content -->
+		
+		<!-- Always at the end of the page -->
+		<div id="FOOTER" class="clr-dark" style="min-width:100%">
+			<div data-applet="i2tm-copyright"></div>
+		</div><!-- footer -->
+	</div><!-- wrapper -->
+	
+	<div id="OVERLAY"></div>
+</body>
+</html>

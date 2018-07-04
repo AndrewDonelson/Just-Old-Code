@@ -1,0 +1,10 @@
+<div id="nano_cover" role="layout" class="site-wrapper bg-orange">
+<div data-applet="cover_nav" data-role="nav" publisher="i2tm" local="yes"></div>
+<div class="site-wrapper bg-orange">
+	<div class="site-wrapper-inner">
+		<div class="cover-container">
+				<div data-applet="cover_home" publisher="i2tm" local="yes"></div>
+		</div>
+	</div>
+	<div data-applet="cover_footer" publisher="i2tm" local="yes"></div>
+</div>

@@ -1,0 +1,66 @@
+<div 
+	data-role="applet" 
+	data-name="leds-example" 
+	data-version="0.2.2" 
+	data-uuid="e6431a9c-043a-4b99-8976-c4f1ad9f36c7"
+	data-author="Andrew Donelson"
+	data-copyright="Copyright 2013 by i2tm labs"
+	data-scale="1" 
+/>
+
+<style data-role="applet" data-type="style">
+
+/* Let's start with what all LEDs have in common */
+#LED,
+.led { margin: 0.75em; height: 1em; display:inline-block;}
+
+/* Now Let's define the three shapes that we want */
+.round { width: 1em; border-radius: 50%;}
+.square { width: 1em; }
+.rectangle { width: 2em;}
+
+/* And finally the Color-State for all LEDs */
+.red-off 	{ background-color: #690606; box-shadow: #000 0 -1px 7px 1px, inset #300 0 -1px 9px, #600 0 2px 1em;}
+.red-on 	{ background-color: #F40; box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 1em; }
+.yellow-off { background-color: #A90; box-shadow: #000 0 -1px 7px 1px, inset #220 0 -1px 9px, #440 0 2px 1em;}
+.yellow-on 	{ background-color: #FF0; box-shadow: #000 0 -1px 7px 1px, inset #660 0 -1px 9px, #FF0 0 2px 1em;}
+.green-off 	{ background-color: #250; box-shadow: #000 0 -1px 7px 1px, inset #020 0 -1px 9px, #040 0 2px 1em;}
+.green-on 	{ background-color: #393; box-shadow: #000 0 -1px 7px 1px, inset #0F0 0 -1px 9px, #7D0 0 2px 1em;}
+.blue-on 	{ background-color: #0BF; box-shadow: #000 0 -1px 7px 1px, inset #006 0 -1px 9px, #0BF 0 2px 1em;}
+.blue-off 	{ background-color: #060669; box-shadow: #000 0 -1px 7px 1px, inset #003 0 -1px 9px, #006 0 2px 1em;}
+
+.DIV-LEDS { width: 7em; padding:1em}
+</style>
+
+<div id="leds-example" data-role="applet"  data-type="content" class="half" style="padding:4em;">
+
+	<div class="row">
+		<div class="fill mainTitle i2tmbox clr-dark">L.E.D. Tutorial (H5C3 Embeded Feature)</div>
+	</div>
+	
+	<div class="row">
+		<div class="i2tmbox clr-dark" style="max-width:8em">
+			<h5>Round</h5>
+			<span id="LED" class="led round red-off"></span><span id="LED" class="round red-on"></span><br />
+			<span id="LED" class="led round yellow-off"></span><span id="LED" class="led round yellow-on"></span><br />
+			<span id="LED" class="led round green-off"></span><span id="LED" class="led round green-on"></span><br />
+			<span id="LED" class="led round blue-off"></span><span id="LED" class="led round blue-on"></span><br />
+		</div>
+		
+		<div class="i2tmbox clr-dark" style="max-width:8em">
+			<h5>Square</h5>
+			<span id="LED" class="led square red-off"></span><span id="LED" class="square red-on"></span><br />
+			<span id="LED" class="led square yellow-off"></span><span id="LED" class="led square yellow-on"></span><br />
+			<span id="LED" class="led square green-off"></span><span id="LED" class="led square green-on"></span><br />
+			<span id="LED" class="led square blue-off"></span><span id="LED" class="led square blue-on"></span><br />
+		</div>
+		
+		<div class="i2tmbox clr-dark" style="max-width:8em">
+			<h5>Rectangle</h5>
+			<span id="LED" class="led rectangle red-off"></span><span id="LED" class="rectangle red-on"></span><br />
+			<span id="LED" class="led rectangle yellow-off"></span><span id="LED" class="led rectangle yellow-on"></span><br />
+			<span id="LED" class="led rectangle green-off"></span><span id="LED" class="led rectangle green-on"></span><br />
+			<span id="LED" class="led rectangle blue-off"></span><span id="LED" class="led rectangle blue-on"></span><br />
+		</div>
+	</div>
+</div>

@@ -1,0 +1,164 @@
+<style>
+	/* GLOBAL */
+	/*
+	 * Main content
+	 */
+	.main {
+	  padding: 20px;
+	}
+	@media (min-width: 768px) {
+	  .main {
+		padding-right: 40px;
+		padding-left: 40px;
+	  }
+	}
+	.main .page-header {
+	  margin-top: 0;
+	}
+
+		h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {font-family: neuropol;color:green}
+
+		.rssBody {max-height: 15em;overflow-x: auto;height: 100%;text-align:left;font-size: 75%}
+
+		.panel {background-color: #222;color:silver}
+		.panel-heading {background-color: #008000;color: #FFF}
+		.panel-footer {text-transform: uppercase;font-size: 60%}
+
+</style>
+<div id="viewport" class="container-fluid"></div>
+
+<style>
+	/* Bootstrap Overrides */
+	a {color: #008000}
+	a:hover, a:focus {color: #008000}
+	.nav>li>a:hover, .nav>li>a:focus {background-color: #0F0}
+	.nav-sidebar > .active > a {background-color: #008000}
+	.panel-footer {background-color: #444;border-top: 1px solid #080}
+	.panel-title {font-size: 16px!important;color: #FFF!important}
+	.panel-default>.panel-heading {color: #FFF;background-color: #008000;border-color: #283F21}
+	
+
+	.tooltip-inner {max-width: 320px;color: #FFF;text-align: center;text-decoration: none;background-color: #008000;border-radius: .5em;padding: 1em}
+	
+	.navbar-inverse .navbar-nav>li>a {color: #008000}
+	.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {color: #0F0}
+	.navbar-inverse .navbar-brand{font-family:neuropol;font-size:24px;color:#0f0}
+	.navbar-inverse .navbar-brand:hover,
+	.navbar-inverse .navbar-brand:focus{color:#005e00}
+	.navbar-default{font-family:neuropol;background-color:rgba(0,32,0,0.95);border-color:#00e700}
+	.navbar-default .navbar-nav > .active > a,
+	.navbar-default .navbar-nav > .active > a:hover,
+	.navbar-default .navbar-nav > .active > a:focus{color:#000;background-color:#00e700}
+	.navbar-default .navbar-nav > li > a{color:#070}
+	.navbar-default .navbar-nav > li > a:hover,
+	.navbar-default .navbar-nav > li > a:focus{color:#0f0;background-color:transparent}
+	.navbar-default .navbar-toggle{border-color:#0d0}
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus{background-color:#0d0}
+	.navbar-default .navbar-nav > .open > a,
+	.navbar-default .navbar-nav > .open > a:hover,
+	.navbar-default .navbar-nav > .open > a:focus{background-color:#00e700}
+	.navbar-default .navbar-nav > .dropdown > a .caret,
+	.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+	.navbar-default .navbar-nav > .dropdown > a:focus .caret{border-top-color:#0f0;border-bottom-color:#0f0}
+	.dropdown-menu {
+		border: 1px solid #FF0;
+		background-color: #222;
+		-webkit-box-shadow: 0px 0px 20px 3px rgba(255, 146, 91, 0.75);
+		-moz-box-shadow: 0px 0px 20px 3px rgba(255, 146, 91, 0.75);
+		box-shadow: 0px 0px 20px 3px rgba(255, 146, 91, 0.75);	
+	}
+	.dropdown-menu .divider{background-color:#00e500}
+	.dropdown-menu{background-color:rgba(0,255,0,0.95)}
+	.dropdown-header{display:block;font-size:1.5em;line-height:1.75em;color:#8D7732}
+
+</style>
+<div id="footer" class=" navbar-fixed-bottom">
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a id="nav-logo" class="navbar-brand" href="" data-original-title="" title="">i2tm Labs</a>
+			</div>
+		
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<li><span id="LED-Rec" class="led round green-on" data-toggle="tooltip" data-placement="bottom" title="Indicates receiving data"></span></li>
+					<li><span id="LED-Snd" class="led round red-off" data-toggle="tooltip" data-placement="bottom" title="Indicates sending data"></span></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<m-nano component="search"><form class="navbar-form" role="search" action="#" onclick=""><div class="input-group"><input type="text" class="form-control" name="nav-search" id="nav-search" x-webkit-speech=""><input name="siteurl" type="hidden" value="i2tmlabs.com/"><div class="input-group-btn"><button class="btn btn-i2tm-search" type="submit"><i class="glyphicon glyphicon-search"></i></button></div></div></form></m-nano>
+					</li>
+					<li><a href="#" onclick="M$['click']('applet.welcome');" class="glyphicon glyphicon-home" data-toggle="tooltip" data-placement="bottom" title="Default Home View"></a></li>
+					<li><a href="#" onclick="M$['click']('applet.blog');" class="glyphicon glyphicon-tasks" data-toggle="tooltip" data-placement="bottom" title="Blog View"></a></li>
+					<li class="dropdown">
+						<a href="#" onclick="M$['click']('applet.code');" class="dropdown-toggle glyphicon glyphicon-file" data-toggle="dropdown"><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" onclick="M$['click']('applet.code-javascript-closures');">Javascript: Closures</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code-css-leds');">CSS: LEDs</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code:foobar');">Javascript: Smarter Resize</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code:foobar');">Bootstrap: Login Dialog</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code:foobar');">HTML5: Custom Tags</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code:foobar');">Bootstrap: Drop Up Menu</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code:foobar');">Bootstrap: Enhanced Nav Search</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown tooltip"><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a onclick="M$['click']('applet.login');" class="pubMenuItem glyphicon glyphicon-log-in" data-toggle="modal" href="#" data-target="#">&nbsp;Sign In</a></li>
+							<li><a onclick="M$['click']('applet.register');" class="pubMenuItem glyphicon glyphicon-new-window" data-toggle="modal" href="#" data-target="#">&nbsp;Register</a></li>
+							<li><a href="#" onclick="M$['click']('applet.ide');" class="pubMenuItem glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="bottom" title="Code Editor">&nbsp;Code Editor</a></li>
+							<li><a href="#" onclick="M$['click']('applet.fm');" class="pubMenuItem glyphicon glyphicon-hdd" data-toggle="tooltip" data-placement="bottom" title="File Manager">&nbsp;File Manager</a></li>
+							<li><a href="#" onclick="M$['click']('applet.prefs');" class="pubMenuItem glyphicon glyphicon-cog" data-toggle="tooltip" data-placement="bottom" title="Your Settings">&nbsp;Preferences</a></li>
+						</ul>
+					</li>
+					<li><a href="#" onclick="M$['toggleFullScreen'](this);" class="glyphicon glyphicon-fullscreen" data-toggle="tooltip" data-placement="bottom" title="Switch to fullscreen"></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle glyphicon glyphicon-question-sign" data-toggle="dropdown"><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" onclick="M$['click']('applet.about.i2tmlabs');">About i2tm Labs</a></li>
+							<li><a href="#" onclick="M$['click']('applet.about.hardware');">Under our Hood</a></li>
+							<li><a href="#" onclick="M$['click']('applet.about.maestro');">What is Maestro?</a></li>
+							<li><a href="#" onclick="M$['click']('applet.kuiper-assult');">Kuiper Assult</a></li>
+							<li><a href="#" onclick="M$['click']('applet.about.features');">Reserved</a></li>
+						</ul>
+					</li>
+				</ul>		  
+			</div>
+		
+		</div><!-- container -->
+	</div><!-- end nav-->
+	
+	<div class="progress progress-striped active">
+		<div id="appProgress" 
+			 class="progress-bar" 
+			 role="progressbar" 
+				aria-valuenow="0" 
+				aria-valuemin="0" 
+				aria-valuemax="100" 
+			 style="width: 0%">
+		</div>
+	</div>		
+	
+	<div class="container-fluid">
+		<div class="row navbar-inverse">
+			<div class="col-xs-12 col-md-6">
+				<ul class="nav nav-pills btn-xs">
+					<li><a href="#" onclick="M$['click']('applet.privacy');">Privacy Policy</a></li>
+					<li><a href="#" onclick="M$['click']('applet.terms');">Terms and Conditions</a></li>
+					<li><a href="#">Sitemap</a></li>
+				</ul>				
+			</div>				
+			<div class="col-xs-12 col-md-6 copyright">
+				<small>Copyright 2012 - 2014 i2tm Labs. All rights reserved.</small>
+			</div>
+		</div>
+	</div>
+</div>

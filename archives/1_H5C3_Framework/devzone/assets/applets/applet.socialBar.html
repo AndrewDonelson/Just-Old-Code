@@ -1,0 +1,91 @@
+<div 
+	data-role="applet" 
+	data-name="socialBar" 
+	data-version="1.1.0" 
+	data-uuid="ba711d12-1754-4229-a586-7e68cc92f24e"
+	data-author="Andrew Donelson" 
+	data-copyright="2013 by i2tm Labs - All rights reserved."
+	data-scale="1" 
+/>
+
+<!-- BEGIN i2tm labs socialBar -->
+<style data-role="applet" data-type="style">
+@charset 'UTF-8';
+@import url(http://h5c3.i2tmlabs.com/public/shared/css/ext/i2tmfonts.css);
+
+/*! DO NOT ALTER FROM HERE */
+#socialBar {
+	position:relative;
+	display: inline-block;
+	line-height: normal;
+	margin: 1em 0.25em 0em 0.25em;
+} 
+#socialBar a  { text-decoration: none; }	
+#socialBar a.i2tm { color: #090;
+font-size: 0.75em;letter-spacing: 0.75em;top: 4em;position: absolute;right: 1em;}
+
+	#socialBar .headerBar { 
+		height: 3.5em !important;
+		text-shadow: 0px 1px 1px #4d4d4d;
+		color: rgba(0,0,0, 0.95);
+	}
+	#socialBar .icon-comment { font-weight: 100; font-size: 3.5em; position:absolute;float: left; padding: 0em 0em 0em 0.3em;}
+	#socialBar h3 {font-weight: 800;float: right;float: right;padding-top: .2em;padding-right: .5em;font-size: 2.5em;}
+
+#socialBar .iconBar { text-align: center; height: 6.2em; float:right; margin:0.35em 0.35em 0.35em 0.35em;}
+	#socialBar .iconSkin1 {font-weight: 100;font-size: 2.0em;float: left;padding: .2em 0.8em 0em 0.8em;border-radius: 2em 0em 2em 0em;box-shadow: inset 0px 0px 8px -1px #666;width: 1em;height: 1.25em;margin-left: 0.5em;}
+		#socialBar  .icon-twitter.iconSkin1 { color: cyan; }
+		#socialBar  .icon-twitter.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px cyan;}
+		#socialBar  .icon-linkedin.iconSkin1 { color: navy; }
+		#socialBar  .icon-linkedin.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px navy;}
+		#socialBar  .icon-google-plus.iconSkin1 { color: red; }
+		#socialBar  .icon-google-plus.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px red;}
+		#socialBar  .icon-facebook.iconSkin1 { color: blue; }
+		#socialBar  .icon-facebook.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px blue;}
+
+/*! TO HERE - Now you can choose a skin or create your own */
+</style>
+
+<script data-role="applet"d ata-type="script">
+	/* Check for H5C3 */
+	if(!window.h5c3) {
+		/* Check for jQuery; h5c3 loads jQuery so it probabaly is not present */
+		if(!window.jQuery) {
+			/* 
+			* No H5C3 and No jQuery - Runnign applet directly so...
+			* Lets load just what we need for them to preview.
+			*/
+			/* Load jQuery */
+		   var script = document.createElement('script');
+		   script.type = "text/javascript";
+		   script.src = "http://h5c3.i2tmlabs.com/shared/js/ext/jquery/jquery-1.10.2.min.js";
+			/* Catch onLoad event for jQuery */
+		   script.onload= function() {
+				/* if No h5c3 and no jquery - fontAwesome is probably missing also */
+				if ($('.icon-stack').length==0) {
+					//No Font-Awesome, must be previewing app directly
+					$('head').append('<link rel="stylesheet" href="http://i2tmlabs.com/h5c3/css/ext/i2tmfonts.css" type="text/css" />');			
+				}
+		   }
+		   document.getElementsByTagName('head')[0].appendChild(script);
+		} /* check for h5c3 */
+	} /* check for h5c3 */
+	
+	//$(window).ready(function() {});
+</script>
+
+<div id="socialBar" class="defaultBox left clr-dark" data-role="applet" data-type="content">
+	<div class="headerBar">
+		<h1 class="icon icon-comment"></h1><h3>Social</h3>
+		<!-- Do not remove/alter this as per lisense. Please at least give credit where it is due. -->
+		<a class="i2tm" href="http://i2tmlabs.com/?track=socialBar">i2tm Labs</a>
+	</div>
+	<!-- Change the below links [href] only! to your respective urls -->
+	<div class="iconBar">
+		<a href="https://twitter.com/AndrewDonelson" alt="Twitter"><i class="icon-twitter iconSkin1"></i></a>
+		<a href="http://www.linkedin.com/pub/andrew-donelson/5b/27/861" alt="LinkedIN"><i class="icon-linkedin iconSkin1"></i></a>
+		<a href="https://plus.google.com/114532266100403759577/about/p/pub" alt="Google+"><i class="icon-google-plus iconSkin1"></i></a>
+		<a href="https://www.facebook.com/andrew.donelson" alt="Facebook"><i class="icon-facebook iconSkin1"></i></a>
+	</div>
+</div>
+<!-- END i2tm labs socialBar -->

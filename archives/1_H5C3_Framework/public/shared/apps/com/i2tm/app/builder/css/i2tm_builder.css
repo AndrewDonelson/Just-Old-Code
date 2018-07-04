@@ -1,0 +1,501 @@
+/**
+*** Skin: Default 
+*** 
+**/
+
+/* Primary Background and Forground - Main color scheem for your page. 2nd & 3rd Compliment */
+.clrFG1 { color: #23e71e; }					/** Primary foreground color **/
+.clrFG2 { color: #419c3f; }					/** ie Headers, Sections, ect **/
+.clrFG3 { color: #396a38; }					/** Here is you need it. **/
+.clrBG1 { background-color: #000000; }		/** Primary background color **/				
+.clrBG2 { background-color: #132012; }		/** ie. Alternating rows tables. BG2 lighter than BG1 - but darker than BG3**/
+.clrBG3 { background-color: #093108; }
+
+/**
+*** Default Look And Feel
+*** 
+**/
+body {
+	font-size: 14px;
+	letter-spacing: 0.025em;
+	line-height: 1.50em;
+	position: fixed;
+	height: 100%;
+	min-height: 100%;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	
+	background: black;
+	background: url(../img/bg/bg_i2tm.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+}
+
+/* Nav */
+#menu {
+	width:80%;
+	margin: 0 auto;
+}
+/* Footer */
+	#header {
+		margin-top: 0px;
+	}
+		#header h3 {
+			font-family: 'Neuropol';
+			font-size: 150%;
+			letter-spacing: 1.5em;
+			margin: 0 auto;
+			text-align: center;
+			color: #0f0;
+		}
+	
+	#footer {
+		text-align: center;
+	}
+		#footer a {
+			color: #0a0;
+		}
+		#footer a:hover {
+			color: #0f0;
+		}
+		#footer p {
+			padding: 95px 0 0;
+			color: #fff;
+			font: 1em helvetica,arial,sans-serif;
+			text-align: center;
+		}
+		#footer p.copyright {
+			font-family: 'Neuropol';
+			padding: 1em 0 0;
+			color: #0a0;
+			font-size: 0.8em;
+		}
+
+/* Overlays */
+
+	#contactBar {
+		border-radius: 0.5em 0.5em 0 0;
+		text-align: center;
+		line-height: 300%;
+		font-size: 1.25%;
+	}
+
+	#contactBar a {
+		display: inline-block;
+		margin: 0 0.85em 0 0.85em;
+		color: #fff;
+	}
+	
+/* Panels */
+
+	#leftPanel,
+	#rightPanel,
+	#bottomPanel {
+		background: #445358;
+		padding: 1.25em;
+	}
+
+	#leftPanel a,
+	#rightPanel a {
+		display: block;
+		color: #fff;
+		border-top: solid 1px #546368;
+		line-height: 2.5em;
+	}
+
+	#leftPanel li:first-child > a,
+	#rightPanel li:first-child > a {
+		border-top: 0;
+	}
+
+	#bottomPanel form {
+		width: 100%;
+		max-width: 640px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	#nav .button
+	{
+		display: inline-block;
+		background: #444;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 0.25em;
+		text-decoration: none;
+		border-radius: 0.35em;
+		border: 0;
+		outline: 0;
+		cursor: pointer;
+		-moz-transition: all .25s ease-in-out;
+		-webkit-transition: all .25s ease-in-out;
+		-o-transition: all .25s ease-in-out;
+		-ms-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+		-webkit-box-shadow:  0px 0px 30px 0px #111;
+				box-shadow:  0px 0px 30px 0px #111;
+		
+	}
+
+		#nav .button-style1
+		{
+			background: #e97770 url('../img/overlay.png');
+			color: #fff;
+		}
+
+			#nav .button-style1:hover
+			{
+				background-color: #f98780;
+			}
+			
+			#nav .button-style1:active
+			{
+				background-color: #d96760;
+			}
+
+		#nav .button-style2
+		{
+			background: none;
+			color: #606167;
+			box-shadow: inset 0px 0px 2px 0px #a0a1a7;
+		}
+		
+			#nav .button-style2:hover
+			{
+				box-shadow: inset 0px 0px 2px 0px #606167;
+			}
+		
+			#nav .button-style2:active
+			{
+				box-shadow: inset 0px 0px 2px 0px #202127;
+			}
+
+		#nav .button-style3
+		{
+			background: #2f333b url('../img/overlay.png');
+			color: #fff;
+		}
+
+			#nav .button-style3:hover
+			{
+				background-color: #3f434b;
+			}
+			
+			#nav .button-style3:active
+			{
+				background-color: #1f232b;
+			}
+
+	#nav ul.style1
+	{
+	}
+	
+	#nav ul.style2
+	{
+	}
+	
+		#nav ul.style2 li
+		{
+			border-top: solid 1px #eee;
+			padding: 1.5em 0 0 0;
+			margin: 1.5em 0 0 0;
+		}
+		
+		#nav ul.style2 li:first-child
+		{
+			border-top: 0;
+			padding-top: 0;
+			margin-top: 0;
+		}
+	
+	#nav ul.style3
+	{
+	}
+	
+		#nav ul.style3 li
+		{
+			border-top: solid 1px #eee;
+			padding: 0.5em 0 0 0;
+			margin: 0.5em 0 0 0;
+		}
+		
+		#nav ul.style3 li:first-child
+		{
+			border-top: 0;
+			padding-top: 0;
+			margin-top: 0;
+		}
+
+/**
+*** Source Sans Pro
+*** 
+**/
+body, input, select, textarea {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+
+body {
+	line-height: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	font-family: 'Neuropol';
+	font-weight: normal; 
+	text-shadow: 0px 0px 16px #111;
+	filter: dropshadow(color=#111, offx=0, offy=0);
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: 200%; line-height: 150%; margin-bottom: 1.5%; margin-top: 1.5% }		/* size: 56px, line-height: 56px, margin: 36.7px @ 1920*/
+h2 { font-size: 175%; line-height: 150%; margin-bottom: 1.4%; margin-top: 1.4% }		/* size: 43px, line-height: 43px, margin: 32.6px @ 1920*/
+h3 { font-size: 150%; line-height: 150%; margin-bottom: 1.3%; margin-top: 1.3% }		/* size: 40px, line-height: 32px, margin: 28.5px @ 1920*/
+h4 { font-size: 125%; line-height: 100%; margin-bottom: 1.2%; margin-top: 1.2% }		/* size: 32px, line-height: 22px, margin: 24.4px @ 1920*/
+h5 { font-size: 112.5%; line-height: 75%; margin-bottom: 1.1%; margin-top: 1.1%}    	/* size: 20px, line-height: 12px, margin: 20.3px @ 1920*/
+h6 { font-size: 100%; line-height: 50%; margin-bottom: 1.0%; margin-top: 1.0% }	/* size: 18px, line-height: 9px, margin: 16.3px @ 1920*/
+
+p { margin: 0 0 1.5% 0; color: #0a0;}
+
+p img { margin: 0; }
+p.lead { font-size: 125%; line-height: 1.50%; }
+
+em, i { font-style: italic; }
+strong, b { font-weight: bold }
+small { font-size: 80%; }
+
+/*	Blockquotes  */
+blockquote, blockquote p { font-size: 112.5%; line-height: 70%; font-style: italic; }
+blockquote { margin: 0 0 1.1%; padding: 10px 20px 0 20px; border-left: 1px solid; }
+blockquote cite { display: block; font-size: 100%; }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { font-weight: 500; }
+
+hr { border: solid; border-width: 1px 0 0; clear: both; margin: 20px 0 20px 0; height: 0; }
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	a:visited {
+		font-weight: bold;
+	}
+
+.icon-twitter:before,  
+.icon-facebook:before, 
+.icon-google-plus:before, 
+.icon-linkedin:before { color: #ffffff; }
+
+div.header div img#logo {
+	float: left;
+}
+
+input:focus, select:focus, textarea:focus {
+	opacity: 1.0;
+}
+
+form
+{
+}
+
+	form label
+	{
+		display: block;
+		font-size: 115%;
+		color: green;
+		font-weight: 800;
+		padding-bottom: 8px;
+	}
+	form input[type="text"], 
+	form input[type="password"],
+	form input.text,
+	form select,
+	form textarea
+	{
+		-webkit-appearance: none;
+		display: block;
+		border: 0;
+		outline-color: transparent;
+		background: #396a38;
+		box-shadow: inset 0px 0px 1px 0px #a0a1a7;
+		border-radius: 0.35em;
+		width: 100%;
+		padding: 7px 5px 7px 5px;
+		-moz-transition: all .25s ease-in-out;
+		-webkit-transition: all .25s ease-in-out;
+		-o-transition: all .25s ease-in-out;
+		-ms-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+	}
+
+		form input[type="text"]:hover, 
+		form input[type="password"]:hover,
+		form input.text:hover,
+		form select:hover,
+		form textarea:hover
+		{
+			background: #23e71e;
+		}
+		form input[type="text"]:focus, 
+		form input[type="password"]:focus,
+		form input.text:focus,
+		form select:focus,
+		form textarea:focus
+		{
+			background: #396a38;
+		}
+				
+		form textarea
+		{
+			min-height: 216px;
+		}
+
+		form .formerize-placeholder
+		{
+			color: black !important;
+			font-style: italic;
+		}
+
+		form ::-webkit-input-placeholder
+		{
+			color: black !important;
+			font-style: italic;
+		}
+
+		form :-moz-placeholder
+		{
+			color: black !important;
+			font-style: italic;
+		}
+
+		form ::-moz-placeholder
+		{
+			color: black !important;
+			font-style: italic;
+		}
+
+		form :-ms-input-placeholder
+		{
+			color: black !important;
+			font-style: italic;
+		}
+
+		form ::-moz-focus-inner
+		{
+			border: 0;
+		}
+
+
+/*!
+ * APPLICATION SPECIFIC STYLE :: I2TM Builder Specific Stylesheet
+ */
+#btnRefresh 	{ position: relative; top: -32px; left: 30px; }
+#btnReset 	{ position: relative; top: -32px; left: 320px; }
+#btnSave 	{ position: relative; top: -32px; left: 405px; }
+.cell {
+	width: 180px !important;
+	float: left;
+	margin: 0px 8px 8px 8px;
+}
+#myPreview {
+	float: left;
+	margin: 8px;
+	width: 640px !important;
+	height: 426px !important;'
+	max-height: 426px;
+	min-height: 426px;
+	min-width: 640px;
+	max-width: 640px;				
+}
+#preview {
+	top: -410px;
+	position: relative;
+	left: 29px;
+	width: 582px;
+	height: 364px;
+	text-align: center;
+	opacity: 0.85;
+	-webkit-box-shadow:  0px 0px 12px 12px #0;
+	box-shadow:  0px 0px 12px 1px #0;
+	overflow:auto;
+}
+#monitor {
+	width: 640px;
+	height: 426px;
+	max-width: 640px;
+	max-height: 426px;
+	min-width: 640px;
+	min-height: 426px;
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
+}
+
+#monitorImg {
+	width: 100%;
+	height: 100%;
+}
+#waDIV {
+	width:586px; 
+	height:366px;	
+	position:relative; 
+	top: -447px; 
+	left: 27px;
+}
+#waCanvas {
+	width: 100%;
+	height:100%;
+}
+#aboutMe {
+	width: 100%;
+	height: 50px !important;'
+}
+/* This imageless css button was generated by CSSButtonGenerator.com */
+#main .button {
+	background-color:transparent;
+	display:inline-block;
+	line-height: 0px;
+	font-size:12px;
+	padding: 0.60em 1.25em 0.50em 1.25em;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #3e963e;
+}.classname:hover {
+	background-color:#008c17;
+}.classname:active {
+	position:relative;
+	top:1px;
+}
+	.button a {
+		color: #419c3f;
+		text-decoration:none;
+	}
+	.button a:hover {
+		color: #23e71e;
+		text-decoration:none;
+	}
+	
+#main #form input[type="text"] {
+	width: 120px;
+	height: 40px;
+	font-size: 75%;
+}
+#main .color {
+	width: 150px !important;
+	height: 25px !important;'
+}
+#tooSmall {
+	opacity: 0.9;
+	background: black;
+	z-index: 10000;
+	width: 100%;
+	height: 100%;
+}

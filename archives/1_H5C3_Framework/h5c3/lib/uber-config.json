@@ -1,0 +1,20 @@
+var path = require('path');
+
+//var rootPath = process.cwd();
+rootPath = /d/Android_Dev/GitHUB/com.I2TMLabs.h5c3.development/
+var uberOptions = {
+  jsPaths: [
+    path.join(rootPath, 'h5c3/lib/header.js'),
+    path.join(rootPath, 'h5c3/lib/application/'),
+    path.join(rootPath, 'h5c3/lib/core/'),
+    path.join(rootPath, 'h5c3/lib/engine/'),
+    path.join(rootPath, 'h5c3/lib/r2wl/'),
+    path.join(rootPath, 'h5c3/lib/framework/'),
+    path.join(rootPath, 'h5c3/lib/footer.js')
+  ],
+  cssPaths: [ path.join(rootPath, 'public/shared/css') ],
+  outputDir: path.join(rootPath, 'h5c3/dist/cached'),
+  debug: false
+};
+var uberCompiler = require('uber-compiler')(uberOptions);
+uberCompiler.run();

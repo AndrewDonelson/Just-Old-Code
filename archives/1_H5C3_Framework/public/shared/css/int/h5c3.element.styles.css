@@ -1,0 +1,62 @@
+/**
++-----------------------------------------------------------+
+| File:		h5c3.element.styles.css							|
+| Version:	0.0.1											|
+| Author: Andrew Donelson	andrew@i2tmlabs.com				|
+| H5C3 Framework - (c) 2013 <i2tm Labs http://i2tmlabs.com>	|
+| 															|
+| This stylesheet contains standard element themes/skins 	|
+| used by the company website and H5C3 Framework.			|
++-----------------------------------------------------------+
+*/
+@charset 'UTF-8';
+
+.hdr1 {
+   color: #111111;
+	text-transform: uppercase;
+   text-shadow: -1px -1px 1px #0f0, 1px 1px 1px #0f0;
+   letter-spacing: 0.25em;
+}
+.hdr2 {
+	text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #090;
+	font-weight:lighter;
+	-moz-box-shadow: 2px 2px 8px #888;  
+	-webkit-box-shadow: 2px 2px 8px #888;  
+	box-shadow:2px 2px 8px #888;  
+	text-align:center;
+	display:block;
+	margin-bottom: 1em;
+}
+.hdr3
+{
+  text-shadow: -1px -1px #00ff00, 1px 1px #001000, -3px 0 4px #000000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color: #34aa34; 
+  font-weight:lighter;
+  text-align:center;
+  display:inline;
+}
+.hdr4 {
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-bottom: 0.5em;
+	text-shadow: 1px 1px 0px #001000, 1px 2px 0px #00aa00;
+}
+.hdr5 {
+	background: -webkit-gradient(linear, 80% 20%, 0% 100%, from(#000000), to(#00DD00));
+	color: #000;
+	text-shadow: 0.11em 0.11em .44em #000000;
+	-webkit-border-radius: 0.2em;
+	border-radius: 0.2em;
+	padding-left: 0.25em;
+	padding-top: 0.35em;
+	padding-bottom: 0.35em;
+}
+
+.hdr6 {
+	font-family: Courier, sans-serif;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+	letter-spacing:0.25em;
+}

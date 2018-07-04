@@ -1,0 +1,235 @@
+<div 
+	data-role="applet" 
+	data-name="i2tm-ide" 
+	data-version="0.3.1" 
+	data-uuid="6f971669-8001-4959-8206-5abb7493dd26" 
+	data-author="Andrew Donelson" 
+	data-copyright="2013 by i2tm Labs - All rights reserved."
+	data-scale="1" 
+/>
+
+<style data-role="applet" data-type="style">
+.ace_gutter-cell {
+	text-shadow: 0px 1px 1px #4d4d4d; color: #222;
+}
+.ace-ambiance .ace_cursor {
+	border-left: 1px solid #7DE879;
+}
+
+
+.titleBar {
+	color: rgba(90,90,90, 0.95);
+	letter-spacing: 0.4em;
+	text-shadow: 0px 1px 1px black;
+	text-transform: uppercase;
+	border: 1px solid #4d4d4d;
+}
+
+#editor { 
+	/* position: relative !important; */
+	height: 40em;
+	width: 100%;
+	overflow:auto;
+	border: 1px solid #4d4d4d;
+}
+
+</style>
+
+
+<div id="i2tm-ide" data-role="applet" data-type="content" class="defaultBox clr-dark">
+	<div class="r2wl-content">
+		<div class="r2wl-wrapper">
+			<div>
+				<div class="clr-dark titleBar" style="width:100%"><span class="left">&nbsp;&nbsp;Integrated Development Enviroment v0.9.0</span><span class="right"><i class="icon icon-move uiButton"></i><i class="icon icon-collapse-alt uiButton"></i><i class="icon icon-expand-alt uiButton"></i></span></div>
+			</div>
+			<form name="daForm">
+				<div class="r2wl-wbox">
+					<section class="r2wl-grid linearL1">
+						<div class="r2wl-g75 r2wl-gl">
+							<div id="editor" class="clr-dark border"></div>
+						</div>
+						<article class="r2wl-g25 r2wl-gr">
+							<div class="r2wl-gbox-right secondary">
+
+								<div id="controls">
+									<div>
+										<label for="doc">Document</label>
+										<select id="doc" size="1"></select>
+									</div>
+									
+									<div>
+										<label for="mode">Mode</label>
+										<select id="mode" size="1"></select>
+									</div>
+									
+									<div>
+										<label for="split">Split</label>
+										<select id="split" size="1">
+										  <option value="none">None</option>
+										  <option value="below">Below</option>
+										  <option value="beside">Beside</option>
+										</select>
+									</div>
+									
+									<div>
+										<label for="theme">Theme</label>
+										<select id="theme" size="1">
+										  <optgroup label="Bright">
+											<option value="ace/theme/chrome">Chrome</option>
+											<option value="ace/theme/clouds">Clouds</option>
+											<option value="ace/theme/crimson_editor">Crimson Editor</option>
+											<option value="ace/theme/dawn">Dawn</option>
+											<option value="ace/theme/dreamweaver">Dreamweaver</option>
+											<option value="ace/theme/eclipse">Eclipse</option>
+											<option value="ace/theme/github">GitHub</option>
+											<option value="ace/theme/solarized_light">Solarized Light</option>
+											<option value="ace/theme/textmate" selected="selected">TextMate</option>
+											<option value="ace/theme/tomorrow">Tomorrow</option>
+											<option value="ace/theme/xcode">XCode</option>
+										  </optgroup>
+										  
+										  <optgroup label="Dark">
+											<option value="ace/theme/ambiance">Ambiance</option>
+											<option value="ace/theme/chaos">Chaos</option>
+											<option value="ace/theme/clouds_midnight">Clouds Midnight</option>
+											<option value="ace/theme/cobalt">Cobalt</option>
+											<option value="ace/theme/idle_fingers">idleFingers</option>
+											<option value="ace/theme/kr_theme">krTheme</option>
+											<option value="ace/theme/merbivore">Merbivore</option>
+											<option value="ace/theme/merbivore_soft">Merbivore Soft</option>
+											<option value="ace/theme/mono_industrial">Mono Industrial</option>
+											<option value="ace/theme/monokai">Monokai</option>
+											<option value="ace/theme/pastel_on_dark">Pastel on dark</option>
+											<option value="ace/theme/solarized_dark">Solarized Dark</option>
+											<option value="ace/theme/terminal">Terminal</option>
+											<option value="ace/theme/tomorrow_night">Tomorrow Night</option>
+											<option value="ace/theme/tomorrow_night_blue">Tomorrow Night Blue</option>
+											<option value="ace/theme/tomorrow_night_bright">Tomorrow Night Bright</option>
+											<option value="ace/theme/tomorrow_night_eighties">Tomorrow Night 80s</option>
+											<option value="ace/theme/twilight">Twilight</option>    
+											<option value="ace/theme/vibrant_ink">Vibrant Ink</option>
+										  </optgroup>
+										</select>
+									  
+									</div>
+									
+									<div>
+										<label for="fontsize">Font Size</label>
+										<select id="fontsize" size="1">
+										  <option value="10px">10px</option>
+										  <option value="11px">11px</option>
+										  <option value="12px" selected="selected">12px</option>
+										  <option value="13px">13px</option>
+										  <option value="14px">14px</option>
+										  <option value="16px">16px</option>
+										  <option value="18px">18px</option>
+										  <option value="20px">20px</option>
+										  <option value="24px">24px</option>
+										</select>
+									</div>
+									
+									<div>
+										<label for="folding">Code Folding</label>
+										<select id="folding" size="1">
+										  <option value="manual">manual</option>
+										  <option value="markbegin" selected="selected">mark begin</option>
+										  <option value="markbeginend">mark begin and end</option>
+										</select>
+									</div>
+									
+									<div>
+										<label for="keybinding">Key Binding</label>
+										<select id="keybinding" size="1">
+										  <option value="ace">Ace</option>
+										  <option value="vim">Vim</option>
+										  <option value="emacs">Emacs</option>
+										  <option value="custom">Custom</option>
+										</select>
+									</div>
+									
+									<div>
+										<label for="soft_wrap">Soft Wrap</label>
+										<select id="soft_wrap" size="1">
+										  <option value="off">Off</option>
+										  <option value="40">40 Chars</option>
+										  <option value="80">80 Chars</option>
+										  <option value="free">Free</option>
+										</select>
+									</div>
+								</div>
+
+								<div id="more-controls">
+									<div>
+										<label for="select_style">Full Line Selection</label>
+										<input type="checkbox" name="select_style" id="select_style" checked>
+									</div>
+									
+									<div>
+										<label for="highlight_active">Highlight Active Line</label>
+										<input type="checkbox" name="highlight_active" id="highlight_active" checked>
+									</div>
+									
+									<div>
+										<label for="show_hidden">Show Invisibles</label>
+										<input type="checkbox" name="show_hidden" id="show_hidden" checked>
+									</div>
+									
+									<div>
+										<label for="display_indent_guides">Show Indent Guides</label>
+										<input type="checkbox" name="display_indent_guides" id="display_indent_guides" checked>
+									</div>
+									
+									<div>
+										<label for="show_hscroll">Persistent HScroll</label>
+										<input type="checkbox" name="show_hscroll" id="show_hscroll">
+										<label for="show_hscroll">VScroll</label>
+										<input type="checkbox" name="show_vscroll" id="show_vscroll">
+									</div>
+																	
+									<div>
+										<label for="show_print_margin">Show Print Margin</label>
+										<input type="checkbox" id="show_print_margin" checked>
+									</div>
+									
+									<div>
+										<label for="soft_tab">Use Soft Tab</label>
+										<input type="checkbox" id="soft_tab" checked>
+									</div>
+									
+									<div>
+										<label for="highlight_selected_word">Highlight selected word</label>
+										<input type="checkbox" id="highlight_selected_word" checked>
+									</div>
+									
+									<div>
+										<label for="enable_behaviours">Enable Behaviours</label>
+										<input type="checkbox" id="enable_behaviours">
+									</div>
+									
+									<div>
+										<label for="fade_fold_widgets">Fade Fold Widgets</label>
+										<input type="checkbox" id="fade_fold_widgets">
+									</div>
+									
+									<div>
+										<input type="button" value="Edit Snippets" onclick="env.editSnippets()">
+									</div>
+								
+								</div>
+							</div>
+						</article>						
+					</section>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="assets/js/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		if (typeof ace !== 'undefined') {
+			var editor = ace.edit("editor");
+			editor.setTheme("ace/theme/twilight");
+			editor.getSession().setMode("ace/mode/javascript");
+		}
+	</script>	
+</div>		
+		

@@ -1,0 +1,118 @@
+<!doctype html>
+<html data-role="application" data-layout="absolute-all" data-skin="i2tm-dark" data-style="normal">
+	<head>
+		<title>Welcome to the H5C3 Tour</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0,  maximum-scale=1.0"> 
+		<meta name="apple-mobile-web-app-capable" content="yes"/> 
+		<link rel="shortcut icon" href="/favicon.ico">
+		<!--
+		<link rel="stylesheet" href="../shared/css/ext/i2tm.primary.min.css" type="text/css" title="Style" />	
+		-->
+		<link rel="stylesheet" href="http://h5c3.i2tmlabs.com/public/shared/css/ext/i2tm.primary.min.css" type="text/css" title="Style" />	
+		<link rel="stylesheet" href="http://h5c3.i2tmlabs.com/public/shared/css/int/i2tm.skin.dark.css" type="text/css" title="Style" />	
+			
+		<script src="assets/js/config.prod.js" title="config"></script>
+		<!--
+		<script src="../shared/js/ext/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+		-->
+		<style>	
+			/*! R2WL Dynamic Stylesheet */
+			/* Clear the columns automagically, thanks @kneath */
+			.column-row:after, 
+			.columns:after,
+			.row:after, 
+			.clearfix:after 	{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+			* html .column-row, * html .row, * html .clearfix { height: 1%; zoom:1; }
+			.column-row, .columns, .row, .clearfix { display: inline-block; }
+			.column-row, .columns, .row, .clearfix { display: block; }
+
+			#OVERLAY {
+				position:absolute;
+				z-index: 10001;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+				background: rgba(0,0,0, 0.95);
+			}
+		
+			.i2tmbox .mainTitle { 
+				text-align:center;
+				font-size: 2.0em;
+				
+				text-shadow: 0px 0px 3px #00FF00, 1px 1px 1px #111, -1px -1px 1px #aaa;
+				color: rgba(0,0,0, 0.95);
+				padding-bottom:0.4em;
+			}			
+			#H5C3_CONSOLE {
+				position: fixed;
+				top:0px;
+				left:0px;
+				width:100%;
+				height:200px;
+				z-index: 10000;
+				overflow:auto;
+			}
+			body {
+				margin: 0px;
+				padding: 0px;
+				background-image: url(../shared/img/stars2.png);
+				background-repeat: repeat;
+			}
+			#earth {
+				background-image: url(../shared/img/earth.png);
+				background-repeat: no-repeat;
+				position: absolute;
+				min-height: 15em;
+				min-width:100%;
+				bottom: 0em;
+				z-index: 0;
+			}
+			
+		</style>
+	</head>
+    <body>
+		<div id="WRAPPER" data-type="application" data-layout="absolute-all">
+			
+			<!-- Always on top: Position Fixed-->
+			<div id="HEADER" class="clr-dark fadeIn">
+				<div data-applet="i2tm-header"></div>
+			</div>
+			
+			<!-- Fixed size after header-->
+			<div id="CONTENT">
+				<!-- Always on top. Fixed position, fixed width, relative to content width-->
+				<div id="LEFTBAR">
+					<div data-applet="menu-slide-left" class="dark"></div>
+				
+					<div data-applet="socialBar" style="position:absolute; bottom:1em;"></div>
+				</div>
+				
+				<!-- Scrollable div with main content -->
+				<div id="VIEWPORT" style="padding:1em;z-index:2;">
+					<div data-applet="h5c3-introduction"></div>
+				</div>
+				
+				<!-- Always on top. Fixed position, fixed width, relative to content width -->
+				<div id="RIGHTBAR">
+					<div data-applet="google" ></div>					
+				</div>
+				
+			</div><!-- content -->
+			
+			<!-- Always at the end of the page -->
+			<div id="FOOTER" class="clr-dark">
+					<div data-applet="i2tm-copyright"></div>
+					<!--
+					<ins class="adsbygoogle rwdAdWide" style="display:inline-block" data-ad-client="ca-pub-7431399643348196" data-ad-slot="8376860866"></ins>
+					<script>googlePush();</script>
+					-->
+			</div><!-- footer -->
+		</div><!-- wrapper -->
+		
+		<div id="OVERLAY">
+		</div>
+    </body>
+</html>

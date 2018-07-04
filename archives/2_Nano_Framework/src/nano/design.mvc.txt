@@ -1,0 +1,7 @@
+Nano Framework MVC
+====================
+Model 		-> $n.Model		extends $n.Persistent		Handles all data and logic
+
+View		-> $n.Applet	extends $n.View				Display content
+
+Controller	-> $n.Control	extends.Base				Process	User input and events

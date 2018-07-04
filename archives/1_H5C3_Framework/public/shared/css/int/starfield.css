@@ -1,0 +1,91 @@
+/* Stars 
+------------------------------------- */
+#space-animated, .stars {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* Animated */
+.stars {
+  background-image: 
+	radial-gradient(2px 2px at 1.25em 1.875em, #aaa, rgba(0,0,0,0)),	/* #efe */
+	radial-gradient(2px 2px at 2.5em 4.375em, #bbb, rgba(0,0,0,0)),		/* #fff */ 
+	radial-gradient(2px 2px at 3.125em 10em, #ccc, rgba(0,0,0,0)),		/* #ddd */ 
+	radial-gradient(2px 2px at 5.625em 2.5em, #ddd, rgba(0,0,0,0)),		/* #fff */ 
+	radial-gradient(2px 2px at 11.875em 5em, #eee, rgba(0,0,0,0)),		/* #fff */ 
+	radial-gradient(2px 2px at 10em 11.25em, #fff, rgba(0,0,0,0));		/* #ddd */ 
+	background-repeat: repeat;
+	background-size: 22.5em 22.5em;
+	-webkit-animation: zoom-in 7.5s 1;
+	-webkit-animation-delay:0s;
+  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  -webkit-animation-delay: 0s;
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  -webkit-animation-delay: 2.5s;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  -webkit-animation-delay: 5.0s;
+}
+.stars:nth-child(4) {
+  background-position: 40% -80%;
+  -webkit-animation-delay: 7.5s;
+}
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  -webkit-animation-delay: 10.0s;
+}
+
+@-webkit-keyframes NAME-YOUR-ANIMATION {
+}
+@-moz-keyframes NAME-YOUR-ANIMATION {
+}
+@-o-keyframes NAME-YOUR-ANIMATION {
+}
+@keyframes NAME-YOUR-ANIMATION {
+}
+
+@-webkit-keyframes zoom-in {
+  0% {
+	opacity: 0;
+	-webkit-transform: scale(0.5);
+	-webkit-animation-timing-function: ease-in;
+  } 
+  50% {
+	opacity: 1;
+	-webkit-transform: scale(1.8);
+	-webkit-animation-timing-function: linear;
+  }
+  100% {
+	opacity: 0;
+	-webkit-transform: scale(3.5);
+	-webkit-animation-timing-function: ease-out;
+  }
+}
+
+@-webkit-keyframes zoom-out {
+  0% {
+	opacity: 0;
+	-webkit-transform: scale(3.5);
+	-webkit-animation-timing-function: ease-in;
+  } 
+  50% {
+	opacity: 1;
+	-webkit-transform: scale(1.8);
+	-webkit-animation-timing-function: linear;
+  }
+  100% {
+	opacity: 0;
+	-webkit-transform: scale(0.5);
+  }
+}

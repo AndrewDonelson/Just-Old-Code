@@ -1,0 +1,125 @@
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.lightbox {
+	opacity: 0.85;
+	color: #00ff00;
+	font-size: 11pt;
+	background-color: #000000;
+	padding: 25px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	-webkit-border-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	border-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+	background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+	
+  -webkit-box-shadow: 0px 0px 60px 2px #006000; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+   box-shadow: 0px 0px 30px 2px #006000; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+}
+
+.logo {
+	display:block;
+	padding: 10px;
+    margin: auto;	
+}
+
+.h470 {
+	min-height: 470px;
+}
+
+body {
+	font-family: 'Audiowide', cursive; character-spacing: 8px;
+	overflow:auto;
+	color: #00ff00;
+	background-color: #000000;
+	padding-top: 0px;
+}
+
+.background {
+	position: absolute;
+	height: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background: url(../img/i2tm_background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.ejuice {
+	width: 32px;
+	height: auto;
+	display: block;
+	float: right;
+	position: relative;
+	top: 75px;
+}
+
+.gotvape {
+	width: auto;
+	height: auto;
+	display: block;
+	float: left;
+	top: 20px;
+	position: fixed;
+}
+
+.btnGoNow {
+	display: block;
+	margin: auto;
+	padding-top: 30px;
+}
+
+
+/* #Color Scemes
+================================================== */
+.backgroundColor01{
+	background-color: #0F0F0F;
+}
+.backgroundColor02{
+	background-color: #2F2F2F;
+}
+.backgroundColor03{
+	background-color: #4F4F4F;
+}
+.textColor01{
+	color: #00ff00;
+}
+.textColor02{
+	color: #009900;
+}
+.textColor03{
+	color: #c0ffc0;
+}
+
+/* #Misc
+================================================== */
+.social { width: 32px; height: 32px; padding: 5px;}
+.remove-bottom { margin-bottom: 0 !important; }
+.half-bottom { margin-bottom: 10px !important; }
+.add-bottom { margin-bottom: 20px !important; }
+.colorH5 { color: #7a3602; text-shadow: 5px 5px 10px #000000; filter: dropshadow(color=#000000, offx=3, offy=3); }
+.colorC3 { color: #02027f; text-shadow: 5px 5px 10px #000000; filter: dropshadow(color=#000000, offx=3, offy=3); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

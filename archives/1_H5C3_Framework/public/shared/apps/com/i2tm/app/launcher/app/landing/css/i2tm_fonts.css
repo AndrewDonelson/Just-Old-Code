@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Neuropol;
+    src: url('fonts/neuropol.ttf');
+}
+
+
+.neuropol {
+	font-family: Neuropol;
+	font-weight: 200;
+	letter-spacing: 12px; 
+	color: #8f3e78;
+}

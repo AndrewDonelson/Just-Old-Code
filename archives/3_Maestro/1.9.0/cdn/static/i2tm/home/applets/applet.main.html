@@ -1,0 +1,677 @@
+<ins 
+	id="main" 
+	data-uuid="757b15c4-978f-4fd9-a8e6-76aef1956d6c"
+	data-component="applet" 
+	data-publisher="i2tm" 
+	data-folder="home" 
+	data-target="wrapper" 
+	data-files="" 
+	class="grayscale.js" 
+>
+<style>
+.bg {position:absolute;top:0;left:0;bottom:0;right:0;overflow:hidden;z-index:0}
+.bg .layer-1 {z-index:1}
+.bg .layer-2 {z-index:2}
+.bg .layer-3 {z-index:3}
+
+.i2tm-bg {
+	background: black url(http://static.i2tmlabs.com/maestro/shared/img/i2tm/i2tm-hd-bg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.i2tmlabs.com/maestro/shared/img/i2tm/i2tm-hd-bg.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.i2tmlabs.com/maestro/shared/img/i2tm/i2tm-hd-bg.jpg', sizingMethod='scale')";
+}
+
+html,body,#wrapper {
+    width: 100%;
+    height: 100%;
+    font-family: Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: transparent;
+	overflow-x:hidden;
+}
+
+#wrapper{z-index:5}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    font-family: Neuropol,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.formatted, p {
+font-size: 18px;
+line-height: initial;
+}
+
+a {
+    color: #0f0;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #176e61;
+}
+
+/*CSS3 extras*/
+.tooltip span { 
+    border: 1px solid #0a0 !important;
+	border-radius:4px; 
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+    box-shadow: 0 0 1em !important;
+	-moz-box-shadow: 0 0 1em !important;
+	-webkit-box-shadow: 0 0 1em !important;
+	box-shadow: 0 0 1em !important;
+}
+
+
+.tooltip.bottom {
+	width:200px;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-color: #000000;
+  border-width: 0 5px 5px;
+}
+.tooltip-inner {
+	text-align:center;
+    border: 1px solid #0a0 !important;
+	border-radius:5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+    box-shadow: 0 0 1em #0f0 !important;
+	-moz-box-shadow: 0 0 1em #0f0 !important;
+	-webkit-box-shadow: 0 0 1em #0f0 !important;
+	box-shadow: 0 0 1em #0f0 !important;
+}
+	
+.search {
+    font-size: 1.5em !important;
+    border-radius: 1.5em !important;
+    border: 1px solid #0f0 !important;
+    box-shadow: 0 0 1em !important;
+	max-width:300px !important;
+	margin:2em auto;
+	background:rgba(31, 47, 31, 0.7) url(../img/google-search.png) center no-repeat !important;
+	transition:All 1.5s ease-in-out;
+	-webkit-transition:All 1.5s ease-in-out;
+	-moz-transition:All 1.5s ease-in-out;
+	-o-transition:All 1.5s ease-in-out;
+	transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform: rotate(0deg) scale(.6) skew(0deg) translate(0px);
+	-moz-transform: rotate(0deg) scale(.6) skew(0deg) translate(0px);
+	-o-transform: rotate(0deg) scale(.6) skew(0deg) translate(0px);
+	-ms-transform: rotate(0deg) scale(.6) skew(0deg) translate(0px);
+}
+.search:focus {
+    border: 1px solid #0a0 !important;
+    box-shadow: 0 0 1em !important;
+	background:rgba(31, 47, 31, 1) !important;
+	transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-o-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-ms-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+
+.search:focus img {
+	transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-o-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-ms-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+
+.search img {
+	transition:All 3.0s ease-in-out;
+	-webkit-transition:All 3.0s ease-in-out;
+	-moz-transition:All 3.0s ease-in-out;
+	-o-transition:All 3.0s ease-in-out;
+	transform: rotate(0deg) scale(1) skew(0deg) translate(-320px);
+	-webkit-transform: rotate(0deg) scale(.6) skew(0deg) translate(-320px);
+	-moz-transform: rotate(0deg) scale(.6) skew(0deg) translate(-320px);
+	-o-transform: rotate(0deg) scale(.6) skew(0deg) translate(-320px);
+	-ms-transform: rotate(0deg) scale(.6) skew(0deg) translate(-320px);
+
+}
+
+
+.light {
+    font-weight: 400;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-family: neuropol,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #000;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom a {color: #0f0}
+.navbar-custom .nav li a {-webkit-transition: background .3s ease-in-out;-moz-transition: background .3s ease-in-out;transition: background .3s ease-in-out}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {	color: black;background-color: green}
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li.active {
+    outline: 0;
+    background-color: rgba(0,255,0,.2);
+}
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background-color: #000;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+}
+
+.navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-toggle:focus,
+.navbar-toggle:active {
+    outline: 0;
+}
+
+.go-inline{
+	width: 300px;
+	display: inline-block;
+	border: 0;
+}
+
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+	max-width:1300px;	
+    padding: 100px 0;
+	margin:0 auto;
+    text-align: center;
+    color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.brand-heading {
+    font-size: 40px;
+}
+
+.intro-text {
+    font-size: 18px;
+}
+
+@media(min-width:767px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+
+    .brand-heading {
+        font-size: 100px;
+    }
+
+    .intro-text {
+        font-size: 25px;
+    }
+}
+
+.btn-circle {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 2px solid #fff;
+    border-radius: 35px;
+    font-size: 40px;
+    color: #fff;
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.btn-circle:hover,
+.btn-circle:focus {
+    outline: 0;
+    color: #fff;
+    background: rgba(255,255,255,.1);
+}
+
+.page-scroll .btn-circle i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+}
+
+.page-scroll .btn-circle:hover i.animated {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
+@-webkit-keyframes pulse {    
+    0 {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {    
+    0 {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.content-section {
+	min-height:640px;
+    width: 100%;
+    padding: 50px 0;
+	background-color:rgba(32,32,32,.85);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+	color: rgba(220, 240, 220, 1);
+	border-top: 3px solid lime;
+	border-bottom: 6px solid black;
+}
+.spacer-section {
+	height:50%;
+	width:100%;
+	background-color:rgba(32,32,32,.85);
+}
+
+@media(min-width:1200px) {
+	.about-section {
+		background: url({ROOT}img/bg-internet.jpg) no-repeat center center scroll;
+	}
+
+	.products-section {
+		background: url({ROOT}img/bg-seattleskyline.jpg) no-repeat center center scroll;
+	}
+
+	.services-section {
+		background: url({ROOT}img/bg-projectmanagement.jpg) no-repeat center center scroll;
+	}
+
+	.contact-section {
+		background: url({ROOT}img/bg-contactus.jpg) no-repeat center center scroll;
+	}
+}
+
+
+.btn {
+    text-transform: uppercase;
+    font-family: Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-default {
+    border: 1px solid #0f0;
+    color: #0f0;
+    background-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid #0f0;
+    outline: 0;
+    color: #000;
+    background-color: #0f0;
+}
+
+.btn-huge {
+    padding: 25px;
+    font-size: 26px;
+}
+
+.banner-social-buttons {
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    ul.banner-social-buttons>li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons>li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+::selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+.navbar:hover{
+	background-color:rgba(32,48,32,.50)
+}
+
+h2 {
+	font-family:"neuropol";
+	text-shadow: 0 0 1em lime,0 0 .5em lime;
+	color: black;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing:4px;
+}			
+
+.bs-callout {margin: 20px 0;padding: 20px;border-left: 3px solid #EEE;background-color: rgba(127,127,127,.25)}
+ul .bs-callout {margin-left: 20px}
+.bs-callout-danger {background-color: #241111;border-color: #D9534F}
+.bs-callout-warning {background-color: #20190F;border-color: #F0AD4E}			
+.bs-callout-primary {background-color: #0B1216;border-color: #5BC0DE}
+.bs-callout-success {background-color: #0C1A0C;border-color: #5CB85C}
+
+/* GLOBAL */
+form input,
+form input:not([type]),
+form input[type=reset],
+form input[type=color],
+form input[type=email],
+form input[type=number],
+form input[type=range],
+form input[type=search],
+form input[type=datetime-local],
+form input[type=submit],
+form input[type=button],
+form input[type=file],
+form input[type=text],
+form input[type=url],
+form input[type=tel],
+form input[type=time],
+form input[type=week],
+form input[type=month],
+form input[type=password],
+form input.text,
+form select,
+form textarea{-webkit-appearance:none;display:block;border:0;outline-color:transparent;color:#0c0;background:#1F2f1f;box-shadow:inset 0 0 1px 0 #001000;border-radius:.35em;width:100%;-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out;-o-transition:all .25s ease-in-out;-ms-transition:all .25s ease-in-out;transition:all .25s ease-in-out;padding:.25em}
+form input:hover,
+form input:not([type]):hover,
+form input[type=reset]:hover,
+form input[type=color]:hover,
+form input[type=email]:hover,
+form input[type=number]:hover,
+form input[type=range]:hover,
+form input[type=search]:hover,
+form input[type=datetime-local]:hover,
+form input[type=submit]:hover,
+form input[type=file]:hover,
+form input[type=button]:hover,
+form input[type=text]:hover,
+form input[type=url]:hover,
+form input[type=tel]:hover,
+form input[type=time]:hover,
+form input[type=week]:hover,
+form input[type=month]:hover,
+form input[type=password]:hover,
+form input.text:hover,
+form select:hover,
+form textarea:hover{color:#0f0;background:#3F4f3f}
+
+form input:focus,
+form input:not([type]):focus,
+form input[type=reset]:focus,
+form input[type=color]:focus,
+form input[type=email]:focus,
+form input[type=number]:focus,
+form input[type=range]:focus,
+form input[type=search]:focus,
+form input[type=datetime-local]:focus,
+form input[type=submit]:focus,
+form input[type=file]:focus,
+form input[type=button]:focus,
+form input[type=text]:focus,
+form input[type=url]:focus,
+form input[type=tel]:focus,
+form input[type=time]:focus,
+form input[type=week]:focus,
+form input[type=month]:focus,
+form input[type=password]:focus,
+form input.text:focus,
+form select:focus,
+form textarea:focus{color:#0c0;background:#6F8f6f}
+form textarea{min-height:10em}
+</style>
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header page-scroll go-inline">
+			<a class="navbar-brand hidden-xs hidden-sm" style="color: rgba(255, 165, 0, 1)" onclick="M$.click('#/i2tm/kuiperassult/');" href="http://apps.i2tmlabs.com/i2tm/kuiperassult/">
+				<i class="fa fa-play-circle"></i>  <span class="light">Play</span> Kuiper Assult
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="navbar-collapse navbar-right navbar-main-collapse go-inline">
+			<ul class="nav nav-pills">
+				<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+				<li class="page-scroll active">
+					<a href="#page-top" rel="tooltip" data-original-title="Home" data-toggle="tooltip" data-placement="bottom" title="" onclick="M$.click(this.href);"><i class="fa fa-home"></i></a>
+				</li>
+				<li class="page-scroll">
+					<a href="#about" data-original-title="Find out more about our company" data-toggle="tooltip" data-placement="bottom" title="" onclick="M$.click(this.href);"><i class="fa fa-question-circle"></i></a>
+				</li>
+				<li class="page-scroll">
+					<a href="#products" data-original-title="References to our products" data-toggle="tooltip" data-placement="bottom" title="" onclick="M$.click(this.href);"><i class="fa fa-sitemap"></i></a>
+				</li>
+				<li class="page-scroll">
+					<a href="#services" data-original-title="Detail information about the services we offer" data-toggle="tooltip" data-placement="bottom" title="" onclick="M$.click(this.href);"><i class="fa fa-shield"></i></a>
+				</li>
+				<li class="page-scroll">
+					<a href="#contact" data-original-title="Drop us a Message and let use know how we are doing." data-toggle="tooltip" data-placement="bottom" title="" onclick="M$.click(this.href);"><i class="fa fa-envelope"></i></a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container -->
+</nav>
+
+<section class="intro">
+	<div class="intro-body">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<a class="btn btn-warning btn-lg hidden-md hidden-lg" onclick="M$.click('#/i2tm/kuiperassult/');" href="http://apps.i2tmlabs.com/i2tm/kuiperassult/">
+					<i class="fa fa-play-circle"></i><span>Play</span> Kuiper Assult
+				</a>
+				<a href="http://apps.i2tmlabs.com/i2tm/cdn/" onclick="M$.click('#/i2tm/cdn/');" class="btn btn-warning btn-lg">Check CDN Status</a>
+				<div class="page-scroll">
+					<a href="#about" class="btn btn-circle">
+						<i class="fa fa-angle-double-down animated"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="about" class="content-section about-section text-center" style="color:rgba(220, 240, 220, 1)">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h2>About i2tm Labs</h2>
+			<p>i2tm Labs started as Donelson Entertainment back in 1995 and the owner Andrew Donelson has been programming computers since 1985 when he started with a top of the line Commodore 64. Primarily focusing on ANSI C or C++ and the MS-DOS / Windows Platforms he has developed everything from an Operating system, PCDesk a Windows 3.1 competitor to Games such as Epic Online, a short lived Sci-Fi strategy MMOG. In 1992 he was hired by Net-Connect, Ltd to create software to handle &amp; track customers connecting via modems to the new Internet Service Provider for billing purposes and was also tasked to create the ISP's official website in HTML 1.</p>
+			<p>Since then he has contacted with companies such as GoDaddy, i4Vegas, Hotels.com and many more to create new or upgrade content. In mid 2012 he moved completely to Web Development using the upcoming release of HTML5/CSS3/JavaScript. He started the H5C3 Framework which was initially going to be solely for web gaming but it has developed into much more and is getting close to public release but is already being used in i2tm Labs products and services.</p>
+		</div>
+	</div>
+</section>
+
+<div class="spacer-section"></div>
+
+<div id="products" class="content-section products-section text-center">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h2>Our Products</h2>
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="col-md-6">
+						<h3>Maestro!</h3>
+						<p>It is time to take control of your web applications. There are plenty of libraries and frameworks out there but none are designed to work together. That is where Nano Framework comes in. We decided on Bootstrap for document structure and flow and jQuery for JavaScript coding. We have also added	Modernizr for maximum compatibility and Font-Awesome for even more fonts.</p>
+						<p>So what is the difference? Well, we turned Bootstrap, jQuery, Font-Awesome and Modernizr into a Black Box for developers. You never have to worry about optimized loading order, multiple copies loaded, nothing. Maestro takes care of all of that.</p>
+						<a href="http://maestro.i2tmlabs.com" class="btn btn-default btn-lg">Learn More</a>
+					</div>
+					<div class="col-md-6">
+						<h3>Nano Framework</h3>
+						<p>It is time to take control of your web applications. There are plenty of libraries and frameworks out there but none are designed to work together. That is where Nano Framework comes in. We decided on Bootstrap for document structure and flow and jQuery for JavaScript coding. We have also added	Modernizr for maximum compatibility and Font-Awesome for even more fonts.</p>
+						<p>So what is the difference? Well, we turned Bootstrap, jQuery, Font-Awesome and Modernizr into a Black Box for developers. You never have to worry about optimized loading order, multiple copies loaded, nothing. Maestro takes care of all of that.</p>
+						<a href="http://maestro.i2tmlabs.com" class="btn btn-default btn-lg">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="spacer-section"></div>
+
+<div id="services" class="content-section services-section text-center">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h2>Our Services</h2>
+			<p>It is time to take control of your web applications. There are plenty of libraries and frameworks out there but none are designed to work together. That is where Nano Framework comes in. We decided on Bootstrap for document structure and flow and jQuery for JavaScript coding. We have also added	Modernizr for maximum compatibility and Font-Awesome for even more fonts.</p>
+			<p>So what is the difference? Well, we turned Bootstrap, jQuery, Font-Awesome and Modernizr into a Black Box for developers. You never have to worry about optimized loading order, multiple copies loaded, nothing. Maestro takes care of all of that.</p>
+			<a href="http://maestro.i2tmlabs.com" class="btn btn-default btn-lg">Learn More</a>
+		</div>
+	</div>
+</div>
+
+<div class="spacer-section"></div>
+
+<div id=contact class="container contact-section content-section text-center" style="color:rgba(240, 240, 220, 1)">
+<div class=row>
+<div class=col-lg-12>
+<h2>Contact Us</h2>
+</div>
+</div>
+<div class=row>
+<div class=col-lg-4>
+<ul class="list-inline banner-social-buttons">
+<li><a href="https://twitter.com/i2tmlabs" class="btn btn-default btn-xs"><i class="fa fa-twitter fa-fw"></i> <span class=network-name>Twitter</span></a></li>
+<li><a href="https://facebook.com/i2tmlabs" class="btn btn-default btn-xs"><i class="fa fa-facebook fa-fw"></i> <span class=network-name>Facebook</span></a></li>
+<li><a href="https://www.linkedin.com/company/i2tm-labs" class="btn btn-default btn-xs"><i class="fa fa-linkedin fa-fw"></i> <span class=network-name>Linked IN</span></a></li>
+</ul>
+</div>
+<div class="col-lg-4 text-center">
+<p>Follow us on Facebook, Twitter or LinkedIN or use the contact form. Either way we would love to hear from you.</p>
+<p>feedback@i2tmlabs.com</p>
+</div>
+<div class=col-lg-4>
+<ul class="list-inline banner-social-buttons">
+<li><a href="#" onclick="M$.click('i2tm_ethics');" class="btn btn-default btn-xs"><i class="fa fa-smile-o fa-fw"></i> <span class=network-name>Ethics Policy</span></a></li>
+<li><a href="#" onclick="M$.click('i2tm_privacy');" class="btn btn-default btn-xs"><i class="fa fa-key fa-fw"></i> <span class=network-name>Privacy Policy</span></a></li>
+<li><a href="#" onclick="M$.click('i2tm_terms');" class="btn btn-default btn-xs"><i class="fa fa-globe fa-fw"></i> <span class=network-name>Terms of Service</span></a></li>
+</ul>
+</div>
+</div>
+<div class=row>
+<div class=col-lg-12>
+<small>Copyright 2012-2014 by i2tm Labs - All rights are reserved.</small><br/>
+</div>
+</div>
+</div>
+
+
+</ins>

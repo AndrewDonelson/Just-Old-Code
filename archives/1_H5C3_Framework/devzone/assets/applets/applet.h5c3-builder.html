@@ -1,0 +1,37 @@
+<div 
+	data-role="applet" 
+	data-name="h5c3-builder" 
+	data-version="0.0.1" 
+	data-uuid="38ac16a4-c30a-49d9-aa16-489c0b9b2c25"
+	data-author="Andrew Donelson" 
+	data-copyright="2013 by i2tm Labs - All rights reserved."
+	data-scale="1" 
+/>
+
+<!-- This style must remain as it is. you can add css content and it will be injected into the head. -->
+<style data-role="applet" data-type="style">
+#desktop {
+	width:100%;
+	height:100%;
+	background: background: rgba(0,0,0, 0.50);
+}
+
+</style>
+
+<!-- 
+	This script must remain as it is. you can add javascript content and it will be injected into the head. 
+	If you need multiple scripts/styles it is ok, and you can leave the data attributes out but its better
+	to let the engine hanldle them.
+-->
+<script data-role="applet" data-type="script"></script>
+
+<!-- Add you HTML content to this div -->
+<div id="h5c3-builder" data-role="applet" data-type="content">
+	<div id="desktop" class="container">
+		<div class="row">
+			<div data-applet="i2tm-ide" class=""></div>
+			<div data-applet="ide-options" class=""></div>
+			<div data-applet="i2tm-compiler" class=""></div>
+		</div>
+	</div>
+</div>

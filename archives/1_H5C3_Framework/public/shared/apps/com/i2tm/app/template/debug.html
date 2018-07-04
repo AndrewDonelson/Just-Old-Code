@@ -1,0 +1,41 @@
+<!-- I2TM Game Engine [Developer] -->
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+    <title>I2TM: Example Template</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0,  maximum-scale=1.0"> 
+    <meta name="apple-mobile-web-app-capable" content="yes"/> 
+	<link rel="stylesheet" href="http://resources.i2tmlabs.com/css/default.css" type="text/css" />	
+	<link rel="stylesheet" href="http://resources.i2tmlabs.com/css/debug.css" type="text/css" />	
+	<script type="text/javascript" src="http://www.i2tmlabs.com/h5c3/dist/gamecore.min.js"></script>
+	<script id="resources" type="text/xmldata">
+	<resources>
+	<game name="Template" version="0.1" publisher="I2TM Software" copyright="2012-2013" />
+	<credit name="Author" entity="Andrew Donelson" url="http://www.i2tmsoftware.com" desc="Author" />
+	<credit name="playcraft" entity="Playcraft Labs" url="http://www.playcraftlabs.com" desc="I2TM Engine forked from PlaycraftJS v0.5.6" />
+	<credit name="padolsey" entity="James Padolsey" url="https://github.com/padolsey/string/blob/master/string.js" desc="Used in I2TM Engine extended String API" />
+	<credit name="marasteanu" entity="Alexandru Marasteanu" url="http://www.diveintojavascript.com/projects/javascript-sprintf" desc="Used in I2TM Engine to add sprintf capability" />
+	<language name="english" from="english" to="english" />
+	<language name="spanish" from="english" to="spanish" />
+	<language name="german" from="english" to="german" />
+	<image name="title" file="images/title.png" />	
+	<image name="puppy" file="images/puppy.png" />	
+	<image name="splash" file="images/splash.png" />
+	</resources>
+	</script>
+	<!-- <script type="text/javascript" src="http://www.i2tmlabs.com/h5c3/dist/h5c3.debug.gz"></script> -->
+	<script type="text/javascript" src="../h5c3/dist/h5c3.debug.cat.js"></script>
+
+</head> 
+<body onload="h5c3.run();">
+	<!-- Engine creates game elements and restores upon friendly exit. -->
+	<div id="waDIV">
+		<div id="pcGameInfo">
+			<div id="cantplay" style="display:none">We're Sorry, But you are not using Google Chrome which is required.</div>
+			<div id="playnow" style="display:none"><a href="javascript:h5c3.bootstrap.go({screen:{width:640,height:380},fullscreen:true,files:['game.main.js','scene.game.js','scene.mainmenu.js','factory.entity.js','factory.sound.js'],plugins:['input','render','layout','expiration','effects']});" />Play Now!</a></div>
+		</div>
+		<div><strong>H5C3 Template</strong><p>Replaces this text with the description of your game here</p></div>
+		<div><strong>Help</strong><p>Replace this with how to play or other helpful information</p></div>		
+	</div>	
+</body>
+</html>

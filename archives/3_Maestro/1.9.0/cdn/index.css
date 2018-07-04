@@ -1,0 +1,58 @@
+		@media all{html{font-size:20px}}
+		@media screen and (max-device-width:2048px){.mdw:before{content:'2048px'}}
+		@media screen and (max-device-width:1920px){.mdw:before{content:'1920px'}}
+		@media screen and (max-device-width:1536px){.mdw:before{content:'1536px'}}
+		@media screen and (max-device-width:1440px){.mdw:before{content:'1440px'}}
+		@media screen and (max-device-width:1366px){.mdw:before{content:'1366px'}}
+		@media screen and (max-device-width:1280px){.mdw:before{content:'1280px'}}
+		@media screen and (max-device-width:1136px){.mdw:before{content:'1136px'}}
+		@media screen and (max-device-width:1024px){.mdw:before{content:'1024px'}}
+		@media screen and (max-device-width:960px){.mdw:before{content:'960px'}}
+		@media screen and (max-device-width:768px){.mdw:before{content:'768px'}}
+		@media screen and (max-device-width:720px){.mdw:before{content:'720px'}}
+		@media screen and (max-device-width:640px){.mdw:before{content:'640px'}}
+		@media screen and (max-device-width:480px){.mdw:before{content:'480px'}}
+		@media screen and (max-device-width:320px){.mdw:before{content:'320px'}}
+		
+		@media only screen and (-webkit-min-device-pixel-ratio:1){.dpp:before{content:'1.0'}.dpi:before{content:'96'}html{font-size:1em}
+		@media only screen and (-webkit-min-device-pixel-ratio:1.3){.dpp:before{content:'1.3'}.dpi:before{content:'124'}html{font-size:.95em}}
+		@media only screen and (-webkit-min-device-pixel-ratio:1.5){.dpp:before{content:'1.5'}.dpi:before{content:'144'}html{font-size:.9em}}
+		@media only screen and (-webkit-min-device-pixel-ratio:2){.dpp:before{content:'2.0'}.dpi:before{content:'192'}html{font-size:.8em}}
+		@media only screen and (-webkit-min-device-pixel-ratio:3){.dpp:before{content:'3.0'}.dpi:before{content:'288'}html{font-size:.7em}}
+		
+		@font-face{font-family:Neuropol;font-weight:normal;font-style:normal;src:url(http://code.nanofw.com/i2tm/fonts/neuropol.ttf)}.neuropol{font-family:Neuropol;font-weight:200;letter-spacing:12px}@font-face{font-family:Ubuntu;font-weight:normal;font-style:normal;src:url(http://code.nanofw.com/i2tm/fonts/ubuntu-r.ttf)}.ubuntu{font-family:Ubuntu;font-weight:normal}
+		*{margin:0}
+		html,body{height:100%;font-family:ubuntu}
+		.page-wrap{min-height:100%;margin-bottom:-3em}
+		.page-wrap:after{content:"";display:block}
+		.site-footer,
+		.page-wrap:after{height:4em;font-size:75% !important}
+		.site-footer{background:black;color:white}
+		header{background:black;color:white;height:6em}
+		h2{font-family:neuropol;background-color:black;color:white;padding:1em;letter-spacing:.25em;font-size:125%1.5em}
+		#panel{
+			width:30em;
+			height:15em;
+			position:absolute;
+			left:50%;
+			top:50%;
+			margin:-7.5em 0 0 -15em;
+			text-align:center
+	}
+		#panel img{max-width:100%!important;height:auto;display:block;margin:0 auto}
+		.pull-right{float:right!important;padding:1em}
+		.pull-left{float:left!important;padding:1em}
+		.cell{font-size:.75em;text-align:center;white-space:nowrap;vertical-align:middle;width:33%;min-width:33%;height:3em;padding:1em 0 0 0!important}
+		a,a:visited{color:white;text-decoration:none}
+		a:hover{color:silver;text-decoration:underline}
+		.btn{display:inline-block;font-family:ubuntu;text-transform:uppercase;background:black;color:white;border-radius:1em;border:0;padding:.33em .66em;margin-bottom:0;font-size:1em;font-weight:normal;line-height:1.428571429;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;background-image:none}
+		.btn:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+		.btn:hover,
+		.btn:focus{color:#333;text-decoration:none}
+		.btn:active,.btn.active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}
+		header>div>span{display:inherit}
+		.responsive {
+			display: block;
+			max-height: 50%;
+			width: auto;			
+		}

@@ -1,0 +1,4483 @@
+<!DOCTYPE html> 
+
+<html lang="en"
+	data-role="application" 
+	data-uuid="d75f102c-c1cb-4d29-8736-48a8029d975d"
+>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Nano Framework Class: fn</title>
+		<link type="text/css" rel="stylesheet" href="css/sunlight.default.css">
+		
+		<link type="text/css" rel="stylesheet" href="css/site.nanofw.css">
+		
+	</head>
+	
+	<body>
+		<div id="wrapper" style="opacity: 0; display: none; visibility: hidden;">
+			<nav class="navbar navbar-left navbar-fluid navbar-inverse" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="index.html" id="nav-logo" class="navbar-brand" href="" data-original-title="" onclick="r2wl.ga(['_trackEvent', 'navbar actions', 'Home', 'Home']);">
+							Nano Framework
+						</a>						
+					</div>
+				
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							
+							<li class="dropdown">
+								<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+									class="caret"></b></a>
+
+								<ul class="dropdown-menu ">
+									
+									<li>
+										<a href="maestro.html">maestro</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.html">CS2I</a>
+									</li>
+									
+
+								</ul>
+							</li>
+							
+							<li class="dropdown">
+								<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
+									class="caret"></b></a>
+
+								<ul class="dropdown-menu ">
+									
+									<li>
+										<a href="maestro.b64.html">b64</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.html">df</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.AccuTimer.html">AccuTimer</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.Applet.html">Applet</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.Base.html">Base</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.Base.html">Base</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.Class.html">Class</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.Device.html">Device</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.DualPool.html">DualPool</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.DualPooled.maestro.df.CS2I.DualPooled.html">DualPooled</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.DualPooled.maestro.df.CS2I.Pooled.html">maestro.df.CS2I.Pooled</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.HashList.html">HashList</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.Hashtable.html">Hashtable</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.LinkedList.html">LinkedList</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.LinkedNode.html">LinkedNode</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.maestro.df.CS2I.html">CS2I</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.maestro.df.Module.html">maestro.df.Module</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.PerformanceMeasure.html">PerformanceMeasure</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.CS2I.Pool.html">Pool</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.HashList.html">HashList</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.Hashtable.html">Hashtable</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.LinkedList.html">LinkedList</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.LinkedListNode.html">LinkedListNode</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.Pool.html">Pool</a>
+									</li>
+									
+									<li>
+										<a href="maestro.df.Pooled.html">Pooled</a>
+									</li>
+									
+									<li>
+										<a href="maestro.fn.html">fn</a>
+									</li>
+									
+									<li>
+										<a href="maestro.fn.versions.html">versions</a>
+									</li>
+									
+									<li>
+										<a href="maestro.lzw.html">lzw</a>
+									</li>
+									
+									<li>
+										<a href="maestro.pf.html">pf</a>
+									</li>
+									
+
+								</ul>
+							</li>
+							
+							<li class="dropdown">
+								<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b
+									class="caret"></b></a>
+
+								<ul class="dropdown-menu ">
+									
+									<li>
+										<a href="global.html#add">add</a>
+									</li>
+									
+									<li>
+										<a href="global.html#addEntry">addEntry</a>
+									</li>
+									
+									<li>
+										<a href="global.html#always">always</a>
+									</li>
+									
+									<li>
+										<a href="global.html#assert">assert</a>
+									</li>
+									
+									<li>
+										<a href="global.html#Bucket">Bucket</a>
+									</li>
+									
+									<li>
+										<a href="global.html#callback">callback</a>
+									</li>
+									
+									<li>
+										<a href="global.html#canPlay">canPlay</a>
+									</li>
+									
+									<li>
+										<a href="global.html#capitalize">capitalize</a>
+									</li>
+									
+									<li>
+										<a href="global.html#Class">Class</a>
+									</li>
+									
+									<li>
+										<a href="global.html#clear">clear</a>
+									</li>
+									
+									<li>
+										<a href="global.html#clone">clone</a>
+									</li>
+									
+									<li>
+										<a href="global.html#containsKey">containsKey</a>
+									</li>
+									
+									<li>
+										<a href="global.html#containsValue">containsValue</a>
+									</li>
+									
+									<li>
+										<a href="global.html#createBucketAggregator">createBucketAggregator</a>
+									</li>
+									
+									<li>
+										<a href="global.html#createBucketLister">createBucketLister</a>
+									</li>
+									
+									<li>
+										<a href="global.html#createBucketSearcher">createBucketSearcher</a>
+									</li>
+									
+									<li>
+										<a href="global.html#createKeyValCheck">createKeyValCheck</a>
+									</li>
+									
+									<li>
+										<a href="global.html#debug">debug</a>
+									</li>
+									
+									<li>
+										<a href="global.html#Deferred">Deferred</a>
+									</li>
+									
+									<li>
+										<a href="global.html#destroyed">destroyed</a>
+									</li>
+									
+									<li>
+										<a href="global.html#each">each</a>
+									</li>
+									
+									<li>
+										<a href="global.html#equals_fixedValueHasEquals">equals_fixedValueHasEquals</a>
+									</li>
+									
+									<li>
+										<a href="global.html#equals_fixedValueNoEquals">equals_fixedValueNoEquals</a>
+									</li>
+									
+									<li>
+										<a href="global.html#ERR">ERR</a>
+									</li>
+									
+									<li>
+										<a href="global.html#error">error</a>
+									</li>
+									
+									<li>
+										<a href="global.html#expansion">expansion</a>
+									</li>
+									
+									<li>
+										<a href="global.html#extend">extend</a>
+									</li>
+									
+									<li>
+										<a href="global.html#freeList">freeList</a>
+									</li>
+									
+									<li>
+										<a href="global.html#get">get</a>
+									</li>
+									
+									<li>
+										<a href="global.html#getBucketForHash">getBucketForHash</a>
+									</li>
+									
+									<li>
+										<a href="global.html#getEntries">getEntries</a>
+									</li>
+									
+									<li>
+										<a href="global.html#getEqualityFunction">getEqualityFunction</a>
+									</li>
+									
+									<li>
+										<a href="global.html#getObject">getObject</a>
+									</li>
+									
+									<li>
+										<a href="global.html#getTotalHeap">getTotalHeap</a>
+									</li>
+									
+									<li>
+										<a href="global.html#getUniqueId">getUniqueId</a>
+									</li>
+									
+									<li>
+										<a href="global.html#getUsedHeap">getUsedHeap</a>
+									</li>
+									
+									<li>
+										<a href="global.html#hashCode">hashCode</a>
+									</li>
+									
+									<li>
+										<a href="global.html#hashObject">hashObject</a>
+									</li>
+									
+									<li>
+										<a href="global.html#Hashtable">Hashtable</a>
+									</li>
+									
+									<li>
+										<a href="global.html#hashtable">hashtable</a>
+									</li>
+									
+									<li>
+										<a href="global.html#info">info</a>
+									</li>
+									
+									<li>
+										<a href="global.html#inheritProps">inheritProps</a>
+									</li>
+									
+									<li>
+										<a href="global.html#init">init</a>
+									</li>
+									
+									<li>
+										<a href="global.html#INITIAL_POOL_SIZE">INITIAL_POOL_SIZE</a>
+									</li>
+									
+									<li>
+										<a href="global.html#isA">isA</a>
+									</li>
+									
+									<li>
+										<a href="global.html#isEmpty">isEmpty</a>
+									</li>
+									
+									<li>
+										<a href="global.html#log">log</a>
+									</li>
+									
+									<li>
+										<a href="global.html#newInstance">newInstance</a>
+									</li>
+									
+									<li>
+										<a href="global.html#pipe">pipe</a>
+									</li>
+									
+									<li>
+										<a href="global.html#pools">pools</a>
+									</li>
+									
+									<li>
+										<a href="global.html#progressFunc">progressFunc</a>
+									</li>
+									
+									<li>
+										<a href="global.html#promise">promise</a>
+									</li>
+									
+									<li>
+										<a href="global.html#put">put</a>
+									</li>
+									
+									<li>
+										<a href="global.html#putAll">putAll</a>
+									</li>
+									
+									<li>
+										<a href="global.html#rawInstance">rawInstance</a>
+									</li>
+									
+									<li>
+										<a href="global.html#remove">remove</a>
+									</li>
+									
+									<li>
+										<a href="global.html#removeEntryForKey">removeEntryForKey</a>
+									</li>
+									
+									<li>
+										<a href="global.html#resolveFunc">resolveFunc</a>
+									</li>
+									
+									<li>
+										<a href="global.html#RUN">RUN</a>
+									</li>
+									
+									<li>
+										<a href="global.html#searchBuckets">searchBuckets</a>
+									</li>
+									
+									<li>
+										<a href="global.html#setup">setup</a>
+									</li>
+									
+									<li>
+										<a href="global.html#size">size</a>
+									</li>
+									
+									<li>
+										<a href="global.html#state">state</a>
+									</li>
+									
+									<li>
+										<a href="global.html#sub">sub</a>
+									</li>
+									
+									<li>
+										<a href="global.html#then">then</a>
+									</li>
+									
+									<li>
+										<a href="global.html#toString">toString</a>
+									</li>
+									
+									<li>
+										<a href="global.html#totalPooled">totalPooled</a>
+									</li>
+									
+									<li>
+										<a href="global.html#totalUsed">totalUsed</a>
+									</li>
+									
+									<li>
+										<a href="global.html#traces">traces</a>
+									</li>
+									
+									<li>
+										<a href="global.html#usedList">usedList</a>
+									</li>
+									
+									<li>
+										<a href="global.html#warn">warn</a>
+									</li>
+									
+									<li>
+										<a href="global.html#when">when</a>
+									</li>
+									
+
+								</ul>
+							</li>
+							
+						</ul>
+
+						<div class="navbar-right" role="brand">
+							<h2 style="color:white">Version 1.0.0</h2>
+						</div>
+				
+					</div><!--/.nav-collapse -->
+				</div>
+			</nav>
+			
+			<!-- End navbar -->
+
+			<!-- Begin Main Content -->
+			<main id="main" class="container-fluid">
+				<div class="row-fluid">
+				
+					<div class="col-xs-5 col-sm-6 col-md-7 col-lg-8"> <!-- col-xs-12 col-sm-12 col-md-8 col-lg-8 -->
+				
+					<div id="main">
+
+
+	<h1 class="page-title">Class: fn</h1>
+<section>
+
+<header>
+    <h2>
+        <span class="ancestors"><a href="maestro.html">maestro</a>.</span>
+    
+    fn
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+<dt>
+    <h4 class="name" id="fn"><span class="type-signature"></span>new fn<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Object in which all functions are stored</p>
+<p>You can define a function in the nano namespace like this:</p>
+<pre><code> $n.fn.foo = function($params) {
+  ... 
+ };</code></pre>
+<p>However it is suggested that you create a package that will be loaded. A package
+will allow for a private namespace and easier access.
+     var MyObject = (function( window ) {
+        var 
+            property;</p>
+<pre><code>    method=function() {};
+
+     return MyObject;
+})( window );</code></pre>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 213
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="maestro.fn.versions.html">versions</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="maestro"><span class="type-signature">&lt;static> </span>maestro<span class="type-signature"> :String</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Current Maestro Version</p>
+    </div>
+    
+    
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">String</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>version</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 245
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="aea"><span class="type-signature">&lt;static> </span>aea<span class="signature">($el, $ne, $id, $html)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Inserts a new element before a given element</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of an element or the actual element</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$ne</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>element to insert</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>ID of the new element</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$html</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>HTML to insert into new element</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 502
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>$id    Parent nodes id</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">string</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">$n('aea','someElementID','DIV','newDivID','This is inner HTML');</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="aet"><span class="type-signature">&lt;static> </span>aet<span class="signature">($el, $ne, $id, $html)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Inserts a new element into a given element</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of an element or the actual element</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$ne</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>element to insert</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>ID of the new element</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$html</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>HTML to insert into new element</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 525
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Element returns the element just created &amp; appended.</p>
+</div>
+
+
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">$n('aet','someElementID','DIV','newDivID','This is inner HTML');</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="ast"><span class="type-signature">&lt;static> </span>ast<span class="signature">($test, $error)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Tests a boolean evaluation and throws an exception with the error string. (Assert)</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$test</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A boolean result test</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A string to throw with the exception</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 579
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>none</p>
+</div>
+
+
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">$n('ast',foo,'BOOYA!');</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="bnd"><span class="type-signature">&lt;static> </span>bnd<span class="signature">($scope, $fn)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Utility function for wrapping a callback function with its reference</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$scope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 593
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>FunctionExpression</p>
+</div>
+
+
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="chk"><span class="type-signature">&lt;static> </span>chk<span class="signature">($p, $def)</span><span class="type-signature"> &rarr; {mixed}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Checks if a param is valid (null or undefined) in which case the default value will be returned</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Parameter to check</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$def</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Default value to return if p is either null or undefined</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 563
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>if valid, otherwise def (default)</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">mixed</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">if (foo=$n('chk',foo,"bar")) { someFunction(); }</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="cnt"><span class="type-signature">&lt;static> </span>cnt<span class="signature">($element)</span><span class="type-signature"> &rarr; {element}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get all data attributes for the given element.
+Checks node parameter. Returns an element no mater if the element is passed in or the name of an element.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of an element or the actual element to append to</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 462
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>returns the element</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">element</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var $el = $n('cnt',$element);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="dec"><span class="type-signature">&lt;static> </span>dec<span class="signature">($p)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Parses previously maestro encoded data back into a JSON</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>p.x= 'dec', p.y=any variable, array or object</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 1048
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">string</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="die"><span class="type-signature">&lt;static> </span>die<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>An equivelent to PHPs die() function</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p.y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>is a string message or error object of the event.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 1089
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>none</p>
+</div>
+
+
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="doc"><span class="type-signature">&lt;static> </span>doc<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Alias for window.document</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 307
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>document</p>
+</div>
+
+
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">$n('doc').addEventListener('webkitfullscreenchange', $n.fn.bootstrap._onFullscreenChange);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="ega"><span class="type-signature">&lt;static> </span>ega<span class="signature">($el, $var)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Alias for element.getAttribute()
+Get all data attributes for the given element.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of an element or the actual element</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$var</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the attribute you want to get</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 487
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>None</p>
+</div>
+
+
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var btnColor = $n('ega',"button","color");</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="enc"><span class="type-signature">&lt;static> </span>enc<span class="signature">($p)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Encodes data by converting to JSON, then converting to base64 and finally lzw compression</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>p.x= 'enc', p.y=any variable, array or object</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 1036
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">string</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="gda"><span class="type-signature">&lt;static> </span>gda<span class="signature">($el, $id)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get all data attributes for the given element.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Element tag name or Id you want to get the data attributes from</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>$id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>set tp true to use elements id</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 369
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Returns the object containing all attributes</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">object</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var attr = $n('gda',"APPLET");</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="gec"><span class="type-signature">&lt;static> </span>gec<span class="signature">($p)</span><span class="type-signature"> &rarr; {Collection}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Alias for window.GET()</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The tag name of the elements you want returned, ie. HEAD</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 356
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Returns the collection of elements with the given tag name</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">Collection</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">$n('get',"head")[0].appendChild($script);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="gec"><span class="type-signature">&lt;static> </span>gec<span class="signature">($p)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Alias for window.document.getElementsByClass()</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 343
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>CallExpression</p>
+</div>
+
+
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var elements = $n('gec',"red");</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="gei"><span class="type-signature">&lt;static> </span>gei<span class="signature">($p)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Alias for window.document.getElementById</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 317
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>CallExpression</p>
+</div>
+
+
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var element = $n('gei',"myDIV");</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="gel"><span class="type-signature">&lt;static> </span>gel<span class="signature">($p)</span><span class="type-signature"> &rarr; {DOMElemnt}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Attempts to return $el by checking Id, Tag Name, Name then class</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>p.x= find, p.y=new and p.z source</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 1072
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">DOMElemnt</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="gen"><span class="type-signature">&lt;static> </span>gen<span class="signature">($p)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Alias for window.document.getElementsByName()</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 330
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>CallExpression</p>
+</div>
+
+
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var elements = $n('gen',"DIV");</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="isa"><span class="type-signature">&lt;static> </span>isa<span class="signature">($e)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Enhanced function for determining the given parameter in a standard accurate way.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$e</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 404
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>$t</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">string</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="msg"><span class="type-signature">&lt;static> </span>msg<span class="signature">($p, maestro)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Sends a message to the server using AJAX. You may call this directly to send a custom message.
+it is also used internally for sending analytics event data to your account.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>maestro</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>internal the meastro object</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 1196
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>true is no error sending</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">boolean</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">
+		$n({x:'msg',y:'Nano Framework Rocks!'});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="off"><span class="type-signature">&lt;static> </span>off<span class="signature">($el)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>hide an element, all elements of tagname or name or class
+Verified fully functional</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>ordered by Id-&gt;TagName-&gt;Name-&gt;Class</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 1153
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>none</p>
+</div>
+
+
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="on"><span class="type-signature">&lt;static> </span>on<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>show an element, all elements of tagname or name or class
+Verified fully functional</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p.y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>ordered by Id-&gt;TagName-&gt;Name-&gt;Class</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 1135
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>none</p>
+</div>
+
+
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="pkg"><span class="type-signature">&lt;static> </span>pkg<span class="signature">($p)</span><span class="type-signature"> &rarr; {mixed}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Obtains a package, initializes and executes it.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Parameter to check</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 739
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>if valid, otherwise def (default)</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">mixed</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="pld"><span class="type-signature">&lt;static> </span>pld<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Page Loader Disable. Fades out then hides wrapper</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 1184
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="ple"><span class="type-signature">&lt;static> </span>ple<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Page Loader Enable. Shows wrapper then fades out</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 1171
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="sra"><span class="type-signature">&lt;static> </span>sra<span class="signature">($p)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Replace all occurances of $p.y with $p.z in $p.z</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>p.x= find, p.y=new and p.z source</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 1060
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">string</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="vld"><span class="type-signature">&lt;static> </span>vld<span class="signature">($p)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Check if a value is valid (not null, undefined or empty)</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>$p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A value</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        maestro/js/maestro.js, line 548
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>true if the value is not undefined and not null</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">boolean</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">if !($n('vld',foo)) { someFunction(); }</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+</div>
+					<div class="clearfix"></div>
+					</div>			
+				</div>
+				</div>
+			</main>
+			<!-- End Main Content -->
+			
+			<!-- Begin Footer -->
+			<footer id="footer">
+			
+				<span class="copyright">Nano Framework and Maestro Copyright © 2012-2014 by i2tm Labs</span>
+			
+				<span class="jsdoc-message">Documentation generated on Sun Feb 02 2014 06:16:25 GMT-0700 (US Mountain Standard Time).</span>
+			</footer>
+			<!-- End Footer -->
+		</div>
+		
+		<tail id="tail">
+			<script async src="http://cdn.i2tmlabs.com/?nv=auto&nb=release"></script>
+			<script>
+				nanoREADY=function() {
+					Sunlight.highlightAll({lineNumbers:true,  showMenu: true, enableDoclinks :true});
+
+					$( function () {
+						$( "#toc" ).toc( {
+							anchorName  : function(i, heading, prefix) {
+								return $(heading).attr("id") || ( prefix + i );
+							},
+							selectors   : "h1,h2,h3,h4",
+							showAndHide : false,
+							scrollTo    : 60
+						} );
+						$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+						$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+
+					} );
+					
+					
+				};				
+				</script>
+		</tail>
+  </body>
+</html>

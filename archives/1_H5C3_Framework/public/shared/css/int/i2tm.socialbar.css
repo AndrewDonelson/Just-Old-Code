@@ -1,0 +1,56 @@
+/*!
+ *  I2TM Labs Social Bar 0.7.2
+ *  Simple, Elegant, Pure HTMl & CSS (NO Images)
+ *  ------------------------------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation can be
+ *  found at http://fontawesome.io.  Stay up to date on Twitter at
+ *  http://twitter.com/fontawesome.
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - The Font Awesome font is licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *
+ *  Author - Andrew Donelson <andrew@i2tmlabs.com>
+ *  ------------------------------------------------------------------------------
+ (start code)
+ 
+
+(end)
+ */
+/* @import('http://h5c3.i2tmlabs.com/shared/css/ext/i2tmfonts.css'); */
+
+#socialBar {
+	poistion:relative;
+	text-align: center;
+	display: inline-block;
+	border-radius: 2em 0em 2em 0em;
+	line-height: normal;
+	box-shadow: inset 0px 0px 1px 1px gray;
+	margin: 0em 0.25em 0em 0.25em;
+} 
+#socialBar a  { text-decoration: none; }	
+#socialBar a.i2tm { color: #090; font-size:0.7em; letter-spacing:0.35em}
+
+#socialBar .titleBar { height: 3.5em !important;}
+	#socialBar .icon-comment { font-weight: 100; font-size: 3em; float: left; padding: 0em 0.2em 0em 0.2em;}
+	#socialBar span { font-weight: 300; font-size: 1.6em; float: right;padding-top:0.35em;padding-right:0.35em}
+
+#socialBar .iconBar { text-align: center; height: auto; float:right; margin:0.35em 0.35em 0.35em 0.35em;}
+	#socialBar .iconSkin1 {font-weight: 100; font-size: 1.7em; float: left; padding: .0em 0.6em 0em 0.6em; border-radius: 2em 0em 2em 0em; box-shadow: inset 0px 0px 8px -1px #666;}
+		#socialBar  .icon-twitter.iconSkin1 { color: cyan; }
+		#socialBar  .icon-twitter.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px cyan;}
+		#socialBar  .icon-linkedin.iconSkin1 { color: navy; }
+		#socialBar  .icon-linkedin.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px navy;}
+		#socialBar  .icon-google-plus.iconSkin1 { color: red; }
+		#socialBar  .icon-google-plus.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px red;}
+		#socialBar  .icon-facebook.iconSkin1 { color: blue; }
+		#socialBar  .icon-facebook.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px blue;}
+
+/*! TO HERE - Now you can choose a skin or create your own */
+#socialBar.normal { background: rgba(255, 255, 255, 0.85); color: rgba(60, 100, 190, 0.85); }
+#socialBar.light { background: rgba(235, 235, 235, 0.85); color: rgba(180, 180, 180, 0.85); }
+#socialBar.dark { background: rgba(20, 20, 20, 0.85); color: rgba(100, 100, 100, 0.85); }
+#socialBar.desert { background: rgba(255, 245, 235, 0.85); color: rgba(220, 190, 140, 0.85); }
+#socialBar.ladies { background: rgba(250, 210, 250, 0.85); color: rgba(145, 25, 45, 0.85); }
+#socialBar.i2tm { background: rgba(0, 0, 0, 0.85); color: rgba(0, 200, 0, 0.85); }

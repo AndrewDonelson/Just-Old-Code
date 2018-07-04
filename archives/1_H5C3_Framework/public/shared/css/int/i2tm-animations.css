@@ -1,0 +1,110 @@
+@charset 'UTF-8';
+
+#stageComing {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	-webkit-perspective:800;
+	-webkit-perspective-origin:center 20em;
+	z-index:4;
+}
+
+#stageH5C3 {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index:5;
+}
+
+.duration1s  {-webkit-animation-duration:  1s;-moz-animation-duration:  1s;-o-animation-duration:  1s; animation-duration:  1s;-webkit-animation-fill-mode: both;-moz-animation-fill-mode: both;-o-animation-fill-mode: both; animation-fill-mode: both; }
+.duration2s  {-webkit-animation-duration:  2s;-moz-animation-duration:  2s;-o-animation-duration:  2s; animation-duration:  2s;-webkit-animation-fill-mode: both;-moz-animation-fill-mode: both;-o-animation-fill-mode: both; animation-fill-mode: both; }
+.duration4s  {-webkit-animation-duration:  4s;-moz-animation-duration:  4s;-o-animation-duration:  4s; animation-duration:  4s;-webkit-animation-fill-mode: both;-moz-animation-fill-mode: both;-o-animation-fill-mode: both; animation-fill-mode: both; }
+.duration8s  {-webkit-animation-duration:  8s;-moz-animation-duration:  8s;-o-animation-duration:  8s; animation-duration:  8s;-webkit-animation-fill-mode: both;-moz-animation-fill-mode: both;-o-animation-fill-mode: both; animation-fill-mode: both; }
+.duration16s {-webkit-animation-duration: 16s;-moz-animation-duration: 16s;-o-animation-duration: 16s; animation-duration: 16s;-webkit-animation-fill-mode: both;-moz-animation-fill-mode: both;-o-animation-fill-mode: both; animation-fill-mode: both; }
+
+.delay1s  {-webkit-animation-delay:  1s;-moz-animation-delay:  1s;-o-animation-delay:  1s; animation-delay:  1s; }
+.delay2s  {-webkit-animation-delay:  2s;-moz-animation-delay:  2s;-o-animation-delay:  2s; animation-delay:  2s; }
+.delay4s  {-webkit-animation-delay:  4s;-moz-animation-delay:  4s;-o-animation-delay:  4s; animation-delay:  4s; }
+.delay8s  {-webkit-animation-delay:  8s;-moz-animation-delay:  8s;-o-animation-delay:  8s; animation-delay:  8s; }
+.delay16s {-webkit-animation-delay: 16s;-moz-animation-delay: 16s;-o-animation-delay: 16s; animation-delay: 16s; }
+.delay32s {-webkit-animation-delay: 32s;-moz-animation-delay: 32s;-o-animation-delay: 32s; animation-delay: 32s; }
+.delay64s {-webkit-animation-delay: 64s;-moz-animation-delay: 64s;-o-animation-delay: 64s; animation-delay: 64s; }
+
+@-webkit-keyframes fadeIn {	0% {opacity: 0;}	100% {opacity: 1;} }
+@-moz-keyframes fadeIn {	0% {opacity: 0;}	100% {opacity: 1;} }
+@-o-keyframes fadeIn {		0% {opacity: 0;}	100% {opacity: 1;} }
+@keyframes fadeIn {			0% {opacity: 0;}	100% {opacity: 1;} }
+.animate .fadeIn {-webkit-animation-name: fadeIn; -moz-animation-name: fadeIn; -o-animation-name: fadeIn; animation-name: fadeIn; }
+
+@-webkit-keyframes fadeOut {	0% {opacity: 1;}	100% {opacity: 0;} }
+@-moz-keyframes fadeOut {	0% {opacity: 1;}	100% {opacity: 0;} }
+@-o-keyframes fadeOut {		0% {opacity: 1;}	100% {opacity: 0;} }
+@keyframes fadeOut {			0% {opacity: 1;}	100% {opacity: 0;} }
+.animate .fadeOut {-webkit-animation-name: fadeOut; -moz-animation-name: fadeOut; -o-animation-name: fadeOut; animation-name: fadeOut; }
+
+
+
+#coming {
+	color:rgb(0,213,0);
+	font-family: Neuropol, sans-serif;
+	font-size:4em;
+	text-align:center;
+	opacity:0;
+	-webkit-animation:fade-in-out 8s linear;
+	-webkit-animation-iteration-count: 1;
+}
+
+#ready {
+	color:rgb(0,213,0);
+	font-family: Neuropol, sans-serif;
+	font-size:4em;
+	text-align:center;
+	opacity:0;
+	-webkit-animation:fade-in-out 4s linear;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-delay:  4s;
+}
+
+#presents {
+	opacity:0;
+	-webkit-animation:fade-in-out 6s linear;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-delay:11s;
+}
+
+header {
+    width: 100%;
+    height: 131px;
+    background-image: url(http://www.scottishheritageusa.org/imgs/header_separator.png);
+    background-position: 0px;
+    background-repeat: repeat-x;
+    -webkit-animation: myanim 5s infinite linear;
+       -moz-animation: myanim 5s infinite linear;
+         -o-animation: myanim 5s infinite linear;
+            animation: myanim 5s infinite linear;
+}
+
+@-webkit-keyframes myanim {
+  0%   { background-position: 0px; }
+  100% { background-position: 760px; } /* set this to the width of the image */
+}
+@-moz-keyframes myanim {
+  0%   { background-position: 0px; }
+  100% { background-position: 760px; } /* set this to the width of the image */
+}
+@-o-keyframes myanim {
+  0%   { background-position: 0px; }
+  100% { background-position: 760px; } /* set this to the width of the image */
+}
+@keyframes myanim {
+  0%   { background-position: 0px; }
+  100% { background-position: 760px; } /* set this to the width of the image */
+}

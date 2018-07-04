@@ -1,0 +1,760 @@
+<ins 
+	id="main" 
+	data-uuid="276f12eb-c974-4099-a406-a05b3b928d3f"
+	data-component="applet" 
+	data-publisher="i2tm" 
+	data-folder="cdn" 
+	data-target="wrapper" 
+	data-files="magister.js" 
+	class="theme-invert" 
+>
+<style>
+
+html {
+	/* background:#505D6E url({ROOT}img/body4.jpg) no-repeat center center fixed;
+	min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	*/
+	background:#fff url({ROOT}img/bg.png) repeat; 
+}
+
+body {
+	background:transparent;
+	min-height:100%; 	
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+	line-height: 1.5em;
+	font-size:16px;
+	font-family: Helvetica, Arial, sans-serif;
+	color:#333;
+	color:rgba(24,24,24,.8); 
+	font-weight: normal;
+}
+
+
+/********************************************************/
+/*                    Navigation bar                    */
+/********************************************************/
+.mainmenu { z-index: 999999; width:100%;  padding: 30px 0 0 0;}
+@media (min-width: 768px) {
+	.mainmenu { position: fixed; }
+}
+
+.navbar-toggle {
+	position:relative;
+	float:left;
+	display:block;
+	padding: 9px 10px;
+	background: rgba(255, 255, 255, 0.2);
+	background-image: none;
+	border: 0 none;
+	top:0px; 
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+	outline: 0;
+	opacity: 1;
+	-webkit-transition: all .45s;
+	   -moz-transition: all .45s;
+	        transition: all .45s;
+	        float: left;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+	margin-top: 4px;
+}
+.open .navbar-toggle { 
+	top:-70px; 
+	opacity: 0;  
+}
+.mainmenu .dropdown-menu {
+	top: -14em;
+	left: 0px;
+	font-size: 13px;
+	padding:0;
+	background:none;
+	border:0 none;
+	border-radius: 2px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display:block;
+	opacity:0;
+	-webkit-transition: all .45s;
+	   -moz-transition: all .45s;
+	        transition: all .45s;
+}
+.mainmenu .dropdown-menu .active { 
+	font-weight:bold;
+}
+.mainmenu .open .dropdown-menu { 
+	top:2px;
+	opacity:1;
+}
+.mainmenu .dropdown-menu a { 
+	padding:10px 10px;
+	margin:0;
+	color:white;
+	text-decoration: none;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}
+.mainmenu .dropdown-menu a:hover { 
+	background:rgba(255,255,255,.1);
+	color:white;
+	padding:10px 8px 10px 12px;
+}
+
+
+
+/********************************************************/
+/*             Sections - universal classes             */
+/********************************************************/
+.section { 
+	z-index: 1;
+	min-height:420px;
+	width: 100%; 
+	overflow:auto;
+	height:100%;
+	padding-top:100px;
+	padding-bottom:50px; 
+	display:none;
+	top:0;
+} 
+@media (min-width: 768px) {
+	.section { padding-top:160px;}
+}
+
+/* Show one of sections */
+#head { 
+	display: block;
+}
+
+
+/********************************************************/
+/*                      Typography                      */
+/********************************************************/
+a { color:#333; text-decoration: none; }
+a:hover, a:active { color:#333; text-decoration: underline; }
+.lead { 
+	font-weight:normal;
+	font-size:1.5em;
+	line-height:1.2em;
+}
+
+.title,
+.subtitle { 
+	font-family: 'NoteThis', Helvetica, Arial, sans-serif;
+	font-weight:normal;
+	font-size:6em;
+	margin-bottom:15px; 
+	color:#000; 
+	line-height:1em;
+}
+.subtitle { 
+	line-height:.9em;
+	font-size:4.5em;
+	margin-top:0;
+	margin-bottom:40px; 
+}
+.tagline { 
+	font-size:1.4em;
+	line-height:1.3em;
+	font-weight:normal;
+	margin-bottom:75px;
+}
+
+@media (max-width: 767px) {
+	.lead { 
+		font-size:1.3em;
+	}
+}
+
+
+/********************************************************/
+/*                   UI - Buttons                       */
+/********************************************************/
+.btn{
+	color:#333;
+	text-shadow: none;
+	text-decoration: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border:0 none;
+}
+.btn:hover {
+	color:#000;
+}
+.btn-lg { 
+	padding:16px 30px;
+	font-size:inherit;
+}
+
+.btn-link {
+	color:rgba(192,192,192,.8);
+}
+.btn-link:hover, .btn-link:focus, .btn-link:active {
+	color:#ccc
+}
+.btn-default {
+	background: rgba(192,192,192,.5);
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+	background: rgba(192,192,192,.8);
+}
+.btn-primary {
+	background: rgba(192,192,192,.2);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active {
+	background: rgba(192,192,192,.5);
+}
+
+
+
+/********************************************************/
+/*                 UI - Thumbnails                      */
+/********************************************************/
+.thumbnail {
+	background-color: rgba(192,192,192,.2);
+	border: 0 none;
+	padding:10px;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}
+.thumbnail .caption {
+	color: inherit;
+	max-height:200px;
+	position: relative;
+	overflow: hidden;
+}
+.thumbnail .caption .read-more { 
+	position: absolute; 
+	bottom: 0; left: 0;
+	width: 100%; 
+	text-align: center; 
+	margin: 0; 
+	padding: 1em 0;
+	background-color: #E6E6E6;
+}
+
+
+/********************************************************/
+/*                 Everything else                      */
+/********************************************************/
+
+.list-social .btn { 
+	font-size:1.3em; 
+}
+.list-social .btn:hover, .list-social .btn:active, .list-social .btn:focus { 
+	text-decoration: none; 
+}
+
+
+/* Social buttons in the footer */
+#social { 
+	margin-top:50px;
+	margin-bottom:50px;
+}
+#social .wrapper { 
+	width:340px; 
+	margin:0 auto;
+}
+
+
+/***********************************************************/
+/*                   Theme: text shadows                   */
+/***********************************************************/
+.text-shadows { 	
+	text-shadow:0 1px 2px rgba(0,0,0,.2);
+}
+.text-shadows .title,
+.text-shadows .subtitle,
+.text-shadows .tagline { 
+	text-shadow:0 2px 3px rgba(0,0,0,.4);
+}
+.text-shadows .mainmenu .dropdown-menu a { 
+	text-shadow:0 2px 1px rgba(0,0,0,.2);
+}
+.text-shadows .mainmenu .dropdown-menu a:hover { 
+	text-shadow:none;
+}
+
+
+/***********************************************************/
+/*                   Inverted theme                        */
+/***********************************************************/
+.theme-invert { 	
+	color:#222;
+	color:rgba(0,0,0,.8); 
+ }
+.theme-invert a { 
+	color:#000;
+}
+.theme-invert .btn {
+	color:rgba(192,192,192,.8);
+}
+.theme-invert .btn:hover {
+	color:#ccc;
+}
+.theme-invert .btn-link {
+	color:rgba(0,0,0,.8);
+}
+.theme-invert .btn-link:hover, .theme-invert .btn-link:focus, .theme-invert .btn-link:active {
+	color:#000
+}
+.theme-invert .navbar-toggle {
+	background: rgba(0, 0, 0, 0.12);
+}
+.theme-invert .navbar-toggle .icon-bar {
+  background: #333;
+}
+.theme-invert .mainmenu .dropdown-menu a { 
+	color:#000;
+}
+.theme-invert .mainmenu .dropdown-menu a:hover { 
+	background:rgba(0,0,0,.1);
+	color:#000;
+}
+
+.theme-invert .title,
+.theme-invert .subtitle,
+.theme-invert .tagline { 
+	color:#222222; 
+}
+
+.theme-invert .btn-default {
+	background: rgba(0,0,0,.4);
+}
+.theme-invert .btn-default:hover,
+.theme-invert .btn-default:focus,
+.theme-invert .btn-default:active,
+.theme-invert .btn-default.active {
+	background: rgba(0,0,0,.6);
+	color:#ccc;
+}
+.theme-invert .btn-primary {
+	background: rgba(0,0,0,.2);
+}
+.theme-invert .btn-primary:hover,
+.theme-invert .btn-primary:focus,
+.theme-invert .btn-primary:active,
+.theme-invert .btn-primary.active {
+	background: rgba(0,0,0,.3);
+	color:#ccc;
+}
+
+.theme-invert .thumbnail {
+	background-color: rgba(192,192,192,.8);
+}
+.thumbnail .caption {
+	color: inherit;
+}
+
+.easeinout{-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;-ms-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out}
+.reflection{-webkit-box-reflect: below -5% -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.3)))}
+.dropshadow1 {box-shadow: 0px 18px 36px -9px}
+.dropshadow2 {-webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);-moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75)}
+.fire {background:-webkit-linear-gradient(red, orange);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+.feature03{height:300px;width:300px;padding:0px;position:relative;overflow:hidden;background-color:rgba(192,192,192,85);border:1px solid gray}
+	.feature03 .caption{position: absolute;top:224px;width: 100%}
+	.feature03 .caption:hover{opacity:1;transform:translateY(-172px);-webkit-transform:translateY(-172px);-moz-transform:translateY(-172px);-ms-transform:translateY(-172px);-o-transform:translateY(-172px)}
+	.feature03 .caption-text .info{width:100%;height: 200px}
+	.feature03 .caption-text .links {font-size:2em;width:100%;height:50px;padding:12px;background-color:rgba(255,255,255,0.50)}
+			   .caption-text .links	button{background: transparent;border: 0}
+			   .caption-text .links	button:hover{color:black}
+	.feature03 .caption-text{z-index: 10;color: #fff;position: absolute;height: 224px;text-align: center;top:-22px;width: 100%}   
+	.feature03 img{z-index: 4}
+	.feature03 .blur{background-color: rgba(192, 192, 192, 0.95);height: 224px;z-index: 5;position: absolute;width: 100%}
+	.feature03 img {
+		position:absolute;
+		top:0;left:0;bottom:0;right:0;
+		z-index:0
+	}
+.tile {}
+	.tile .title{font-size:22px;text-align:right;margin-top: 0px;margin-bottom:8px;color: white;letter-spacing: 4px}
+	.tile p{font-size:12px;line-height: 1.6}
+	.tile .stats{font-size:10px;line-height: 1.0;margin-top:20px}
+	.tile h4 {font-size:15px;font-family:neuropol;margin-bottom:4px}
+	.tile h6 {font-size:9px;font-family:ubuntu;;margin-bottom:8px}
+	.tile i{padding-right:10px}
+	.tile i:hover{font-size:150%}
+	.tile {font-family: 'ubuntu';line-height: 1.5em;font-weight: 400;display:inline-block;box-sizing:border-box;background:#fff;padding:10px;color: #fff;width:280px;height:180px;margin:8px;text-rendering: optimizeLegibility}
+	.tile.purple{background: #5133AB}.tile .purple:hover{background:darken(#5133AB,10%)}		
+	.tile.red{background:#AC193D}.tile:hover{background:darken(#AC193D, 10%)}		
+	.tile.green{background: #00A600}.tile:hover{background: darken(#00A600, 10%)}		
+	.tile.blue{background:#2672EC}.tile:hover{background: darken(#2672EC, 10%)}	
+	.tile.orange{background:#DC572E}.tile.orange:hover{background:darken(#DC572E, 10%)}	
+	.tile.teal{background: #008299}
+	.tile:hover{background:darken(#008299, 10%)}	
+
+.glyphicon { margin-right:5px;}
+.rating .glyphicon {font-size: 22px;}
+.rating-num { margin-top:0px;font-size: 54px; }
+.progress { margin-bottom: 5px;height;16px}
+.progress-bar { text-align: left; }
+.rating-desc .col-md-3 {padding-right: 0px;}
+.sr-only { margin-left: 5px;overflow: visible;clip: auto; }
+
+.carousel-inner{height:120px}
+.carousel-inner .item, .carousel-inner .active {border: 1px solid rgba(192, 192, 192, 0.5);background-color: rgba(0,0,0,.15)}
+.carousel-indicators {position:absolute;bottom:36px;left:initial;z-index:15;width:100%;padding-left:0px;text-align:center;list-style:none}
+.carousel-indicators li {border-radius:0;margin-left: 160px;margin-right: -120px}
+</style>
+
+<nav class="mainmenu">
+	<div class="container">
+		<div class="dropdown">
+			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><a href="#head" class="active">home</a></li>
+				<li><a href="#about">features</a></li>				
+				<li><a href="#status">status</a></li>
+				<li><a href="#apps">apps</a></li>
+				<li><a href="#contact">contact</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<!-- Main (Home) section -->
+<section class="section" id="head">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
+
+				<!-- Site Title, your name, HELLO msg, etc. -->
+				<h1 class="title">Maestro!</h1>
+				<h2 class="subtitle">Modernizr, Bootstrap, jQuery & Font Awesome</h2>
+
+				<!-- Short introductory (optional) -->
+				<h3 class="tagline">
+					Maestro knows how and where to load API's providing maximum <a href="#">performance</a>.<br>
+					We have also mixed in Bootstrap upgrades as well as the <a href="#">nano-framework</a>.
+				</h3>
+				
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Light-234x60 -->
+				<ins class="adsbygoogle"
+				style="display:inline-block;width:234px;height:60px"
+				data-ad-client="ca-pub-7431399643348196"
+				data-ad-slot="9001649268"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				
+				<!-- Nice place to describe your site in a sentence or two -->
+				<div><a href="#" class="btn btn-default btn-lg">Get Started Now</a></div>
+	
+			</div> <!-- /col -->
+		</div> <!-- /row -->
+	
+	</div>
+</section>
+
+<!-- Second (About) section -->
+<section class="section" id="about">
+	<div class="container">
+	
+		<h2 class="text-center title">features</h2>
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-2">    
+				<h5><strong>Where's my lorem ipsum?<br></strong></h5>
+				<p>Well, here it is: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, ullam, ducimus, eaque, ex autem est dolore illo similique quasi unde sint rerum magnam quod amet iste dolorem ad laudantium molestias enim quibusdam inventore totam fugit eum iusto ratione alias deleniti suscipit modi quis nostrum veniam fugiat debitis officiis impedit ipsum natus ipsa. Doloremque, id, at, corporis, libero laborum architecto mollitia molestiae maxime aut deserunt sed perspiciatis quibusdam praesentium consectetur in sint impedit voluptates! Deleniti, sequi voluptate recusandae facere nostrum?</p>    
+			</div>
+			<div class="col-sm-4">
+				<h5><strong>More, more lipsum!<br></strong></h5>    
+				<p>Tempore, eos, voluptatem minus commodi error aut eaque neque consequuntur optio nesciunt quod quibusdam. Ipsum, voluptatibus, totam, modi perspiciatis repudiandae odio ad possimus molestias culpa optio eaque itaque dicta quod cupiditate reiciendis illo illum aspernatur ducimus praesentium quae porro alias repellat quasi cum fugiat accusamus molestiae exercitationem amet fugit sint eligendi omnis adipisci corrupti. Aspernatur.</p>    
+				<h5><strong>Author links<br></strong></h5>    
+				<p><a href="https://twitter.com/i2tmlabs">Twitter</a> / <a href="https://www.linkedin.com/company/i2tm-labs">LinkedIn</a> / <a href="https://www.facebook.com/i2tmlabs">Facebook</a></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- B&W Responsive 1 -->
+				<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-7431399643348196"
+					 data-ad-slot="5127707264"
+					 data-ad-format="auto"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>			
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Third (Apps) section -->
+<section class="section" id="apps">
+	<div class="container">
+	
+		<h2 class="text-center title">apps</h2>
+
+	
+		<h2 class="text-center title"><a href="#">Want your app here?</a></h2>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<img src="{ROOT}/apps/wsb-carolyn.jpg" width="100%" alt="" class="img-responsive">
+					<div class="caption easeinout">
+						<h3>Carolyn Donelson</h3>
+						<p>I love to help people just by teaching. Are you not where you want to be financially? I will teach you what you need to know so you can build your financial success.</p>
+						<p class="read-more"><a href="#" class="button">... Read More ...</a></p>
+						<a href="http://apps.i2tmlabs.com/wsb/home/" class="btn btn-default" role="button">Run</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<img src="{ROOT}/apps/i2tmlabs.jpg" width="100%" alt="" class="img-responsive">
+					<div class="caption easeinout">
+						<h3>i2tm Labs</h3>
+						<p>Of course the company is running the same framework we preach! Check it out.</p>
+						<p class="read-more"><a href="#" class="button">Read More</a></p>
+						<a href="http://apps.i2tmlabs.com/i2tm/home/" class="btn btn-default" role="button">Run</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				
+				<div class="feature03 " style="background-color:#cccccc;">
+					<img width="100%"  src="{ROOT}/apps/kuiperassult.jpg" alt="Kuiper Assult" title="Kuiper Assult">
+					<div class="caption easeinout">
+						<div class="blur"></div>
+						<div class="caption-text">
+							<h3 style="border-top:2px solid white; border-bottom:2px solid white">Kuiper Assult</h3>
+							<p> modern asteroids style game, but on steroids. Designed in beautiful full HD and with Maestro.</p>
+							<a href="#"><span class="glyphicon glyphicon-link glyphBig"></span></a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-sm-4">
+
+				<div class="feature03 " style="background-color:#cccccc;">
+					<img width="100%"  src="{ROOT}/apps/i2tmlabs.jpg" alt="i2tm Labs" title="i2tm Labs">
+					<div class="caption easeinout">
+						<div class="blur"></div>
+						<div class="caption-text">
+							<h3 style="border-top:2px solid white; border-bottom:2px solid white">i2tm Labs</h3>
+							<p>Of course the company is running the same framework we preach! Check it out.</p>
+							<a href="#"><span class="glyphicon glyphicon-link glyphBig"></span></a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+<!-- Fourth (Status) section -->
+<section class="section" id="status">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+
+				<div class="feature03 dropshadow2">
+				
+					<div class="project tips" data-tags="tips" style="position: absolute; left: 0px; top: 0px;">
+						<div class="tile purple horz lg container" data-gallery="">
+							<img src="{ROOT}/apps/wsb-carolyn.jpg" width="100%" alt="" class="img-responsive">
+							<div class="row">
+								<div class="col-xs-1 text-left"><i class="fa fa-thumbs-down fa-lg reflection"></i></div>
+								<div class="col-xs-1 text-left"><i class="fa fa-thumbs-up fa-lg reflection"></i></div>
+								<div class="col-xs-1 text-left"><span class="fa fa-fire fa-lg text fire reflection "></span></div>
+								<div class="col-xs-1 text-left"><span class="fa fa-cube fa-lg reflection"></span></div>
+								<div class="col-xs-7 text-right">
+									<h3 class="title reflection">TIP!&nbsp;<span class="fa fa-comment">&nbsp;</span></h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="container-fluid">
+										<div class="row-fluid">
+											<div class="col-xs-12">
+												<div class="row-fluid">
+												
+													<div id="user-ratings" class="carousel slide" data-ride="carousel" data-interval="3000" data-wrap="true">
+														<!-- Wrapper for slides -->
+														<div class="carousel-inner">
+															<div class="item active">
+																<h1 class="rating-num">4.0</h1>
+																<div class="rating">
+																	<span class="glyphicon glyphicon-star"></span>
+																	<span class="glyphicon glyphicon-star"></span>
+																	<span class="glyphicon glyphicon-star"></span>
+																	<span class="glyphicon glyphicon-star"></span>
+																	<span class="glyphicon glyphicon-star-empty"></span>																</div>
+																<div>
+																	<span class="glyphicon glyphicon-user"></span>1,050,008 total
+																</div>
+															</div>
+															
+															<div class="item">
+																<div class="row-fluid rating-desc">
+																	<div class="col-xs-4 text-right">
+																		<span class="glyphicon glyphicon-star"></span>5
+																	</div>
+																	<div class="col-xs-8">
+																		<div class="progress progress-striped">
+																			<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+																				aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+																				<span class="sr-only">80%</span>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- end 5 -->
+																	<div class="col-xs-4 text-right">
+																		<span class="glyphicon glyphicon-star"></span>4
+																	</div>
+																	<div class="col-xs-8">
+																		<div class="progress">
+																			<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+																				aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+																				<span class="sr-only">60%</span>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- end 4 -->
+																	<div class="col-xs-4 text-right">
+																		<span class="glyphicon glyphicon-star"></span>3
+																	</div>
+																	<div class="col-xs-8">
+																		<div class="progress">
+																			<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+																				aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+																				<span class="sr-only">40%</span>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- end 3 -->
+																	<div class="col-xs-4 text-right">
+																		<span class="glyphicon glyphicon-star"></span>2
+																	</div>
+																	<div class="col-xs-8">
+																		<div class="progress">
+																			<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20"
+																				aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+																				<span class="sr-only">20%</span>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- end 2 -->
+																	<div class="col-xs-4 text-right">
+																		<span class="glyphicon glyphicon-star"></span>1
+																	</div>
+																	<div class="col-xs-8">
+																		<div class="progress">
+																			<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+																				aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+																				<span class="sr-only">15%</span>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- end 1 -->
+																</div>
+															</div>
+															
+														</div>
+													</div>												
+																								
+												</div>
+											</div>
+										</div>
+									</div>															
+								</div>
+							</div>
+						</div>					
+					</div>
+					
+					<div class="caption easeinout">
+						<div class="blur"></div>
+						<div class="caption-text">
+							<div class="info">
+								<h3 style="border-top:2px solid white; border-bottom:2px solid white">Carolyn Donelson</h3>
+								<h4>WSB</h4>
+								<p>I love to help people just by teaching. Are you not where you want to be financially? I will teach you what you need to know so you can build your financial success.</p>
+							</div>
+							<div class="links">
+								<button onclick="M$.click('/donelson/');"><span class="fa fa-link fa-4"></span></button>
+								<button onclick="M$.click('/donelson/wfg/applets/applet.main.html','status');"><span class="fa fa-youtube-play fa-4"></span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!-- Five (Contact) section -->
+<section class="section" id="contact">
+	<div class="container">
+	
+		<h2 class="text-center title">Get in touch</h2>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<div class="lead">Have a question? Want to be a Maestro publisher?</div>
+				<div>Feel free to drop us an email, or drop us a line in Twitter!</div>
+				<br><br>
+				<a href="mailto:andrew@donelson.net"><img src='{ROOT}img/email.png' alt="email" class="img-responsive" style="margin:0 auto"/></a>
+				<ul class="list-inline list-social">
+					<li><a href="https://twitter.com/i2tmlabs" class="btn btn-link"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
+					<li><a href="https://facebook/i2tmlabs" class="btn btn-link"><i class="fa fa-facebook fa-fw"></i> Facebook</a></li>
+					<li><a href="https://www.linkedin.com/company/i2tm-labs" class="btn btn-link"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Splash (app loader) -->
+				<ins class="adsbygoogle"
+					 style="display:inline-block;width:300px;height:250px"
+					 data-ad-client="ca-pub-7431399643348196"
+					 data-ad-slot="8726107669"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>			
+			</div>
+		</div>
+		
+
+	</div>
+</section>
+<script>
+try{
+	M$['applet.main']={
+		onLoaded:function(){dbg('Applet onLoaded() event called.')},
+		onUnloaded:function(){dbg('Applet onUnloaded() event called.')}
+	};
+	
+$('.carousel').carousel();
+} catch(e){
+	dbg('Applet Error: '+e.message);
+}
+</script>
+</ins>

@@ -1,0 +1,28 @@
+/**
++-----------------------------------------------------------+
+| File:		i2tm.h5c3.default.css							|
+| Version:	0.0.1											|
+| Author: Andrew Donelson	andrew@i2tmlabs.com				|
+| H5C3 Framework - (c) 2013 <i2tm Labs http://i2tmlabs.com>	|
+| 															|
+| This is the development version, Combine all and minimize	|
+| into i2tm.h5c3.min.css for production.					|
+|															|
+| Note: This is layout and skin independant, you must still |
+| load a lauout and skin.									|
++-----------------------------------------------------------+
+*/
+@charset 'UTF-8';
+@import url('h5c3.effects.css');
+@import url('starfield.css');
+@import url('i2tm.css');
+@import url('h5c3.css');
+@import url('i2tm.socialbar.css');
+
+.fade-out {
+	-webkit-transition: all 4s ease-out 0s;
+	-moz-transition: all 4s ease-out 0s;
+	-ms-transition: all 4s ease-out 0s;
+	-o-transition: all 4s ease-out 0s;
+	transition: all 4s ease-out 0s;
+}

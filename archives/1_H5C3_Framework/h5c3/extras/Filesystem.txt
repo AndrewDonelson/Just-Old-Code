@@ -1,0 +1,95 @@
+/**	+-----------------------------------------------------------+
+	| File:		Filesystem.txt									|
+	| Version:	0.0.1											|
+	| Author: Andrew Donelson	andrew@i2tmlabs.com				|
+	| H5C3 Framework - (c) 2013 <i2tm Labs http://i2tmlabs.com>	|
+	+-----------------------------------------------------------+*/
+/*
+Keyword: Filesystem
+
+See Also:
+	<Accounts>
+
+
+(start code)
+${DEVPATH}\GitHUB\com.I2TMLabs.h5c3.development\com\i2tm\app>
+08/24/2013  01:09 AM    <DIR>          .
+08/24/2013  01:09 AM    <DIR>          ..
+08/23/2013  06:16 AM    <DIR>          builder
+08/24/2013  01:09 AM    <DIR>          common
+08/23/2013  06:16 AM    <DIR>          compiler
+08/23/2013  06:16 AM    <DIR>          debugger
+08/23/2013  06:16 AM    <DIR>          launcher
+08/23/2013  06:16 AM    <DIR>          template
+               0 File(s)              0 bytes
+               8 Dir(s)  212,587,524,096 bytes free
+(end)
+
+The above filesystem is my actual development structure. H5C3 Framework is deigned for the Cloud right from the start, nothing is installed; so
+all CloudApps and resources will be on the i2tmlabs.com servers. You can still run the CloudApps and RRWD from you domains, it is seamless like 
+Google adSense or Analytics.
+
+However, lets say your name John Smith and your own "The Best Software Publisher, Inc." and sign up for the H5C3 Framework Developer account. You
+WILL be making money off your hard work, but at the moment you are not. You are just learning and developing. 
+
+(start code)
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:08 ./			
+drrrr-rr-r 1 someguy someguy 4096 Aug 23 23:04 ../
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:07 biz/		For Profit Business
+drrrr-rr-r 1 someguy someguy 4096 Aug 23 07:42 com/		For Profit Business
+drrrr-rr-r 1 someguy someguy 4096 Aug 23 07:49 dev/		For Developers Only
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:07 gov/		Governemnt
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:08 me/		Personal Non-Commercial
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:07 org/		Organizations Non-Profit
+(end)
+
+When you are ready you submit the 
+fruits of your labor and apply for a Business Account and you request it under BIZ.
+
+(start code)
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:08 ./			
+drrrr-rr-r 1 someguy someguy 4096 Aug 23 23:04 ../
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:07 biz/		For Profit Business
+(end)
+
+Well her you go Mr. Tablespoon, Your Commercial account file structure. The dev folder is internal to you and your developers.
+The live folder is Puclic access, wha you currently have online.
+
+(start code)
+/h5c3/apps/biz/TBSP
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:22 ./
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:19 ../
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:22 dev/		Your Sandbox
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:22 live/	Public Access
+(end)
+
+Welcome to your CloudApps folder. It could look simular to the one below.
+
+(start code)
+/h5c3/apps/biz/TBSP/live/apps
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:28 ./
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:26 ../
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:27 Footbook/		You various CloudApps
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:28 LinkedOut/		That are making you
+drrrr-rr-r 1 someguy someguy 4096 Aug 24 14:28 Qoqqle-/			Zillions of $$$
+(end)
+
+Below you will find your directory structure for your Qoqqle- CloudApp. This was cis created for you automatically for the
+H5C3 Builder UI. Pull it, Add it to your respository - your ready to develop. You can develop locally, but need internet 
+an internet connect for access to the H5C3 Framework (Which is *NOT* authorized off i2tmlabs.com). 
+Plugins and other resources are fine to pull to your local file system.
+
+(start code)
+/h5c3/apps/biz/TBSP/live/apps/Qoqqle-
+drrrr-rr-r 1 someguy someguy  4096 Aug 23 07:42 ./
+drrrr-rr-r 1 someguy someguy  4096 Aug 23 07:42 ../
+drrrr-rr-r 1 someguy someguy    35 Aug 23 07:42 README.md		GitHUB main repository page (if you use GitHUB)
+drrrr-rr-r 1 someguy someguy  4096 Aug 23 07:42 css/			All your stylesheets that are solely for this app
+drrrr-rr-r 1 someguy someguy  8237 Aug 23 07:42 debug.html		Your debug HTML file, its just easier
+drrrr-rr-r 1 someguy someguy  4096 Aug 23 07:43 img/			All your graphic files that are solely for this app
+drrrr-rr-r 1 someguy someguy  8239 Aug 23 07:42 index.html		Your Production HTML file, No debugging support, leaner, meaner.
+drrrr-rr-r 1 someguy someguy  4096 Aug 23 07:42 js/				All your javascript files that are solely for this app
+drrrr-rr-r 1 someguy someguy  4096 Aug 23 07:42 snd/			All your Sound files that are solely for this app
+(end)
+
+ */

@@ -1,0 +1,100 @@
+<div 
+	data-role="applet" 
+	data-name="devzone-welcome" 
+	data-version="0.1.0" 
+	data-uuid="a3171e24-f7cf-4419-a956-e4b2ab9b0f98"
+	data-author="Andrew Donelson" 
+	data-copyright="2013 by i2tm Labs - All rights reserved."
+	data-scale="1" 
+/>
+
+<!-- This style must remain as it is. you can add css content and it will be injected into the head. -->
+<style data-role="applet" data-type="style"></style>
+
+<!-- 
+	This script must remain as it is. you can add javascript content and it will be injected into the head. 
+	If you need multiple scripts/styles it is ok, and you can leave the data attributes out but its better
+	to let the engine hanldle them.
+-->
+<script data-role="applet" data-type="script"></script>
+
+<!-- Add you HTML content to this div -->
+<div id="devzone-welcome" data-role="applet" data-type="content">
+<div class="r2wl-content">
+	<div class="r2wl-wrapper">
+		<div class="r2wl-wbox">
+			<div class="box warning" style="text-align:center">
+				<h2 style="color:red">Please keep in mind that this site is in ACTIVE development!</h2>
+				<p>Content can change, move or vanish all together between clicks :) ... and Most likely will. But feel free to poke around.</p>
+			</div>
+			<section class="box clr-dark">
+				<div class="r2wl-grid linearL1">
+					<div class="r2wl-g66 r2wl-gl">
+						<div class="r2wl-grid linearL2">
+							<article class="r2wl-g50 r2wl-gl">
+								<div class="r2wl-gbox-left">
+									<H2>Current Changes</H2>
+									<ul>
+										<li>Updated version to 0.9.9 (<i>Not officially released</i>)</li>
+										<li>Added new SDAL $GQS($dataName,$dataValue) . Its a Shortcut to document.querySelector, but allows you to also give Name and Value to select</li>
+										<li>added objToString() method to String.prototype for converting objects into strings (single or multiple line)</li>
+										<li>added pad() to String.prototype for padding strings to a given length</li>
+										<li>Upgraded Google Integration to detect when google API does not load/or is super slow and get it online automatically</li>
+										<li>Added h5c3.BUILT constant. This tells you the last time this current Engine was built.</li>
+										<li>Updated Brand Class to display new BUILT feature</li>
+										<li>devZONE: created applets Terms of Service, Privacy Policy and added under development to welcome page top</li>
+										<li>devZONE: created You are Running applet for branding</li>
+										<li>devZONE: added Social Applet</li>
+										<li>devZONE: Completed Welcome page with new Up to date info</li>
+										<li>devZONE: Completed Introduction-> About H5C3</li>
+										<li>Major structure changes to R2WL Layer to support changes to layout & styling</li>
+										<li>Added LocalStorage class which handles H5C3 Global options & Files along with Options and Files for individual Applications</li>
+										<li>Completed Layout class. Now supports full Absolute layout dynamically. Will also dynamically handle sidebars based on device window size.</li>
+									</ul>
+								</div>
+							</article>
+							<article class="r2wl-g50 r2wl-gr">
+								<div class="r2wl-gbox">
+									<H2>Current Known Issues</H2>
+									<ul>
+										<li><strong>#17</strong> AppletFactory::parse fails on header when there is a Comment or anything before it.</li>
+										<li><strong>#18</strong> Applet inside an applet is loaded and validated but not embeded. Fix it.</li>
+										<li><strong>#19</strong> I Broke Google Integration LOL...I'll Fix it later.</li>
+									</ul>
+								</div>
+							</article>
+						</div>
+
+					</div>
+					<article class="r2wl-g33 r2wl-gr">
+						<div class="r2wl-gbox-right secondary">
+							<H2>To-Do List</H2>
+							<span style="padding:0.25em;">LEGEND:
+							<i class="icon icon-ok" style="padding-right:0.25em; color:green" />Complete
+							<i class="icon icon-gears" style="padding-right:0.25em; color:yellow" />In Progress
+							<i class="icon icon-time" style="padding-right:0.25em; color:orange" />Pending
+							<i class="icon icon-remove" style="padding-right:0.25em; color:red" />Not Active
+							</span>
+							<ul>
+								<li><i class="icon icon-time" style="padding-right:0.25em; color:orange" /> - Get the basics of devZONE Live</li>
+								<li><i class="icon icon-time" style="padding-right:0.25em; color:orange" /> - Get all content under "Information" Live</li>
+								<li><i class="icon icon-time" style="padding-right:0.25em; color:orange" /> - Update Applet Compiler and make Live</li>
+								<li><i class="icon icon-time" style="padding-right:0.25em; color:orange" /> - Update the IDE and make Live</li>
+								<li><i class="icon icon-time" style="padding-right:0.25em; color:orange" /> - Update "My Page Builder" and makeLive</li>
+								<li><i class="icon icon-gears" style="color:yellow" /> - Change "Contact Us" Applet until Isuue #18 is fixed and make Live</li>
+								<li><i class="icon icon-ok" style="color:green" /> - Fix the Margin/Padding issue I introduced and cannot find!</li>
+								<li><i class="icon icon-ok" style="padding-right:0.25em; color:green" /> - Create local file storage class</li>
+								<li><i class="icon icon-gears" style="padding-right:0.25em; color:yellow" /> - Create "Window" template for Applets</li>
+								<li><i class="icon icon-time" style="padding-right:0.25em; color:orange" /> - Implement Drag & Drop with Memory</li>
+								<li><i class="icon icon-remove" style="padding-right:0.25em; color:red" /><strong>Issue #17</strong> AppletFactory::parse fails...</li>
+								<li><i class="icon icon-remove" style="padding-right:0.25em; color:red" /><strong>Issue #18</strong> Applet inside an applet...</li>
+								<li><i class="icon icon-remove" style="padding-right:0.25em; color:red" /><strong>Issue #19</strong> I Broke Google Integration...</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</section>			
+			<!-- <div data-applet="google-728x90"></div> -->
+		</div>
+	</div>
+</div><!-- r2wl-content -->

@@ -1,0 +1,121 @@
+<div 
+	data-role="applet" 
+	data-name="menu-slide-left" 
+	data-version="0.1.1" 
+	data-uuid="be131fe7-3cfd-4ee9-9876-eb18fb9ac563"
+	data-author="Andrew Donelson" 
+	data-copyright="2013 by i2tm Labs - All rights reserved."
+	data-scale="1" 
+/>
+
+<!-- BEGIN i2tm labs MAINMENU -->
+<style data-role="applet" data-type="style">
+@charset 'UTF-8';
+
+
+/*! DO NOT ALTER FROM HERE */
+#MAINMENU {
+	font-family: Arial;
+	poistion:relative;
+	text-align: left;
+	display: inline-block;
+	border-radius: 0em 0em 2em 0em;
+	line-height: normal;
+	box-shadow: inset 0px 0px 1px 1px gray;
+	margin: 1em .25em 1em 0em;
+	max-width:15.9em;
+	width:100%;	
+} 
+#MAINMENU a  { text-decoration: none;}	
+
+#MAINMENU .titleBar { height: 2.0em !important;
+	font-family: Neuropol;
+    text-shadow: 0px 1px 1px #4d4d4d;
+    color: rgba(0,0,0, 0.95);
+}
+	#MAINMENU .icon-align-justify { font-weight: 200; font-size: 2em; float: right; padding: 0.2em 0.3em 0em 0em;}
+	#MAINMENU .icon-align-justify a:hover { color: initial; font-size:2.2em }
+	#MAINMENU a [class*=" icon-"] {	 color: initial; }
+	#MAINMENU span { font-weight: 900; font-size: 1.6em; float: left;padding-top:0.35em;padding-left:.5em}
+
+#MAINMENU .menuItems { text-align: left; height: auto; float:left; margin:0.35em 0.35em 0.35em 0.35em;width:90%;}
+	#MAINMENU .menuItem {}
+	#MAINMENU .subMenu {margin-top:0.25em;margin-bottom:0.50em;}	
+	#MAINMENU .iconSkin1 {font-weight: 100; font-size: 1.7em; float: left; padding: .0em 0.6em 0em 0.6em; border-radius: 2em 0em 2em 0em; box-shadow: inset 0px 0px 8px -1px #666;}
+		#MAINMENU  .icon-caret-right { display:block;float:right; }
+
+#MAINMENU ul, ol {
+	margin-bottom: 1em;
+	line-height: 1.5em;
+	width:100%;
+	list-style: none;
+	padding-left:0.5em;
+}
+#MAINMENU ul li { margin-bottom: 0.2em; }
+#MAINMENU ul li li { margin-bottom: 0.3em; }
+#MAINMENU ul li li li { margin-bottom: 0.4em; }
+#MAINMENU ul li li li li { margin-bottom: 0.5em; }
+
+/*! TO HERE - Now you can choose a skin or create your own */
+#MAINMENU.normal { background: rgba(255, 255, 255, 0.85); color: rgba(60, 100, 190, 0.85); }
+#MAINMENU.light { background: rgba(235, 235, 235, 0.85); color: rgba(180, 180, 180, 0.85); }
+#MAINMENU.dark { background: rgba(20, 20, 20, 0.85); color: rgba(100, 100, 100, 0.85); }
+#MAINMENU.desert { background: rgba(255, 245, 235, 0.85); color: rgba(220, 190, 140, 0.85); }
+#MAINMENU.ladies { background: rgba(250, 210, 250, 0.85); color: rgba(145, 25, 45, 0.85); }
+#MAINMENU.i2tm { background: rgba(0, 0, 0, 0.85); color: rgba(0, 200, 0, 0.85); }
+</style>
+
+<script data-role="applet" data-type="script"></script>
+
+<div id="MAINMENU" class="clr-dark" data-role="applet" data-type="content">
+	<div class="titleBar">
+		<span>MENU</span><a href="#" alt=""><i class="icon icon-align-justify"></i></a><br />
+	</div>
+	<!-- Change the below links [href] only! to your respective urls -->
+	<div class="menuItems">
+		<ul id="NAVLIST">
+			<li><div class="menuItem"><a href="#applet.i2tm-about" alt="Welcome">Welcome</a></div></li>
+			<li><div class="menuItem"><a href="#applet.h5c3-introduction" alt="Introduction">Introduction</a><i class="icon-caret-right"></i></div></li>
+				<ul data-menu="sub" data-autohide="true" data-link="javascript:h5c3.menu.toggle();" class="off">
+					<li><div class="menuItem"><a href="#" alt="R2WL">What is R2WL?</a></div></li>
+					<li><div class="menuItem"><a href="#" alt="Embeded">What's Embeded?</a></div></li>
+					<li><div class="menuItem"><a href="#" alt="Plugins">Plugins</a><i class="icon-caret-right right"></i></div></li>
+						<div data-menu="sub" data-autohide="true" data-link="javascript:h5c3.menu.toggle();" class="off">
+							<ul>
+							<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+							<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+							<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+							<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+							<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+							</ul>
+						</div>
+					</ul>
+			<li><div class="menuItem"><a href="#applet.i2tm-compiler" alt="Compiler">Applet Compiler</a></div></li>
+			<li><div class="menuItem"><a href="#applet.i2tm-mypagebuilder" alt="Page Builder">Page Builder</a></div></li>
+			<li><div class="menuItem"><a href="#" alt="Sub Menu">Sub Menu</a><i class="icon-caret-right"></i></div></li>
+				<ul data-menu="sub" data-autohide="true" data-link="javascript:h5c3.menu.toggle();" class="off">
+					<li><div class="menuItem"><a href="#" alt="Sub Menu">Sub Menu</a><i class="icon-caret-right"></i></div></li>
+						<ul data-menu="sub" data-autohide="true" data-link="javascript:h5c3.menu.toggle();" class="off">
+							<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+							<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+							<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+						</ul>
+					<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+					<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+					<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+				</ul>
+			<li><div class="menuItem"><a href="#" alt="Sub Menu">Sub Menu</a><i class="icon-caret-right"></i></div></li>
+				<ul  data-menu="sub" data-autohide="true" data-link="javascript:h5c3.menu.toggle();" class="off">
+					<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+					<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+					<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+					<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+					<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+				</ul>
+			<li><div class="menuItem"><a href="#applet.leds-example" alt="LEDs">LED's</a></div></li>
+			<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+			<li><div class="menuItem"><a href="#" alt="Menu Option">Menu Option</a></div></li>
+		</ul>
+	</div>
+</div>
+<!-- END i2tm labs MAINMENU -->

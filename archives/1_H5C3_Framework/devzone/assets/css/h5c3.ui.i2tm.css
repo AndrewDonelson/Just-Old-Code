@@ -1,0 +1,313 @@
+/*********************************************************************************
+ Basic    
+ Bright:	#00FF00		hover, border, anywhere to brink attention		
+ Light:		#C2FFC2		primary foreground color (text, ect)
+ Medium: 	#34AA34	 	herder, sub herder, link foreground
+ Dark:		#001000		primary background color
+*********************************************************************************/
+.bgBright { background-color: #00ff00;}	.fgBright { color: #00ff00; }
+.bgLight { background-color: #c2ffc2;}	.fgLight { color: #c2ffc2; }
+.bgMedium { background-color: #34aa34;}	.fgMedium { color: #34aa34; }
+.bgDark { background-color: #001000; }	.fgdark { color: #001000; }
+
+/* Basic Theme FG/BG color Skins */
+.clr-light { background: rgba(235, 235, 235, 0.85); color: rgba(180, 180, 180, 0.85); }
+.clr-normal { background: rgba(30, 30, 30, 0.90); color: rgba(90, 90, 90, 1); }
+.clr-dark { background: rgba(10, 10, 10, 0.85); color: rgba(120, 165, 120, 1); }
+
+
+/** MOVE THIS INTO MAIN **/ 
+.windowScale1 {transform: scale(0.25,0.25);-ms-transform: scale(0.25,0.25);-webkit-transform: scale(0.25,0.25);}
+.windowScale2 {transform: scale(0.5,0.5);-ms-transform: scale(0.5,0.5);-webkit-transform: scale(0.5,0.5);}
+.windowScale3 {transform: scale(0.75,0.75);-ms-transform: scale(0.75,0.75);-webkit-transform: scale(0.75,0.75);}
+.windowScale4 {transform: scale(1,1);-ms-transform: scale(1,1);-webkit-transform: scale(1,1);}
+.windowScale5 {transform: scale(1.25,1.25);-ms-transform: scale(1.25,1.25);-webkit-transform: scale(1.25,1.25);}
+.windowScale6 {transform: scale(1.5,1.5);-ms-transform: scale(1.5,1.5);-webkit-transform: scale(1.5,1.5);}
+.windowScale7 {transform: scale(1.75,1.75);-ms-transform: scale(1.75,1.75);-webkit-transform: scale(1.75,1.75);}
+
+div .defaultBox {
+	position:relative;
+	text-align: left;
+	display: block;
+	line-height: normal;
+	margin: 0em;
+	padding: 0em;	
+	text-shadow: 0px 1px 1px black;
+	  -moz-box-shadow:    3px 3px 5px 6px #000,inset 0px 0px 1px 1px #090;
+	  -webkit-box-shadow: 3px 3px 5px 6px #000,inset 0px 0px 1px 1px #090;
+	  box-shadow:         3px 3px 5px 6px #000,inset 0px 0px 1px 1px #090;
+}
+.defaultBox.left 	{ border-radius: 0em 2em 0em 2em; }
+.defaultBox.right  { border-radius: 2em 0em 2em 0em; }
+.defaultBox.top  	{ border-radius: 2em 2em 0em 0em; }
+.defaultBox.bottom { border-radius: 0em 0em 2em 2em; }
+.defaultBox.all 	{ border-radius: 2em 2em 2em 2em; }
+.defaultBox.pad 	{ padding:1.5em; }
+
+form label {
+	display: block;
+	font-size: 1.15em;
+	font-weight: 800;
+	padding-bottom: 0.8em;
+}
+
+/* Move this max dimensions to base.css*/
+form input:not([type]), 
+form input[type="reset"], 
+form input[type="color"], 
+form input[type="email"], 
+form input[type="number"], 
+form input[type="range"], 
+form input[type="search"], 
+form input[type="datetime-local"], 
+form input[type="submit"], 
+form input[type="button"], 
+form input[type="file"], 
+form input[type="text"], 
+form input[type="tel"], 
+form input[type="time"], 
+form input[type="week"], 
+form input[type="month"], 
+form input[type="password"] {
+	max-width: 12em;
+}
+
+form input,
+form input:not([type]), 
+form input[type="reset"], 
+form input[type="color"], 
+form input[type="email"], 
+form input[type="number"], 
+form input[type="range"], 
+form input[type="search"], 
+form input[type="datetime-local"], 
+form input[type="submit"], 
+form input[type="button"], 
+form input[type="file"], 
+form input[type="text"], 
+form input[type="url"], 
+form input[type="tel"], 
+form input[type="time"], 
+form input[type="week"], 
+form input[type="month"], 
+form input[type="password"],
+form input.text,
+form select,
+form textarea {
+	-webkit-appearance: none;
+	display: block;
+	border: 0;
+	outline-color: transparent;
+	background: #1F2f1f;/*medium*/
+	box-shadow: inset 0px 0px 1px 0px #001000;/*dark*/
+	border-radius: 0.35em;
+	width: 100%;
+	padding: 0.5em 0.4em 0.5em 0.4em;
+	-moz-transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+
+form input:hover,
+form input:not([type]):hover, 
+form input[type="reset"]:hover, 
+form input[type="color"]:hover, 
+form input[type="email"]:hover, 
+form input[type="number"]:hover, 
+form input[type="range"]:hover, 
+form input[type="search"]:hover, 
+form input[type="datetime-local"]:hover, 
+form input[type="submit"]:hover, 
+form input[type="file"]:hover, 
+form input[type="button"]:hover, 
+form input[type="text"]:hover, 
+form input[type="url"]:hover, 
+form input[type="tel"]:hover, 
+form input[type="time"]:hover, 
+form input[type="week"]:hover, 
+form input[type="month"]:hover, 
+form input[type="password"]:hover,
+form input.text:hover,
+form select:hover,
+form textarea:hover {
+	background: #3F4f3f;/*Bright*/
+}
+
+form input:focus,
+form input:not([type]):focus, 
+form input[type="reset"]:focus, 
+form input[type="color"]:focus, 
+form input[type="email"]:focus, 
+form input[type="number"]:focus, 
+form input[type="range"]:focus, 
+form input[type="search"]:focus, 
+form input[type="datetime-local"]:focus, 
+form input[type="submit"]:focus, 
+form input[type="file"]:focus, 
+form input[type="button"]:focus, 
+form input[type="text"]:focus, 
+form input[type="url"]:focus, 
+form input[type="tel"]:focus, 
+form input[type="time"]:focus, 
+form input[type="week"]:focus, 
+form input[type="month"]:focus, 
+form input[type="password"]:focus,
+form input.text:focus,
+form select:focus,
+form textarea:focus {
+	background: #6F8f6f;/*medium*/
+}
+		
+form textarea {
+	min-height: 10em;
+}
+
+form .formerize-placeholder { color: black !important; font-style: italic; }
+form ::-webkit-input-placeholder { color: black !important; font-style: italic; }
+form :-moz-placeholder { color: black !important; font-style: italic; }
+form ::-moz-placeholder { color: black !important; font-style: italic; }
+form :-ms-input-placeholder { color: black !important; font-style: italic; }
+form ::-moz-focus-inner { border: 0; }
+
+.titleBar {
+	font-family: neuropol;
+	color: rgba(90,90,90, 0.95);
+	letter-spacing: 0.4em;
+	font-size: 1.0em;
+	text-shadow: 0px 1px 1px black;
+	text-transform: uppercase;
+	border: 1px solid #1F2f1f;
+	height: 1.5em;
+}
+.draggable {
+	cursor:move;
+}
+.dragging {
+	background-color: rgba(10,90,10, 0.75);
+}
+
+.uiButton {
+	cursor: pointer;
+	text-shadow: 0px 1px 1px black;
+	font-size: 1em;
+	letter-spacing: 0.20em;
+	display: inline-block;
+	padding: .4em;
+}
+.uiButton:hover {
+	box-shadow: inset 0px 0px 8px -1px #666;
+}
+
+.green {
+	font-family: neuropol;
+	opacity: 0.95;
+	color: #00ff00;
+	background-color: black;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	background-clip: padding-box;
+	-webkit-box-shadow: 0px 0px 32px 2px #006000;
+	box-shadow: 0px 0px 16px 2px #006000;
+	padding: 0em .35em 0em .35em;
+}
+
+/*
+ * H5C3 Standard UI Properties
+ */
+#DESKTOP { background: #030303;	}
+	#DESKTOP a {}
+	#DESKTOP a:active {}
+	#DESKTOP a:hover {}
+	#DESKTOP a:visited {}
+
+	
+#uiAppName {
+	padding-left:2.5em;
+	line-height: normal;
+	margin: 0em;
+}
+
+#uiPageTitle {
+	padding-left: 2.5em;
+	line-height: normal;
+	margin: 0em;
+}
+
+#mobileMenu {
+	position:relative;
+	font-family: neuropol;
+	text-align: left;
+	display: inline-block;
+	line-height: normal;
+	border-radius: 0em 0em 2em 0em;
+	box-shadow: inset 0px 0px 1px 1px gray;
+	margin: 1em .25em 1em 0em;
+	max-width:15.9em;
+	width:100%;	
+} 
+
+#mainMenu { font-size: 1.2em; z-index:100;margin-top:1em;text-decoration: none; width: 100%; }
+	#mainMenu .navMobile, .icon-reorder { font-weight: 200; float: left; padding: .5em 1em .5em 1em;}
+	#mainMenu .icon-reorder a:hover { color: initial; }
+	#mainMenu a [class*=" icon-"] {	 color: initial; }
+	#mainMenu span { font-weight: 900; font-size: 1.5em;float:left;padding-left:.5em;}
+	
+	#mainMenu ul { margin-top: 16px;}
+	ul.topMenu { }
+	ul div { font-size: 1.25em; padding: 0.5em; text-transform: uppercase;}
+	#mainMenu li { list-style: none; margin:0em;}
+	ul.topMenu li {}
+	#mainMenu a { cursor: pointer; display:block; height:25px; line-height: 25px; text-indent: 10px; text-decoration:none; }
+	#mainMenu a:hover{ opacity:0.5;background-color:inherit;}
+	#mainMenu li:hover { position: relative; }
+	ul.subMenu { display: none; }
+	li:hover .subMenu { display: block; position: absolute;	left: 75px;	top: 5px; z-index:100; }
+	ul.subMenu li { border: none; float:left; width:12.5em; }
+	#mainMenu .subMenu {width:12.5em}
+	#mainMenu .subMenu .subMenu {width:12.5em}
+	#mainMenu .subMenu .subMenu .subMenu {width:12.5em}
+	
+	li:hover .subMenu .subMenu { display:none; }
+	.subMenu li:hover .subMenu { display:block; }	
+	
+
+/**
+ * Default UI Window
+ * Minimum size is 320x240
+ */
+.r2wl_window {
+	position:relative;
+	min-height:17.14em;
+	min-width:22.85em;
+	margin: 1em;
+	padding:1px;
+	text-shadow: 0px 1px 1px black;
+	  -moz-box-shadow:    3px 3px 5px 6px #000,inset 0px 0px 1px 1px #090;
+	  -webkit-box-shadow: 3px 3px 5px 6px #000,inset 0px 0px 1px 1px #090;
+	  box-shadow:         3px 3px 5px 6px #000,inset 0px 0px 1px 1px #090;
+}
+	
+	.r2wl_window .r2wl_titleBar {height:1.5em;padding:.25em 1em .25em 1em;margin:0;background-color: rgba(34, 34, 34, 0.25);}
+		.r2wl_titlebar.title {}
+		.r2wl_titlebar.icons {}
+	
+	.r2wl_window .r2wl_body {
+		position: absolute;
+		background-color: rgba(64, 64, 64, 0.25);
+		padding: .25em;
+		bottom: 1.6em;
+		right: 1px;
+		left: 1px;
+		top: 2.2em;
+	}
+	.r2wl_window .r2wl_statusBar {
+		position: absolute;
+		background-color: rgba(34, 34, 34, 0.25);
+		height: 1em;
+		padding: .25em 1em .25em 1em;
+		bottom: 1px;
+		right: 1px;
+		left: 1px;
+	}

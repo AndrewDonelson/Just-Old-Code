@@ -1,0 +1,59 @@
+<!-- H5C3 Loading Page (Pre-Cache) -->
+<!doctype html>
+<html>
+	<head>
+		<title>Loading</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="http://h5c3.i2tmlabs.com/css/ext/jquery-ui.css" />
+		<link rel="stylesheet" href="http://h5c3.i2tmlabs.com/css/ext/animate.min.css" type="text/css" title="Style" />
+		<link rel="stylesheet" href="http://h5c3.i2tmlabs.com/css/ext/animate.min.css" type="text/css" title="Style" />
+		<link rel="stylesheet" href="../css/i2tm.skin.dark.css" type="text/css" title="Style" />
+		<style>
+			* {font-size: 12px; padding: 0px;margin: 0px;line-height: 100%;outline: none;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}html , body{border: 0px;width: 100%;height: 100%;}#background {position: fixed;width: 100%;height: 100%;background: url(../img/H5C3.portal.door.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+			.ui-dialog {position: absolute;	top: 0;	left: 0;padding: .2em;outline: 0;background: #333;}
+			.ui-dialog .ui-dialog-titlebar {padding: .2em 1em;position: relative;background: #3a3;}
+			.ui-dialog .ui-dialog-title {float: left;margin: .1em 0;white-space: nowrap;width: 90%;	overflow: hidden;text-overflow: ellipsis;}
+			.ui-dialog .ui-dialog-titlebar-close {position: absolute; right: .3em;top: 50%;	width: 21px;margin: -10px 0 0 0;padding: 1px;height: 20px;}
+			.ui-dialog .ui-dialog-content {	position: relative;	border: 0;	padding: .5em 1em;	background: none;overflow: auto;color: #9d9;}
+			.ui-dialog .ui-dialog-buttonpane {text-align: left;	border-width: 1px 0 0 0;background-image: none;	margin-top: .5em;padding: .3em 1em .5em .4em;background: #333;}
+			.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {	float: right;}
+			.ui-dialog .ui-dialog-buttonpane button {margin: .5em .4em .5em 0;cursor: pointer;}
+			.ui-dialog .ui-resizable-se {width: 12px;height: 12px;right: -5px;bottom: -5px;background-position: 16px 16px;}
+			.ui-draggable .ui-dialog-titlebar {	cursor: move;}
+		</style>
+		<script src="http://h5c3.i2tmlabs.com/js/jquery-1.10.2.release.js" title="jQuery" ></script>
+		<script src="http://h5c3.i2tmlabs.com/js/jquery-ui.js"></script>
+	</head>
+    <body>
+		<div id="background">
+			<div id="dialog-confirm" title="Access with terms">
+			  <p>The i2tm Labs H5C3 Framework is currently in a live testing / pre-release state.</p>
+			  <p>You are welcome to enter, browse, learn and play with what is currently online. We would appreciate email with any issues you may come across.</p>
+			  <p>Please keep in mind that even though there is no charge for using or developing with the our framework the code is NOT authorized off our servers.</p>
+			</div>
+			<script>
+			  $(function() {
+				$( "#dialog-confirm" ).dialog({
+				  resizable: false,
+				  height:250,
+				  width: 500,
+				  modal: true,
+				  buttons: {
+					"Enter Portal": function() {
+						//User Accepts
+						location.href= 'home.html';
+						$( this ).dialog( "close" );
+					},
+					Cancel: function() {
+						//User declines
+						$( this ).dialog( "close" );
+					}
+				  }
+				});
+			  });
+			</script>			
+		</div><!-- background -->
+    </body>
+</html>

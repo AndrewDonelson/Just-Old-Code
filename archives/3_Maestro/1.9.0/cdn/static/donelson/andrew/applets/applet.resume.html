@@ -1,0 +1,309 @@
+<ins 
+	id="main" 
+	data-uuid="08a11dc5-b911-4499-b396-8dc2d491b2fc"
+	data-component="applet" 
+	data-folder="andrew"
+	data-publisher="donelson" 
+	data-files="">
+<style>
+	html,body {font-size:18px !important;font-family: "ubuntu"}
+	header,footer {font-family:"neuropol";text-align:center}
+	p {font-size: 1em;text-indent: 1em;text-align: justify;padding:1em;line-height:1.75em;}
+	h1,h2,h3,h4 {font-family:"neuropol"}
+	h1 {font-size:300%;letter-spacing:4px}
+	h2 {font-size:150%}
+	h3 {font-size:110%}
+	h4 {font-size:80%;letter-spacing:4px}
+	dt {padding-top:1em;text-align:center;border-bottom:solid 2px black;max-width:30%;margin:0 auto;}
+	hr { border: solid; border-width: 1px 0 0; clear: both; margin: 20px 0 20px 0; height: 0; }
+	li {list-style: none}
+	i {padding-right:1em;font-size:1.5em}
+	.question,.answer {display:block}			
+	.animated {
+		-webkit-animation-duration: 1s;
+		   -moz-animation-duration: 1s;
+			 -o-animation-duration: 1s;
+				animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+		   -moz-animation-fill-mode: both;
+			 -o-animation-fill-mode: both;
+				animation-fill-mode: both;
+	}
+	@-webkit-keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+		}
+	}
+
+	@-moz-keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			-moz-transform: translateY(960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-moz-transform: translateY(0);
+		}
+	}
+
+	@-o-keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			-o-transform: translateY(960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-o-transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			transform: translateY(960px);
+		}
+		
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animated.fadeInUp {
+		-webkit-animation-name: fadeInUp;
+		-moz-animation-name: fadeInUp;
+		-o-animation-name: fadeInUp;
+		animation-name: fadeInUp;
+	}
+	@-webkit-keyframes fadeInDown {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(-960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+		}
+	}
+
+	@-moz-keyframes fadeInDown {
+		0% {
+			opacity: 0;
+			-moz-transform: translateY(-960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-moz-transform: translateY(0);
+		}
+	}
+
+	@-o-keyframes fadeInDown {
+		0% {
+			opacity: 0;
+			-o-transform: translateY(-960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-o-transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeInDown {
+		0% {
+			opacity: 0;
+			transform: translateY(-960px);
+		}
+		
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animated.fadeInDown {
+		-webkit-animation-name: fadeInDown;
+		-moz-animation-name: fadeInDown;
+		-o-animation-name: fadeInDown;
+		animation-name: fadeInDown;
+	}
+	@-webkit-keyframes fadeInLeft {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateX(-960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-webkit-transform: translateX(0);
+		}
+	}
+
+	@-moz-keyframes fadeInLeft {
+		0% {
+			opacity: 0;
+			-moz-transform: translateX(-960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-moz-transform: translateX(0);
+		}
+	}
+
+	@-o-keyframes fadeInLeft {
+		0% {
+			opacity: 0;
+			-o-transform: translateX(-960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-o-transform: translateX(0);
+		}
+	}
+
+	@keyframes fadeInLeft {
+		0% {
+			opacity: 0;
+			transform: translateX(-960px);
+		}
+		
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	.animated.fadeInLeft {
+		-webkit-animation-name: fadeInLeft;
+		-moz-animation-name: fadeInLeft;
+		-o-animation-name: fadeInLeft;
+		animation-name: fadeInLeft;
+	}
+	@-webkit-keyframes fadeInRight {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateX(960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-webkit-transform: translateX(0);
+		}
+	}
+
+	@-moz-keyframes fadeInRight {
+		0% {
+			opacity: 0;
+			-moz-transform: translateX(960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-moz-transform: translateX(0);
+		}
+	}
+
+	@-o-keyframes fadeInRight {
+		0% {
+			opacity: 0;
+			-o-transform: translateX(960px);
+		}
+		
+		100% {
+			opacity: 1;
+			-o-transform: translateX(0);
+		}
+	}
+
+	@keyframes fadeInRight {
+		0% {
+			opacity: 0;
+			transform: translateX(960px);
+		}
+		
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	.animated.fadeInRight {
+		-webkit-animation-name: fadeInRight;
+		-moz-animation-name: fadeInRight;
+		-o-animation-name: fadeInRight;
+		animation-name: fadeInRight;
+	}		
+	#close{position:absolute;top:12px;right:12px}
+</style>
+		
+<i id="close" class="fa fa-times-circle fa-3" onclick="M$['click']('/donelson/andrew/applets/applet.main.html');"></i>			
+<div class="container animated fadeInDown">
+	<header>
+		<h1>Andrew Donelson</h1>
+		<h2>Computer Hardware &amp; Software Engineer</h2>
+		<h3>27 Years of experience private and government sectors.</h3>
+	</header>
+
+	<hr>
+
+	<dl>
+		<dt><h3>Introduction</h3></dt>
+		<dd>
+		<div class="container">
+			<div class="row">
+				<!-- left column -->
+				<div class="col-md-6 animated fadeInLeft">
+					<p>I have worked too many jobs to remember over the last Twenty-Seven years. I have a vast basic knowledge of almost everything technical with a passion in two areas. Software Engineering and Computer/Electronics Engineering. With my Military career now behind me I am looking to to provide my experience as a Software Project Manager.</p>
+					<p>I believe a great project manager manages the project’s team, the project’s scope, enforcing or improving upon the project’s budget and handles any issues that arise and can remain your reliable and knowledgeable single point of contact to the senior leadership.</p>
+					<p>My Though pattern is one of broad strokes. This means that I can see a very big picture and plan well ahead and as events happen I focus on a pre-planned road and the brush strokes be finer as I get either closer to the goal or things have are getting out of hand and need to be reigned in.</p>
+				</div>
+				<!-- right column -->
+				<div class="col-md-6 animated fadeInRight">
+					<p>I have an extremely broad range on experiences from basic electronics to nano technology; from punch cards to PC's to Phones to Mainframes. With software I have experiences with Machine code, Assembler Language as well as Pascal, COBAL, BASIC, C, Java, JavaScript, HTML5, CSS3 MySQL, BASH, etc. I have experience with Artificial Intelligence, Fuzzy Logic, Probabilities, Neural Networks and Expert Systems. I have experience with game Programming, Network communication, Networking, Routers, Access Points and Fiber Optics.</p>
+					<p>I am also from the days of 16k Computers, so just because storage is massive and cheap now - that does not stop me from creating the smallest most efficient code that I can achieve. I believe in efficiency and not wasting anything. Give me a well defined project, a budget and a time-frame and I will produce.</p>
+				</div>
+			</div>
+		</div>
+		</dd>
+		
+		<dt><h3>Some Common Interview Questions</h3></dt>
+		<dd>
+			<div class="container interview animated fadeInUp">
+				<ul>
+					<li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>In Your Experience, What One Skill Does a Project Manager Need to Succeed?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>Vision.</p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>What Methods Will You Use to Deliver the Results We’re Looking For?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>The Global Workforce.</p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>How Will You Put Together Your Project Team?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>I use oDesk. I have individuals around the world that have worked with me for the last decade. I tend to balance my team with senior experienced professionals and young, fresh and creative individuals.</p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>What software have you used to manage projects in the past?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>MS Office, Skype, Bugzlla, Filezilla, ProjectLibe</p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>If I gave you a laptop to plan your next project, what software would you want on it?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>Windows 7 Professional, MS Office, Zend Server, Skype, Bugzlla, Filezilla, ProjectLibre, Cygwin</p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>What’s your approach to managing a project?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>I will accept the project as it is given to me. I will study it and research similar (if any) projects out there. I will learn and possibly come up with some new idea and changes. I will confer with my leadership, usually verbally at first and if all is well submit the official changes in documentation. Once that is completed I will use a meticulous planned out process with checkpoints and a extensive Quality Assurance which includes to stages in-house and closed limited end-user. I do this with firm leadership, yet I have a rapport with the team members. I delegate and move on unless there is a issue with the team member in which case they will have to be replaced.</p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>What’s your school of thought on project management -- are you an agile person?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i></p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>How do you do your scheduling?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>I use oDesk for Managing My Team(s)</p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>How do you allocate resources?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>I use a combination of ProjectLibre and oDesk.</p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>How do you do status updates?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>It depends on my leadership. For casual updates I prefer quick emails, for milestones it will be a complete documentation of the current status at that point.</p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>How do you handle politics?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>The military bearing within me will not tolerate it. The team exists for a reason, a task, nothing else. Be professional.</p>
+					</li><li><p class="question"><i class="glyphicon glyphicon-question-sign"></i>Do you manage people and projects or just projects?</p><p class="answer"><i class="glyphicon glyphicon-hand-right"></i>I manage both. I have no issues with people, although sometimes projects can be very annoying!</p>
+				</li></ul>
+			</div>
+		</dd>
+	</dl>
+	
+	<hr>
+
+	<footer>
+		<h4>Copyright 2014 by Andrew Donelson - All rights reserved.</h4>
+	</footer>			
+</div>
+		
+</ins>

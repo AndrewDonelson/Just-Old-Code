@@ -1,0 +1,129 @@
+/*! i2tm Labs Style Template */
+/********************************************************************************/
+/* I2TM Labs Absolute Responsive Web Design Base Style							*/
+/* File: i2tm.base.rwd.css														*/
+/* Version: 0.1.0																*/
+/* Author: Andrew Donelson <andrew@i2tmlabs.com>								*/
+/********************************************************************************/
+
+/********************************************************************************/
+/* BASIC RESETS 																*/
+/********************************************************************************/
+* {
+	padding: 0px;
+	margin: 0px;
+	line-height: 100%;
+	outline: none;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	overflow: hidden; 
+}
+
+html , body{
+	border: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+h1 { font-size: 2.0em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.0em; }
+
+/********************************************************************************/
+/* Responsive Helper															*/
+/********************************************************************************/
+.off				{ display: none; visibility: hidden; }
+.on					{ display: block; visibility: visible; }
+.clearfix 			{ *zoom: 1; }
+.clearfix:before, 
+.clearfix:after 		{ display: table; line-height: 0; content: ""; }
+.clearfix:after 		{ clear: both; }
+.clear { clear: both; padding: 0px;	margin: 0px; height: 0px; }
+
+/********************************************************************************/
+/* Responsive Fluid Control															*/
+/********************************************************************************/
+.box		{ min-height: 1em; max-height: 20em; height: 100%; float: left; margin: 0.55em; overflow: hidden; }
+.auto		{ min-width: 31% !important; width: 31% !important; }
+.full 		{ min-width: 55.8em; width: 55.8em; }
+.half 		{ min-width: 27.3em; width: 27.3em; }
+.third 		{ min-width: 17.85em; width: 17.7em; }
+.fourth 		{ min-width: 13.1em; width: 13.1em; }
+.sixth 		{ min-width: 8.35em; width: 8.35em; }
+.eighth		{ min-width: 6em; width: 6em; }
+
+.container			{ display: block; width: 100%; margin: 0px auto; position: relative; padding: 0; opacity: 1; }
+.container .column,
+.container .columns	{ float: left; display: inline; margin-left: 0.5em; margin-right: 0.5em; }
+.row				{ margin-bottom: 1em; margin-left: 0px; *zoom: 1; }
+.row:before,
+.row:after 			{ display: table; line-height: 0; content: ""; }
+.row:after 			{ clear: both; }
+
+.remove-top { margin-top: 0 !important; }
+.half-top { margin-top: 0.5em !important; }
+.add-bottom { margin-top: 1em !important; }
+
+.remove-bottom { margin-bottom: 0 !important; }
+.half-bottom { margin-bottom: 0.5em !important; }
+.add-bottom { margin-bottom: 1em !important; }
+
+.center {
+	display: table;
+    margin: 0 auto;
+}
+/********************************************************************************/
+/* DEFINE SIZE & FLOW OF ALL REQUIRED ELEMENTS									*/
+/********************************************************************************/
+#wrapper		{ min-height: 100%; min-width: 100%; height: 100% !important; height: 100% !important; overflow: hidden;}
+#background  	{ position: fixed; width: 100%; height: 100%; overflow: hidden; }
+#header			{ position: fixed; z-index: 100; width: 100%; top: 0; height: 60px !important; } 
+#content 		{ position:relative; z-index: 0; width:100%; height: 100%; 	padding: 0;	margin: 0;	overflow: hidden; }
+#leftSidebar, 
+#rightSidebar 	{ position:fixed; z-index: 100; top:60px; bottom:100px; width: 200px; overflow: hidden; }
+#leftSidebar 	{ left:0px; }
+#rightSidebar 	{ right: 0px; }
+#scrollable 		{ padding: 60px 200px 100px 200px; margin: 0; width: auto; height:100%; 	opacity: 1.0; overflow:auto; }
+#footer 			{ position: fixed; z-index: 100; 	width: 100%; height: 100px;	bottom: 0; }
+	
+#header, 
+#footer, 
+#leftSidebar, 
+#rightSidebar  	{ opacity: 1.0; }
+
+
+
+.bgLight { background-color: #ccc;}	.fgLight { color: #ccc; }
+.bgDark { background-color: #333; }	.fgdark { color: #333; }
+
+.lightbox {
+	opacity: 0.85;
+	padding: 25px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	-webkit-border-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	border-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+	background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+	
+  -webkit-box-shadow: 0px 0px 60px 2px #006000; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+   box-shadow: 0px 0px 30px 2px #006000; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+}
+.overflow { display: block; float: right; padding: 0.25em; font-size: 0.33em; }
+.collapseText   {height:26px;overflow:hidden}
+.collapse, .expand {
+	color: #333;
+	text-align: center;
+	display: inline-block;
+	padding: .120em;	
+	line-height: normal;
+	font-size: 1.0em;	
+}
+.collapse a:hover, 
+.expand a:hover { border-radius: 8px; background: #0f0;}	

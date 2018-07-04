@@ -1,0 +1,116 @@
+<html lang=en>
+   <head>
+      <meta charset="utf-8">
+      <title>I2TM-Maestro Boilerplate</title>
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script> 
+      <![endif]-->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="apple-touch-fullscreen" content="yes">
+      <meta name="HandheldFriendly" content="true"/>
+      <meta name="MobileOptimized" content="320"/>
+   </head>
+   <body>
+      <div id="wrapper">
+			
+		<div class="container dpiScale">
+			 <div class="row">
+				<div class="col-xs-2">
+					<!--<img src="img/maestro-logo.png" alt="" class="img-responsive" />-->
+				</div>
+				<div class="col-xs-8">
+					<h1 class="notethis text-center">Maestro Boilerplate <br /><small class="neuropol"><i>by</i> I2TM Labs</small></h1>
+				</div>
+				<div class="col-xs-2 ">
+					<!--<img src="img/i2tm-logo.png" alt="" class="img-responsive" />-->
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="text-center">This content is using Maestro dynamic scaling to improve readability across all device screen types.</p>
+				</div>
+			</div>
+			 <div class="row">
+				<div class="col-xs-12">
+				   <div class="list-group jumbotron">
+					  <div class="list-group-item">
+						 <h5 class="list-group-item-heading">Device Screen (Width)</h5>
+						 <p class="list-group-item-text">Number of pixels horizontally in <span class="cdo">&nbsp;</span> orientation.</p>
+						 <span class="badge mdw">&nbsp;</span>
+						 <br style="clear:both" />	
+					  </div>
+					  <div class="list-group-item">
+						 <h5 class="list-group-item-heading">Dots Per Inch <small>(dpi)</small></h5>
+						 <p class="list-group-item-text">This is how many pixels (dots) your device has in one inch.</p>
+						 <span class="badge dpi">&nbsp;</span>
+						 <br style="clear:both" />	
+					  </div>
+					  <div class="list-group-item">
+						 <h5 class="list-group-item-heading">Dots Per Pixel <small>(dppx)</small></h5>
+						 <p class="list-group-item-text">This is how many dots are in each pixel for this device.</p>
+						 <span class="badge dppx">&nbsp;</span>
+						 <br style="clear:both" />	
+					  </div>
+					  <div class="list-group-item">
+						 <h5 class="list-group-item-heading">Device Orientation</small></h5>
+						 <p class="list-group-item-text">This is how many dots are in each pixel for this device.</p>
+						 <span class="badge cdo">&nbsp;</span>
+						 <br style="clear:both" />	
+					  </div>
+					  
+					  <div class="list-group-item">
+						 <h5 class="list-group-item-heading">Mobile Detection</small></h5>
+						 <p class="list-group-item-text">This device is a mobile device with touch capability.</p>
+						 <span class="badge isMobile">&nbsp;</span>
+						 <br style="clear:both" />	
+					  </div>
+					  
+				   </div>
+				</div>			
+			 </div>		 
+		  </div>
+		
+	  </div>
+	  
+		<span class="text-center">
+			<hr />
+			<p>Copyright 2016 by I2TM Labs - All rights are reserved.</p>
+		</span>
+	  
+  	  <!--[This is a hidden DIV with all JavaScript before closing body tag]-->
+      <div id="tail" class="vanish">	
+		<script>
+(function(f){f.W$=f;W$.D$=W$.document;W$.H$=D$.getElementsByTagName("head")[0];W$.T$=D$.getElementById("tail");W$.B$=D$.getElementsByTagName("body")[0];W$.C$=D$.styleSheets;W$.S$=D$.scripts;W$.M$={VERSION:"3.0.0",LOADED:0};M$.vld=function(a){return!(null===a||"undefined"===typeof a||!1===a||""===a)};M$.chk=function(a,c){return this.vld(a)?a:c};M$.gei=function(a){return D$.getElementById(a)};M$.cls=function(a,c,e,h){try{if(a="string"!=typeof a?a:M$.gei(a))switch(c.toLowerCase()){case "set":a.className=
+e;break;case "clear":a.className="";break;case "add":a.classList.add(e);break;case "remove":try{a.classList.remove(e)}catch(d){}break;case "replace":try{a.classList.remove(e)}catch(d){}try{a.classList.add(h)}catch(d){}break;case "toggle":a.classList.toggle(e)}}catch(d){alert(d)}};M$.gex=function(a){return"undefined"===typeof a||""==a?"":/(?:\.([^.]+))?$/.exec(a)[1].toLowerCase()};M$.gfn=function(a){if("string"===typeof a)return a.substring(a.lastIndexOf("/")+1)};M$.lds=function(a,c,e,h,d,f,k){function l(){console.log("File load successful.")}
+function m(){console.log("File load failed.")}for(var b,g=0;3>g;g++)arguments[g]=M$.chk(arguments[g],!1),!1===arguments[g]&&console&&console.log("Error");if("script"==arguments[0]||"js"==arguments[0])b=D$.createElement("script"),b.async=1,b.src=e,b.type="application/javascript";else if("link"==arguments[0]||"css"==arguments[0])b=D$.createElement("link"),b.href=e,b.rel="stylesheet",b.type="text/css";else return!1;b.id=arguments[1];b.onload=f?f:l.bind(this);b.onerror=k?k:m.bind(this);return function(){var a=
+!0===h?T$:H$;"string"!=typeof d&&(d="last");if("first"==d)return a.firstElementChild(b),M$.LOADED++,!0;if("last"==d)return a.appendChild(b),M$.LOADED++,!0;a=M$.gei(d);return"undefined"!=typeof a&&null!=a&&null!=a.nextElementSibling?(a.nextElementSibling.insertBefore(b),M$.LOADED++,!0):!1}()};M$.a=function(a){if(T$&&"DIV"==T$.tagName&&a&&"Array"===a.constructor.name){var c;do c=a.shift(),M$.lds(M$.gex(c),M$.gfn(c),c,"js"==M$.gex(c)?!0:!1,"last",null,null);while(0<a.length)}};M$.start=function(a){M$.cls("wrapper",
+"add","vanish","");M$.a(a);M$.cls("wrapper","replace","vanish","appear")};M$.lds("js","jquery","https://code.jquery.com/jquery-2.2.1.min.js",!0,"last",function(){M$.start(["https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css","https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css","https://i2tmlabs.com/static/css/maestro-3.0.0.css","https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"])},null)})(window);
+		
+	
+		M$.start([]);
+		
+		/**
+		Usage:
+			start:function(files)
+			
+			The latest versions Bootstrap, Font-Awesome and jQuery are considered core resources and have already been loaded for you.
+			DO NOT Reload Them :)
+			
+			{Array} scripts	array of files to be loaded.
+
+		M$.start(
+			[
+				'assets/js/jquery.knob.js',
+				'assets/js/jquery.ui.widget.js',
+				'assets/js/script.js'
+			]
+		);
+		*/		
+		</script>		 
+      </div>
+   </body>
+</html>

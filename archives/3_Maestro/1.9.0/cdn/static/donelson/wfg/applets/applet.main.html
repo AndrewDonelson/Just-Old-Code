@@ -1,0 +1,920 @@
+<ins 
+	id="main" 
+	data-uuid="8a141ec9-72ef-4779-a766-a7a29e9df82c"
+	data-component="applet" 
+	data-publisher="donelson" 
+	data-folder="wfg" 
+	data-target="wrapper" 
+	class="">
+<style>
+/* Global Styles */
+.reflection{-webkit-box-reflect: below -33% -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));}
+#CmC{visibility:hidden!important;display:none!important}
+/* Fullscreen Video */
+#video-bg {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+.glyphBig{font-size:36px}
+.vert-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.vert-text h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+
+/* Side Menu */
+
+#sidebar-wrapper {
+  margin-right: -250px;
+  right: 0;
+  width: 250px;
+  background: #000;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: #999999;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 55px;
+  line-height: 55px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#menu-toggle {
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.toggle {
+  margin: 5px 5px 0 0;
+}
+
+/* Full Page Image Header Area */
+
+.header {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url({ROOT}img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-bottom: 1em solid #7fbbda;
+}
+
+/* Intro */
+
+.intro {
+  padding: 50px 0;
+}
+
+/* Services */
+
+.services {
+  background: #7fbbda;
+  padding: 50px 0;
+  color: #ffffff;
+  border-bottom: 1em solid #7fbbda;
+}
+
+.service-item {
+  margin-bottom: 15px;
+}
+
+i.service-icon {
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 56px;
+  width: 140px;
+  height: 140px;
+  line-height: 136px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+/* Callout */
+
+.callout {
+  color: #ffffff;
+  display: table;
+  height: 400px;
+  width: 100%;
+  background: url({ROOT}img/callout.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Portfolio */
+
+.portfolio {
+  padding: 50px 0;
+  border-bottom: 1em solid #7fbbda;
+}
+
+.portfolio-item {
+  margin-bottom: 25px;
+}
+
+.img-portfolio {
+  margin: 0 auto;
+}
+
+
+.products {
+  padding: 100px 0 100px 0;
+  border-bottom: 1em solid #7fbbda;
+}
+
+.survey {
+}
+
+/* Call to Action */
+
+.call-to-action {
+  color: #ffffff;
+  background: #0a5175;
+  padding: 50px 0;
+}
+
+.call-to-action .btn {
+  margin: 10px;
+}
+
+/* Footer */
+
+footer {
+  padding: 100px 0;
+  position: relative
+}
+
+i.scroll {
+  color: #333333;
+}
+
+i.scroll:hover {
+  color: #0a5175;
+}
+/* Responsive */
+
+@media (max-width: 768px) {
+	
+  .header {
+	background: url({ROOT}img/bg.jpg) no-repeat center center scroll; 
+  }
+
+  .callout {
+	background: url({ROOT}img/callout.jpg) no-repeat center center scroll; 
+  }
+}
+   
+
+
+.cuadro_intro_hover{
+    	padding: 0px;
+		position: relative;
+		overflow: hidden;
+		height: 200px;
+	}
+	.cuadro_intro_hover:hover .caption{
+		opacity: 1;
+		transform: translateY(-150px);
+		-webkit-transform:translateY(-150px);
+		-moz-transform:translateY(-150px);
+		-ms-transform:translateY(-150px);
+		-o-transform:translateY(-150px);
+	}
+	.cuadro_intro_hover img{
+		z-index: 4;
+	}
+	.cuadro_intro_hover .caption{
+		position: absolute;
+		top:150px;
+		-webkit-transition:all 0.3s ease-in-out;
+		-moz-transition:all 0.3s ease-in-out;
+		-o-transition:all 0.3s ease-in-out;
+		-ms-transition:all 0.3s ease-in-out;
+		transition:all 0.3s ease-in-out;
+		width: 100%;
+	}
+	.cuadro_intro_hover .blur{
+		background-color: rgba(10, 81, 117, 0.75);
+		height: 300px;
+		z-index: 5;
+		position: absolute;
+		width: 100%;
+	}
+	.cuadro_intro_hover .caption-text{
+		z-index: 10;
+		color: #fff;
+		position: absolute;
+		height: 300px;
+		text-align: center;
+		top:-20px;
+		width: 100%;
+	}   
+	
+	.jumbotron {
+		background: #002040;
+		color: #FFF;
+		border: 1px solid rgb(120,120,200);
+		text-align: center;
+	}	
+	.jumbotron-sm { padding-top: 24px;
+		padding-bottom: 24px
+	}
+	.jumbotron small {
+		color: #FFF;
+	}
+	.h1 small {
+	font-size: 24px;
+	}	
+	.well {
+		background-color: transparent;
+		border: none;
+	}	
+	.roof{position:absolute;top:0;left:0;width:100%;z-index:100;}
+	.roof .left {float:left;padding:1em 1em}
+	.roof .right {float:right;padding:1em 1em}
+	
+	form {background: rgba(135,206,235,0.85);border: 1px solid navy;padding: 1em}
+	form li {padding:1em}
+	form span {float:right}
+	form input[type=radio], input[type=checkbox] {display: inline-block}
+	form label {display: inline-block}
+	
+   </style> 
+   
+	<link href="//vjs.zencdn.net/4.6/video-js.css" rel="stylesheet">
+	<script src="//vjs.zencdn.net/4.6/video.js"></script>
+   
+   <div class="roof">
+		<div class="left"><img src="{ROOT}img/wsb-logo.png" class="img-responsive" style="max-width:140px;" /></div>
+		<div class="right"><img src="{ROOT}img/names.png" class="img-responsive" style="max-width:140px;" /></div>
+   </div>
+   
+    <!-- Full Page Image Header Area -->
+    <div id="top" class="header">
+        <div class="vert-text">
+            <h1 style="color: lightcyan;text-shadow: 0px 0px 10px gray">Finances made Simple</h1>
+            <h3><em>We</em> love to help people <em>build a better future</em></h3>
+			<h4 style="margin-top:2em">Insanity: doing the same thing over and over again and expecting different results.<br><small>Albert Einstein</small></h4>
+        </div>
+		
+    </div>
+    <!-- /Full Page Image Header Area -->
+
+    <!-- Intro -->
+    <div id="about" class="intro hidden-xs">
+        <div class="container">
+		
+            <div class="row">
+                <div class="col-sm-6 text-center">
+					<h3>A few words by Vivian Olero, Executive Vice Chairman</h3>
+					<object id="smh_player_1402670357" name="smh_player_1402670357" type="application/x-shockwave-flash" allowfullscreen="true" allownetworking="all" allowscriptaccess="always" bgcolor="#000000" width="300" height="169" xmlns:dc="http://purl.org/dc/terms/" xmlns:media="http://search.yahoo.com/searchmonkey/media/" rel="media:video" resource="https://mediaplatform.streamingmediahosting.com/index.php/kwidget/cache_st/1402670357/wid/_10073/uiconf_id/6710341/entry_id/0_hr7qn8b8" data="https://mediaplatform.streamingmediahosting.com/index.php/kwidget/cache_st/1402670357/wid/_10073/uiconf_id/6710341/entry_id/0_hr7qn8b8" style="min-height: 160px !important;">
+						<param name="wmode" value="transparent">
+						<param name="allowFullScreen" value="true">
+						<param name="allowNetworking" value="all">
+						<param name="allowScriptAccess" value="always">
+						<param name="bgcolor" value="#000000">
+						<param name="flashVars" value="streamerType=rtmp&amp;autoPlay=false&amp;">
+						<param name="movie" value="https://mediaplatform.streamingmediahosting.com/index.php/kwidget/cache_st/1402670357/wid/_10073/uiconf_id/6710341/entry_id/0_hr7qn8b8">
+						<span property="media:title" content="Vivian Olero - Executive Vice Chairman"></span>
+						<a rel="media:thumbnail" href="http://imgs.mediaportal.streamingmediahosting.com/p/10073/sp/1007300/thumbnail/entry_id/0_hr7qn8b8/width/120/height/90/bgcolor/000000/type/2"></a>
+						<span property="media:width" content="300"></span>    
+						<span property="media:height" content="169"></span>
+					</object>
+				</div>
+                <div class="col-sm-6 text-center">
+					<h3>WFG - Business Opportunity</h3>
+					<iframe width="300" height="169" src="//www.youtube.com/embed/htnB0bmFcys" frameborder="0" allowfullscreen></iframe>
+				</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 text-center">
+					<h3>Harris Survey Exposes Truth</h3>
+					<iframe width="300" height="169" src="//www.youtube.com/embed/G_HjwuwqtQk" frameborder="0" allowfullscreen></iframe>
+				</div>
+                <div class="col-sm-6 text-center">
+					<h3>"I Believe"</h3>
+					<iframe width="300" height="169" src="//www.youtube.com/embed/022LztQIMsc?list=PLE85D170A85638705" frameborder="0" allowfullscreen></iframe>				
+				</div>
+            </div>
+        </div>
+    </div>
+    <!-- /Intro -->
+
+    <!-- Services -->
+    <div id="services" class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>Our Services</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="service-item">
+						<img src="{ROOT}img/businessmen-icon.png" class="img-responsive" style="padding: 20px;margin: 0 auto" />
+                        <h4>Better Tomorrows Start Here</h4>
+                        <p>Even in this time of unprecedented access to information, there remains a lack of financial knowledge among individuals and families. A WFG associate helps clients understand fundamental financial concepts that give them the foundation to create a sound strategy so they can build a better tomorrow for themselves and their loved ones.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-item">
+						<img src="{ROOT}img/strength-icon.png" class="img-responsive" style="padding: 20px;margin: 0 auto" />
+                        <h4>Strength On Your Side</h4>
+                        <p>WFG associates have access to products and services from many well-known product providers that they can represent to clients. By maintaining selling agreements with numerous financial services companies through WFG’s affiliates, a WFG associate offers clients the power of choice, allowing the associate and client to find appropriate products for the client’s needs.*</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-item">
+						<img src="{ROOT}img/yoursuccess-icon.png" class="img-responsive" style="padding: 20px;margin: 0 auto" />
+                        <h4>Create Your Success</h4>
+                        <p>World Financial Group has a mission: to help people from all walks of life build a better future. Through our business platform, we have removed the barriers that have kept people from achieving the dream of owning their own business, and our associates prove each day that, by helping others achieve their goals, success just happens. You can be a part of that success.</p>
+                    </div>
+                </div>
+            </div>
+			<div class="row">
+				<div class="col-md-12"  style="text-align:center">
+				<p style="margin:0 auto;max-width:500px">*Associates must be properly licensed and appointed to sell insurance, securities and investment advisory-related products and services.</p>
+				</div>
+			</div>
+        </div>
+    </div>
+    <!-- /Services -->
+
+    <!-- Callout -->
+    <div class="callout">
+        <div class="vert-text" style="background-color: rgba(0, 0, 0, 0.75);border-bottom: 1em solid #7fbbda;">
+			<img src="{ROOT}img/wsb-logo.png" class="img-responsive" style="padding: 20px;margin: 2em auto" />
+            <h2 style="color: #136208;margin: 1em 0 1em">World System Builder, LLC</h1>
+			<p class="hidden-xs" style="max-width:75%;margin:0 auto;margin-bottom: 100px">is a financial services marketing company that is associated with World Financial Group, Inc. World Financial Group, Inc. (WFG) is a financial services marketing company whose affiliates offer a broad array of financial products and services. Insurance products offered through World Financial Insurance Agency, Inc. (WFIA), World Financial Group Insurance Agency of Hawaii, Inc., World Financial Group Insurance Agency of Massachusetts, Inc., World Financial Group Insurance Agency of Wyoming, Inc., World Financial Insurance Agency, Inc. and/or WFG Insurance Agency of Puerto Rico, Inc. WFG and WFGIA are affiliated companies. World System Builder, LLC Headquarters: 2099 Gold Street, Suite 100, Alviso, CA 95002-3602. Phone: 408.941.1838. WFG and WFIA Headquarters: 11315 Johns Creek Parkway, Johns Creek, GA 30097-1517. Phone: 770.453.9300. WorldFinancialGroup.com.</p>
+			<p class="visible-xs" style="margin-bottom: 100px">is a financial services marketing company that is associated with World Financial Group, Inc. World Financial Group, Inc. (WFG) is a financial services marketing company whose affiliates offer a broad array of financial products and services. Insurance products offered through World Financial Insurance Agency, Inc. (WFIA), World Financial Group Insurance Agency of Hawaii, Inc., World Financial Group Insurance Agency of Massachusetts, Inc., World Financial Group Insurance Agency of Wyoming, Inc., World Financial Insurance Agency, Inc. and/or WFG Insurance Agency of Puerto Rico, Inc. WFG and WFGIA are affiliated companies. World System Builder, LLC Headquarters: 2099 Gold Street, Suite 100, Alviso, CA 95002-3602. Phone: 408.941.1838. WFG and WFIA Headquarters: 11315 Johns Creek Parkway, Johns Creek, GA 30097-1517. Phone: 770.453.9300. WorldFinancialGroup.com.</p>
+        </div>
+    </div>
+    <!-- /Callout -->
+
+    <!-- Portfolio -->
+    <div id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>We teach</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img class="img-portfolio img-responsive" src="{ROOT}img/portfolio-1.jpg">
+                        </a>
+                        <h4>Retirement</h4>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img class="img-portfolio img-responsive" src="{ROOT}img/portfolio-2.jpg">
+                        </a>
+                        <h4>Education</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img class="img-portfolio img-responsive" src="{ROOT}img/portfolio-3.jpg">
+                        </a>
+                        <h4>Long Term Care</h4>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img class="img-portfolio img-responsive" src="{ROOT}img/portfolio-4.jpg">
+                        </a>
+                        <h4>Security</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Portfolio -->
+
+
+	
+    <!-- Survey -->
+    <div class="callout">
+		<div id="survey" class="survey">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<h2>Finance 101 Survey</h2>
+					<hr>
+					<form id="form_872721" class="appnitro" method="post" action="/formbuilder/view.php">
+
+					<ul class="form-group">
+
+					<li id="li_1">
+					<label class="description" for="element_1">Are you suffering from financial losses as a result of the recent economic downturn? </label>
+					<div>
+					<input id="element_1_1" name="element_1" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_1_1">Yes</label>
+					<input id="element_1_2" name="element_1" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_1_2">No</label>
+					<input id="element_1_3" name="element_1" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_1_3">Unsure</label>
+					</div> 
+					</li>
+
+					<li id="li_2">
+					<label class="description" for="element_2">Are you concerned about a lack of savings or investments for retirement or kids education? </label>
+					<div>
+					<input id="element_2_1" name="element_2" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_2_1">Yes</label>
+					<input id="element_2_2" name="element_2" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_2_2">No</label>
+					<input id="element_2_3" name="element_2" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_2_3">Unsure</label>
+					</div> 
+					</li>
+
+					<li id="li_3">
+					<label class="description" for="element_3">Are you concerned about the future of your job or career? </label>
+					<div>
+					<input id="element_3_1" name="element_3" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_3_1">Yes</label>
+					<input id="element_3_2" name="element_3" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_3_2">No</label>
+					<input id="element_3_3" name="element_3" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_3_3">Unsure</label>
+					</div> 
+					</li>
+
+					<li id="li_4">
+					<label class="description" for="element_4">Are you interested in making more money and increasing your cash flow? </label>
+					<div>
+					<input id="element_4_1" name="element_4" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_4_1">Yes</label>
+					<input id="element_4_2" name="element_4" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_4_2">No</label>
+					<input id="element_4_3" name="element_4" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_4_3">Unsure</label>
+					</div> 
+					</li>
+
+					<li id="li_5">
+					<label class="description" for="element_5">Do you have to many  debts or bills? Are you currently living check to check? </label>
+					<div>
+					<input id="element_5_1" name="element_5" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_5_1">Yes</label>
+					<input id="element_5_2" name="element_5" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_5_2">No</label>
+					<input id="element_5_3" name="element_5" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_5_3">Unsure</label>
+					</div> 
+					</li>
+
+					<li id="li_6">
+					<label class="description" for="element_6">Do you carry an significant financial responsibilities with growing children or ageing parents? </label>
+					<div>
+					<input id="element_6_1" name="element_6" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_6_1">Yes</label>
+					<input id="element_6_2" name="element_6" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_6_2">No</label>
+					<input id="element_6_3" name="element_6" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_6_3">Unsure</label>
+					</div> 
+					</li>
+
+					<li id="li_7">
+					<label class="description" for="element_7">Do you have enough protection right now in the event you were disabled or had a terminal illness? </label>
+					<div>
+					<input id="element_7_1" name="element_7" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_7_1">Yes</label>
+					<input id="element_7_2" name="element_7" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_7_2">No</label>
+					<input id="element_7_3" name="element_7" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_7_3">Unsure</label>
+					</div> 
+					</li>
+
+					<li id="li_8">
+					<label class="description" for="element_8">Do you feel that finical terms such as investments, insurance, inflation and tax are difficult to understand? </label>
+					<div>
+					<input id="element_8_1" name="element_8" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_8_1">Yes</label>
+					<input id="element_8_2" name="element_8" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_8_2">No</label>
+					<input id="element_8_3" name="element_8" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_8_3">Unsure</label>
+					</div> 
+					</li>
+
+					<li id="li_9">
+					<label class="description" for="element_9">Do you think there is a large number of people in our country who struggle financially? </label>
+					<div>
+					<input id="element_9_1" name="element_9" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_9_1">Yes</label>
+					<input id="element_9_2" name="element_9" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_9_2">No</label>
+					<input id="element_9_3" name="element_9" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_9_3">Unsure</label>
+					</div> 
+					</li>
+
+					<li id="li_10">
+					<label class="description" for="element_10">Would you be interested in learning how money works and teaching others? </label>
+					<div>
+					<input id="element_10_1" name="element_10" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_10_1">Yes</label>
+					<input id="element_10_2" name="element_10" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_10_2">No</label>
+					<input id="element_10_3" name="element_10" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_10_3">Unsure</label>
+					</div> 
+					</li>
+
+					<li id="li_11">
+					<label class="description" for="element_11">If you were to choose, what would you rather have? </label>
+					<div>
+					<input id="element_11_1" name="element_11" class="element radio" type="radio" value="1">
+					<label class="choice" for="element_11_1">Better return for your money.</label>
+					<input id="element_11_2" name="element_11" class="element radio" type="radio" value="2">
+					<label class="choice" for="element_11_2">Better safty for your money.</label>
+					<input id="element_11_3" name="element_11" class="element radio" type="radio" value="3">
+					<label class="choice" for="element_11_3">I would like to have some money!</label>
+					</div> 
+					</li>
+
+					<li class="buttons">
+					<input type="hidden" name="form_id" value="872721">
+					<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit">
+					</li>
+
+					</ul>
+					</form>
+				</div>
+			</div>
+		</div>	
+	</div>
+	 
+	 
+    <!-- Products -->
+    <!-- Callout -->
+    <div class="callout">
+        <div class="vert-text" style="overflow:hidden;background-color: rgba(0, 0, 0, 0.75);">
+			<div id="products" class="products">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h2>Our Products</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+								<p style="text-align:center; margin-top:20px;">
+									<img width="170" height="60" src="http://www.wfgopportunity.com/wp-content/uploads/2014/05/WRL.png" alt="Western Reserve Life" title="Western Reserve Life">
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;"></h3>
+										<p></p>
+										<a href="https://www.westernreserve.com/wps/portal/wrl" target="_blank"><span class="glyphicon glyphicon-link glyphBig"></span></a>
+									</div>
+								</div>
+							</div>					
+						</div>
+						<div class="col-md-4">
+							<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+								<p style="text-align:center; margin-top:20px;">
+									<img width="170" height="60" src="http://www.wfgopportunity.com/wp-content/uploads/2014/06/equitable2.jpg" alt="Equitable Life" title="Equitable Life">
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;"></h3>
+										<p></p>
+										<a href="http://www.equitable.ca/" target="_blank"><span class="glyphicon glyphicon-link glyphBig"></span></a>
+									</div>
+								</div>
+							</div>					
+						</div>
+						<div class="col-md-4">
+							<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+								<p style="text-align:center; margin-top:20px;">
+									<img width="170" height="60" src="http://www.wfgopportunity.com/wp-content/uploads/2014/05/ING.png" alt="ING" title="ING">
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;"></h3>
+										<p></p>
+										<a href="http://www.ing.com/en.htm" target="_blank"><span class="glyphicon glyphicon-link glyphBig"></span></a>
+									</div>
+								</div>
+							</div>					
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+								<p style="text-align:center; margin-top:20px;">
+									<img width="170" height="60" src="http://www.wfgopportunity.com/wp-content/uploads/2014/05/Nationwide.png" alt="Nationwide" title="Nationwide">
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Long-Term Care Coverage</h3>
+										<p>Founded in 1925 - 85 Years old - $158 billion in statutory assets.</p>
+										<a href="http://www.nationwide.com/" target="_blank"><span class="glyphicon glyphicon-link glyphBig"></span></a>
+									</div>
+								</div>
+							</div>					
+						</div>
+						<div class="col-md-4">
+							<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+								<p style="text-align:center; margin-top:20px;">
+									<a href="http://www.pacificlife.com/" target="_blank"><img width="170" height="60" src="http://www.wfgopportunity.com/wp-content/uploads/2014/05/PacificLife.png" alt="PacLife" title="PacLife"></a>
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;"></h3>
+										<p></p>
+										<a href="#"><span class="glyphicon glyphicon-link glyphBig"></span></a>
+									</div>
+								</div>
+							</div>					
+						</div>
+						<div class="col-md-4">
+							<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+								<p style="text-align:center; margin-top:20px;">
+									<a href="http://www.transamerica.com/individual/products/annuities/" target="_blank"><img width="170" height="60" src="http://www.wfgopportunity.com/wp-content/uploads/2014/05/TAnnuities.png" alt="Transamerica Annuities" title="Transamerica Annuities"></a>
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;"></h3>
+										<p></p>
+										<a href="#"><span class="glyphicon glyphicon-link glyphBig"></span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+								<p style="text-align:center; margin-top:20px;">
+									<a href=" http://transamericalifecanada.com/" target="_blank"><img width="170" height="60" src="http://www.wfgopportunity.com/wp-content/uploads/2014/06/TransCanada.png" alt="Transamerica Canada" title="Transamerica Canada"></a>
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;"></h3>
+										<p></p>
+										<a href="#"><span class="glyphicon glyphicon-link glyphBig"></span></a>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+						<div class="col-md-6">
+							<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+								<p style="text-align:center; margin-top:20px;">
+									<a href="http://www.nationwide.com/" target="_blank"><img width="170" height="60" src="http://www.wfgopportunity.com/wp-content/uploads/2014/05/Nationwide.png" alt="Nationwide" title="Nationwide"></a>
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;"></h3>
+										<p></p>
+										<a href="#"><span class="glyphicon glyphicon-link glyphBig"></span></a>
+									</div>
+								</div>
+							</div>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <!-- /Callout -->
+
+    <!-- Footer -->
+    <footer class="call-to-action">
+        <div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+
+					<div class="jumbotron jumbotron-sm">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-12">
+									<h2 class="reflection">Feel free to contact us</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-8">
+								<form id='contactus' method='post'>
+								<input type="hidden" name="contactform" value="1" />
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="name">
+												Name</label>
+											<input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required="required" />
+										</div>
+										<div class="form-group">
+											<label for="email">
+												Email Address</label>
+											<div class="input-group">
+												
+												<input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required="required" /></div>
+										</div>
+										<div class="form-group">
+											<label for="subject">
+												Subject</label>
+											<select id="subject" name="subject" class="form-control" required="required">
+												<option value="na" selected="">Choose One:</option>
+												<option value="service">General Customer Service</option>
+												<option value="suggestions">Suggestions</option>
+												<option value="product">Product Support</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="name">
+												Message</label>
+											<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+												placeholder="Message"></textarea>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+											Send Message</button>
+									</div>
+								</div>
+								</form>
+							</div>
+							<div class="col-sm-4">
+								<form>
+								<legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+								<address>
+									11999 Katy Freeway<br>
+									Houston, TX 77084<br>
+									<abbr title="Phone">
+										Andrew:</abbr>
+									(928) 246-3691
+									<abbr title="Phone">
+										Carolyn:</abbr>
+									(714) 261-6865
+								</address>
+								</form>
+								<ul class="list-inline" style="text-align: center;padding: 1em;">
+									<li><i class="fa fa-facebook fa-4x" style="color:blue"></i></li>
+									<li><i class="fa fa-twitter fa-4x" style="color:cyan"></i></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <hr>
+                    <span style="color:white">Copyright &copy; Carolyn Donelson 2011-2014</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+    <script>
+	try{
+		M$['applet.main']={
+			onLoaded:function(){dbg('Applet onLoaded() event called.')},
+			onUnloaded:function(){dbg('Applet onUnloaded() event called.')}
+		};
+		
+		$("#menu-close").click(function(e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+		});
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+		});
+		function onAppletmainLoaded() {
+			console.log('onAppletMainLoaded Event Triggered')
+		}
+		$(function() {
+			$('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('#wrapper').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+	} catch(e){
+		dbg('Applet Error: '+e.message);
+	}
+	
+    </script>
+</ins>

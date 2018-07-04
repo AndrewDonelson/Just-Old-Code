@@ -1,0 +1,92 @@
+<div id="viewport" class="container-fluid">
+</div>
+
+<div id="footer" class=" navbar-fixed-bottom">
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a id="nav-logo" class="navbar-brand" href="" data-original-title="" title="">i2tm Labs</a>
+			</div>
+		
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<li><span id="LED-Rec" class="led round green-on" data-toggle="tooltip" data-placement="bottom" title="Indicates receiving data"></span></li>
+					<li><span id="LED-Snd" class="led round red-off" data-toggle="tooltip" data-placement="bottom" title="Indicates sending data"></span></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<m-nano component="search"><form class="navbar-form" role="search" action="#" onclick=""><div class="input-group"><input type="text" class="form-control" name="nav-search" id="nav-search" x-webkit-speech=""><input name="siteurl" type="hidden" value="i2tmlabs.com/"><div class="input-group-btn"><button class="btn btn-i2tm-search" type="submit"><i class="glyphicon glyphicon-search"></i></button></div></div></form></m-nano>
+					</li>
+					<li><a href="#" onclick="M$['click']('applet.welcome');" class="glyphicon glyphicon-home" data-toggle="tooltip" data-placement="bottom" title="Default Home View"></a></li>
+					<li><a href="#" onclick="M$['click']('applet.blog');" class="glyphicon glyphicon-tasks" data-toggle="tooltip" data-placement="bottom" title="Blog View"></a></li>
+					<li class="dropdown">
+						<a href="#" onclick="M$['click']('applet.code');" class="dropdown-toggle glyphicon glyphicon-file" data-toggle="dropdown"><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" onclick="M$['click']('applet.code-javascript-closures');">Javascript: Closures</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code-css-leds');">CSS: LEDs</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code:foobar');">Javascript: Smarter Resize</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code:foobar');">Bootstrap: Login Dialog</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code:foobar');">HTML5: Custom Tags</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code:foobar');">Bootstrap: Drop Up Menu</a></li>
+							<li><a href="#" onclick="M$['click']('applet.code:foobar');">Bootstrap: Enhanced Nav Search</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown tooltip"><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a onclick="M$['click']('applet.login');" class="pubMenuItem glyphicon glyphicon-log-in" data-toggle="modal" href="#" data-target="#">&nbsp;Sign In</a></li>
+							<li><a onclick="M$['click']('applet.register');" class="pubMenuItem glyphicon glyphicon-new-window" data-toggle="modal" href="#" data-target="#">&nbsp;Register</a></li>
+							<li><a href="#" onclick="M$['click']('applet.ide');" class="pubMenuItem glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="bottom" title="Code Editor">&nbsp;Code Editor</a></li>
+							<li><a href="#" onclick="M$['click']('applet.fm');" class="pubMenuItem glyphicon glyphicon-hdd" data-toggle="tooltip" data-placement="bottom" title="File Manager">&nbsp;File Manager</a></li>
+							<li><a href="#" onclick="M$['click']('applet.prefs');" class="pubMenuItem glyphicon glyphicon-cog" data-toggle="tooltip" data-placement="bottom" title="Your Settings">&nbsp;Preferences</a></li>
+						</ul>
+					</li>
+					<li><a href="#" onclick="M$['toggleFullScreen'](this);" class="glyphicon glyphicon-fullscreen" data-toggle="tooltip" data-placement="bottom" title="Switch to fullscreen"></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle glyphicon glyphicon-question-sign" data-toggle="dropdown"><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" onclick="M$['click']('applet.about.i2tmlabs');">About i2tm Labs</a></li>
+							<li><a href="#" onclick="M$['click']('applet.about.hardware');">Under our Hood</a></li>
+							<li><a href="#" onclick="M$['click']('applet.about.maestro');">What is Maestro?</a></li>
+							<li><a href="#" onclick="M$['click']('applet.kuiper-assult');">Kuiper Assult</a></li>
+							<li><a href="#" onclick="M$['click']('applet.about.features');">Reserved</a></li>
+						</ul>
+					</li>
+				</ul>		  
+			</div>
+		
+		</div><!-- container -->
+	</div><!-- end nav-->
+	
+	<div class="progress progress-striped active">
+		<div id="appProgress" 
+			 class="progress-bar" 
+			 role="progressbar" 
+				aria-valuenow="0" 
+				aria-valuemin="0" 
+				aria-valuemax="100" 
+			 style="width: 0%">
+		</div>
+	</div>		
+	
+	<div class="container-fluid">
+		<div class="row navbar-inverse">
+			<div class="col-xs-12 col-md-6">
+				<ul class="nav nav-pills btn-xs">
+					<li><a href="#" onclick="M$['click']('applet.privacy');">Privacy Policy</a></li>
+					<li><a href="#" onclick="M$['click']('applet.terms');">Terms and Conditions</a></li>
+					<li><a href="#">Sitemap</a></li>
+				</ul>				
+			</div>				
+			<div class="col-xs-12 col-md-6 copyright">
+				<small>Copyright 2012 - 2014 i2tm Labs. All rights reserved.</small>
+			</div>
+		</div>
+	</div>
+</div>

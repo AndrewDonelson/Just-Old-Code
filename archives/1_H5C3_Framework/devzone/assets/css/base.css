@@ -1,0 +1,1329 @@
+@media all {
+  /**
+   *  @section Normalisation Module
+   */
+  /* (en) Global reset of paddings and margins for all HTML elements */
+  /* (de) Globales Zurücksetzen der Innen- und Außenabstände für alle HTML-Elemente */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+   /* (en) Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+  * html body * { overflow: visible; font-size: 100%; }
+  html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+ 
+  /* (en) Correction: margin/padding reset caused too small select boxes. */
+  /* (de) Korrektur: Das Zurücksetzen der Abstände verursacht zu kleine Selectboxen. */
+  option {
+    padding-left: 0.4em;
+  }
+
+  select {
+    padding: 1px;
+  }
+
+  /* (en) avoid visible outlines on DIV and h[x] elements in Webkit browsers */
+  div:target,
+  h1:target,
+  h2:target,
+  h3:target,
+  h4:target,
+  h5:target,
+  h6:target {
+    outline: 0 none;
+  }
+
+  /* (en) HTML5 - adjusting visual formatting model to block level */
+  /*main,*/
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  nav,
+  section,
+  summary { display: block; }
+
+  /* (en) HTML5 - default media element styles */
+  audio,
+  canvas,
+  video { display: inline-block; }
+
+  /* (en) HTML5 - don't show <audio> element if there aren't controls */
+  audio:not([controls]) { display: none; }
+
+  /* (en) HTML5 - add missing styling in IE & old FF for hidden attribute */
+  [hidden] { display: none; }
+
+  /* (en) set correct box-modell in IE8/9 plus remove padding */
+  input[type="checkbox"],
+  input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  /* (en) force consistant appearance of input[type="search"] elements in all browser */
+  input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  /* (en) Correct overflow displayed oddly in IE 9 */
+  svg:not(:root) {
+    overflow: hidden;
+  }
+
+  /* (en) Address margin not present in IE 8/9 and Safari 5 */
+  figure {
+    margin: 0;
+  }
+
+  /* (en) Clear borders for <fieldset> and <img> elements */
+  fieldset,
+  img {
+    border: 0 solid;
+  }
+
+  /* (en) new standard values for lists, blockquote, cite and tables */
+  ul,
+  ol,
+  dl {
+    margin: 0 0 1em 1em;
+  }
+
+  li {
+    line-height: 1.5em;
+    margin-left: 0.8em;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin: 0 0 1em 0.8em;
+  }
+
+  blockquote {
+    margin: 0 0 1em 0.8em;
+  }
+
+  q {
+    quotes: none;
+  }
+
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /**
+  * @section Float Handling Module
+  */
+  /* (en) clearfix method for clearing floats */
+  .r2wl-clearfix:before {
+    content: "";
+    display: table;
+  }
+
+  .r2wl-clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  /* (en) alternative solutions to contain floats */
+  .r2wl-contain-dt {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .r2wl-contain-oh {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .r2wl-contain-fl {
+    float: left;
+    width: 100%;
+  }
+
+  /**
+  * @section Column Module
+  *
+  * default column config:
+  * |-------------------------------|
+  * | col1    | col3      | col2    |
+  * | 20%     | flexible  | 20%     |
+  * |-------------------------------|
+  */
+  .r2wl-column {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .r2wl-col1 {
+    float: left;
+    width: 20%;
+  }
+
+  .r2wl-col2 {
+    float: right;
+    width: 20%;
+  }
+
+  .r2wl-col3 {
+    width: auto;
+    margin: 0 20%;
+  }
+
+  .r2wl-cbox {
+    padding: 0 10px;
+  }
+
+  .r2wl-cbox-left {
+    padding: 0 10px 0 0;
+  }
+
+  .r2wl-cbox-right {
+    padding: 0 0 0 10px;
+  }
+
+  /* (en) IE-Clearing: Only used in Internet Explorer, switched on in iehacks.css */
+  .r2wl-ie-clearing {
+    display: none;
+  }
+
+  /**
+  * @section Grid Module
+  */
+  .r2wl-grid {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .r2wl-gl {
+    float: left;
+    margin: 0;
+  }
+
+  .r2wl-gr {
+    float: right;
+    margin: 0 0 0 -5px;
+  }
+
+  .r2wl-g20 {
+    width: 20%;
+  }
+
+  .r2wl-g40 {
+    width: 40%;
+  }
+
+  .r2wl-g60 {
+    width: 60%;
+  }
+
+  .r2wl-g80 {
+    width: 80%;
+  }
+
+  .r2wl-g25 {
+    width: 25%;
+  }
+
+  .r2wl-g33 {
+    width: 33.333%;
+  }
+
+  .r2wl-g50 {
+    width: 50%;
+  }
+
+  .r2wl-g66 {
+    width: 66.666%;
+  }
+
+  .r2wl-g75 {
+    width: 75%;
+  }
+
+  .r2wl-g38 {
+    width: 38.2%;
+  }
+
+  .r2wl-g62 {
+    width: 61.8%;
+  }
+
+  .r2wl-gbox {
+    padding: 0 10px;
+  }
+
+  .r2wl-gbox-left {
+    padding: 0 10px 0 0;
+  }
+
+  .r2wl-gbox-right {
+    padding: 0 0 0 10px;
+  }
+
+  .r2wl-equalize {
+    overflow: hidden;
+  }
+
+  .r2wl-equalize > [class*="r2wl-g"] {
+    display: table-cell;
+    float: none;
+    margin: 0;
+    vertical-align: top;
+  }
+
+  .r2wl-equalize > [class*="r2wl-g"] > [class*="r2wl-gbox"] {
+    padding-bottom: 10000px;
+    margin-bottom: -10000px;
+  }
+
+  /**
+  * @section Form Module
+  */
+  /** Vertical-Forms - technical base (standard)
+  *
+  * |-------------------------------|
+  * | form                          |
+  * |-------------------------------|
+  * |   label                       |
+  * |   input / select / textarea   |
+  * |-------------------------------|
+  * | /form                         |
+  * |-------------------------------|
+  *
+  * (en) Styling of forms where both label and input/select/textarea are styled with display:block;
+  */
+  .r2wl-form,
+  .r2wl-form fieldset {
+    overflow: hidden;
+  }
+
+  .r2wl-form div {
+    position: relative;
+  }
+  .r2wl-form label,
+  .r2wl-form .r2wl-label,
+  .r2wl-form .r2wl-message {
+    position: relative;
+    line-height: 1.5;
+    display: block;
+  }
+  .r2wl-form .r2wl-message {
+    clear: both;
+  }
+  .r2wl-form .r2wl-fbox-check label {
+    display: inline;
+  }
+  .r2wl-form input,
+  .r2wl-form textarea {
+    cursor: text;
+  }
+  .r2wl-form .r2wl-fbox-check input,
+  .r2wl-form input[type="image"],
+  .r2wl-form input[type="radio"],
+  .r2wl-form input[type="checkbox"],
+  .r2wl-form select,
+  .r2wl-form label {
+    cursor: pointer;
+  }
+  .r2wl-form textarea {
+    overflow: auto;
+  }
+  .r2wl-form input.hidden,
+  .r2wl-form input[type=hidden] {
+    display: none !important;
+  }
+  .r2wl-form .r2wl-fbox:before,
+  .r2wl-form .r2wl-fbox-text:before,
+  .r2wl-form .r2wl-fbox-select:before,
+  .r2wl-form .r2wl-fbox-check:before,
+  .r2wl-form .r2wl-fbox-button:before {
+    content: "";
+    display: table;
+  }
+  .r2wl-form .r2wl-fbox:after,
+  .r2wl-form .r2wl-fbox-text:after,
+  .r2wl-form .r2wl-fbox-select:after,
+  .r2wl-form .r2wl-fbox-check:after,
+  .r2wl-form .r2wl-fbox-button:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  .r2wl-form .r2wl-fbox-check input:focus,
+  .r2wl-form .r2wl-fbox-check input:hover,
+  .r2wl-form .r2wl-fbox-check input:active,
+  .r2wl-form input[type="radio"]:focus,
+  .r2wl-form input[type="radio"]:hover,
+  .r2wl-form input[type="radio"]:active,
+  .r2wl-form input[type="checkbox"]:focus,
+  .r2wl-form input[type="checkbox"]:hover,
+  .r2wl-form input[type="checkbox"]:active {
+    border: 0 none;
+  }
+  .r2wl-form input,
+  .r2wl-form textarea,
+  .r2wl-form select {
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70%;
+  }
+  .r2wl-form .r2wl-fbox-check input,
+  .r2wl-form input[type="radio"],
+  .r2wl-form input[type="checkbox"] {
+    display: inline;
+    margin-left: 0;
+    margin-right: 0.5ex;
+    width: auto;
+    height: auto;
+  }
+  .r2wl-form input[type="image"] {
+    border: 0;
+    display: inline;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+  .r2wl-form label,
+  .r2wl-form .r2wl-label {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .r2wl-form .r2wl-fbox-button input {
+    display: inline;
+    overflow: visible;
+    width: auto;
+  }
+  .r2wl-form .r2wl-inline {
+    display: inline-block;
+    float: none;
+    margin-right: 0;
+    width: auto;
+    vertical-align: baseline;
+  }
+
+  /* default form wrapper width */
+  .r2wl-fbox-wrap {
+    display: table;
+    table-layout: fixed;
+    width: 70%;
+  }
+  .r2wl-fbox-wrap input,
+  .r2wl-fbox-wrap textarea,
+  .r2wl-fbox-wrap select {
+    width: 100%;
+  }
+  .r2wl-fbox-wrap input[type="image"] {
+    width: auto;
+  }
+  .r2wl-fbox-wrap input[type="radio"],
+  .r2wl-fbox-wrap input[type="checkbox"] {
+    display: inline;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0.5ex;
+  }
+  .r2wl-fbox-wrap label,
+  .r2wl-fbox-wrap .r2wl-label {
+    display: inline;
+  }
+
+  .r2wl-full input,
+  .r2wl-full textarea,
+  .r2wl-full select {
+    width: 100%;
+  }
+  .r2wl-full .r2wl-fbox-wrap {
+    width: 100%;
+  }
+
+  /**
+  *  Columnar forms display - technical base (optional)
+  *
+  *  |-------------------------------------------|
+  *  | form                                      |
+  *  |-------------------------------------------|
+  *  |                                           |
+  *  |   label   |   input / select / textarea   |
+  *  |                                           |
+  *  |-------------------------------------------|
+  *  | /form                                     |
+  *  |-------------------------------------------|
+  *
+  *  (en) Styling of forms where label floats left of form-elements
+  *  (de) Formulargestaltung, bei der die label-Elemente nach links fließen
+  */
+  .r2wl-columnar input,
+  .r2wl-columnar textarea,
+  .r2wl-columnar select {
+    float: left;
+    margin-right: -3px;
+  }
+  .r2wl-columnar label,
+  .r2wl-columnar .r2wl-label {
+    display: inline;
+    float: left;
+    width: 30%;
+    z-index: 1;
+  }
+  .r2wl-columnar .r2wl-fbox-check input,
+  .r2wl-columnar .r2wl-message {
+    margin-left: 30%;
+  }
+  .r2wl-columnar .r2wl-fbox-wrap {
+    margin-left: 30%;
+    margin-right: -3px;
+  }
+  .r2wl-columnar .r2wl-fbox-wrap .r2wl-message {
+    margin-left: 0%;
+  }
+  .r2wl-columnar .r2wl-fbox-wrap label {
+    float: none;
+    width: auto;
+    z-index: 1;
+    margin-left: 0;
+  }
+  .r2wl-columnar .r2wl-fbox-wrap input {
+    margin-left: 0;
+    position: relative;
+  }
+  .r2wl-columnar .r2wl-fbox-check {
+    position: relative;
+  }
+  .r2wl-columnar .r2wl-fbox-check label,
+  .r2wl-columnar .r2wl-fbox-check .r2wl-label {
+    padding-top: 0;
+  }
+  .r2wl-columnar .r2wl-fbox-check input {
+    top: 3px;
+  }
+  .r2wl-columnar .r2wl-fbox-button input {
+    float: none;
+    margin-right: 1em;
+  }
+
+  .r2wl-fbox-wrap + .r2wl-fbox-wrap {
+    margin-top: 0.5em;
+  }
+
+  /* global and local columnar settings for button alignment */
+  .r2wl-columnar fieldset .r2wl-fbox-button,
+  fieldset.r2wl-columnar .r2wl-fbox-button {
+    padding-left: 30%;
+  }
+
+  /**
+  * @section Accessibility Module
+  *
+  * (en) skip links and hidden content
+  * (de) Skip-Links und versteckte Inhalte
+  */
+  /* (en) classes for invisible elements in the base layout */
+  /* (de) Klassen für unsichtbare Elemente im Basislayout */
+  .r2wl-skip,
+  .r2wl-hideme,
+  .r2wl-print {
+    position: absolute;
+    top: -32768px;
+    left: -32768px;
+  }
+
+  /* (en) make skip links visible when using tab navigation */
+  /* (de) Skip-Links für Tab-Navigation sichtbar schalten */
+  .r2wl-skip:focus,
+  .r2wl-skip:active {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+
+  /* skiplinks:technical setup */
+  .r2wl-skiplinks {
+    position: absolute;
+    top: 0px;
+    left: -32768px;
+    z-index: 1000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .r2wl-skiplinks .r2wl-skip:focus,
+  .r2wl-skiplinks .r2wl-skip:active {
+    left: 32768px;
+    outline: 0 none;
+    position: absolute;
+    width: 100%;
+  }
+}
+@media print {
+  /**
+  * @section print adjustments for core modules
+  *
+  * (en) float containment for grids. Uses display:table to avoid bugs in FF & IE
+  * (de) Floats in Grids einschließen. Verwendet display:table, um Darstellungsprobleme im FF & IE zu vermeiden
+  *
+  * @bugfix
+  * @since     3.0
+  * @affected  FF2.0, FF3.0, IE7
+  * @css-for   all browsers
+  * @valid     yes
+  */
+  .r2wl-grid > .r2wl-gl,
+  .r2wl-grid > .r2wl-gr {
+    overflow: visible;
+    display: table;
+    table-layout: fixed;
+  }
+
+  /* (en) make .r2wl-print class visible */
+  /* (de) .r2wl-print-Klasse sichtbar schalten */
+  .r2wl-print {
+    position: static;
+    left: 0;
+  }
+
+  /* (en) generic class to hide elements for print */
+  /* (de) Allgemeine CSS Klasse, um beliebige Elemente in der Druckausgabe auszublenden */
+  .r2wl-noprint {
+    display: none !important;
+  }
+}
+
+@media all {
+  .r2wl-hlist {
+    /* (en) containing floats in IE */
+    /* (de) Einfassen der Floats im IE */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    line-height: 1em;
+    background: #222;
+  }
+  .r2wl-hlist ul {
+    margin: 0;
+    padding: 0.5em 1.5em;
+    display: inline;
+    float: left;
+  }
+  .r2wl-hlist ul li {
+    display: inline;
+    float: left;
+    font-size: 1.0em;
+    line-height: 1;
+    list-style-type: none;
+    margin: 0 .25em 0 0;
+    padding: 0;
+  }
+  .r2wl-hlist ul li a, .r2wl-hlist ul li strong {
+    background: transparent;
+    color: #aaa;
+    display: block;
+    font-size: 1em;
+    line-height: 2em;
+    padding: 0 0.5em;
+    font-weight: normal;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    width: auto;
+  }
+  .r2wl-hlist ul li a:focus,
+  .r2wl-hlist ul li a:hover,
+  .r2wl-hlist ul li a:active {
+    color: #ccc;
+    background: #666;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 0.2em;
+    text-decoration: none;
+    outline: 0 none;
+  }
+  .r2wl-hlist ul li.active {
+    background: #666;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0.2em;
+    color: #fff;
+  }
+  .r2wl-hlist ul li.active strong,
+  .r2wl-hlist ul li.active a:focus,
+  .r2wl-hlist ul li.active a:hover,
+  .r2wl-hlist ul li.active a:active {
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* ------- search form -------- */
+  .r2wl-searchform {
+    float: right;
+    display: inline;
+    line-height: 2;
+    padding: 0.5em 1.5em;
+  }
+  .r2wl-searchform .r2wl-searchfield {
+    -webkit-appearance: none;
+    background: #fff;
+    line-height: 1;
+    padding: 0.25em;
+    width: 12em;
+    border: solid 1px #888;
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    outline: none;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  .r2wl-searchform .r2wl-searchbutton {
+    -webkit-appearance: none;
+    background: #5f5f5f;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: .2em;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1.25;
+    padding: 0.25em;
+    border: solid 1px transparent;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media all {
+  /* 4 navigation levels defined */
+  .r2wl-vlist {
+    margin: 0 0 1.5em 0;
+    list-style-type: none;
+    background: transparent;
+    border: 0 none;
+  }
+  .r2wl-vlist ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    border-top: 2px #ddd solid;
+    border-bottom: 2px #ddd solid;
+  }
+  .r2wl-vlist ul ul {
+    border: 0 none;
+  }
+  .r2wl-vlist li {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  .r2wl-vlist a,
+  .r2wl-vlist strong,
+  .r2wl-vlist span {
+    display: block;
+    padding: 3px 0px 3px 10%;
+    text-decoration: none;
+    border-bottom: 1px #ddd solid;
+  }
+  .r2wl-vlist a,
+  .r2wl-vlist a:visited {
+    color: #444;
+  }
+  .r2wl-vlist li span {
+    display: block;
+    font-weight: bold;
+    border-bottom: 1px #ddd solid;
+  }
+  .r2wl-vlist li.active {
+    color: #fff;
+    background-color: #444;
+  }
+  .r2wl-vlist li.active strong {
+    font-weight: bold;
+  }
+  .r2wl-vlist li a,
+  .r2wl-vlist li strong,
+  .r2wl-vlist li span {
+    width: 90%;
+    padding-left: 10%;
+  }
+  .r2wl-vlist li a:focus,
+  .r2wl-vlist li a:hover,
+  .r2wl-vlist li a:active {
+    background-color: #888;
+    color: #fff;
+    outline: 0 none;
+  }
+  .r2wl-vlist li ul li a,
+  .r2wl-vlist li ul li strong,
+  .r2wl-vlist li ul li span {
+    width: 80%;
+    padding-left: 20%;
+  }
+  .r2wl-vlist li ul li a,
+  .r2wl-vlist li ul li a:visited {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  .r2wl-vlist li ul li a:focus,
+  .r2wl-vlist li ul li a:hover,
+  .r2wl-vlist li ul li a:active {
+    background-color: #888;
+    color: #fff;
+  }
+  .r2wl-vlist li ul li ul li a,
+  .r2wl-vlist li ul li ul li strong,
+  .r2wl-vlist li ul li ul li span {
+    width: 70%;
+    padding-left: 30%;
+  }
+  .r2wl-vlist li ul li ul li a,
+  .r2wl-vlist li ul li ul li a:visited {
+    background-color: #f0f0f0;
+    color: #222;
+  }
+  .r2wl-vlist li ul li ul li a:focus,
+  .r2wl-vlist li ul li ul li a:hover,
+  .r2wl-vlist li ul li ul li a:active {
+    background-color: #888;
+    color: #fff;
+  }
+  .r2wl-vlist li ul li ul li ul li a,
+  .r2wl-vlist li ul li ul li ul li strong,
+  .r2wl-vlist li ul li ul li ul li span {
+    width: 60%;
+    padding-left: 40%;
+  }
+  .r2wl-vlist li ul li ul li ul li a,
+  .r2wl-vlist li ul li ul li ul li a:visited {
+    background-color: #e8e8e8;
+    color: #111;
+  }
+  .r2wl-vlist li ul li ul li ul li a:focus,
+  .r2wl-vlist li ul li ul li ul li a:hover,
+  .r2wl-vlist li ul li ul li ul li a:active {
+    background-color: #888;
+    color: #fff;
+  }
+
+  /* title */
+  .r2wl-vtitle {
+    font-weight: bold;
+    font-size: 100%;
+    width: 90%;
+    padding: 3px 0px 3px 10%;
+    margin: 0;
+    color: #444;
+    background-color: #fff;
+    border-top: 2px #ddd solid;
+  }
+  .r2wl-vtitle + ul {
+    border-top: 4px #888 solid;
+  }
+}
+
+@media all {
+
+  /**
+  * (en) reset monospaced elements to font size 16px in all browsers
+  * (de) Schriftgröße von monospaced Elemente in allen Browsern auf 16 Pixel setzen
+  *
+  * @see: http://webkit.org/blog/67/strange-medium/
+  */
+  textarea,
+  pre,
+  code,
+  kbd,
+  samp,
+  var,
+  tt {
+    font-family: Arial, Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+  }
+
+  /* font-size: 14px; */
+  body {
+    font-family: Arial, Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+    font-size: 100%;
+    color: #4d4d4d;
+  }
+
+  /*--- Headings | Überschriften ------------------------------------------------------------------------*/
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 400;
+    margin: 0;
+	text-shadow: 0 1px 1px #4d4d4d;
+	color: rgba(5,5,5,0.95);	
+  }
+
+  h1 {
+    /* font-size: 48px; */
+    font-size: 342.85714%;
+    line-height: 0.875;
+    margin: 0 0 0.4375em 0;
+  }
+
+  h2 {
+    /* font-size: 32px; */
+    font-size: 228.57143%;
+    line-height: 1.3125;
+    margin: 0 0 0.65625em 0;
+  }
+
+  h3 {
+    /* font-size: 24px; */
+    font-size: 171.42857%;
+    line-height: 0.875;
+    margin: 0 0 0.875em 0;
+  }
+
+  h4 {
+    /* font-size: 21px; */
+    font-size: 150%;
+    line-height: 1;
+    margin: 0 0 1em 0;
+  }
+
+  h5 {
+    /* font-size: 18px; */
+    font-size: 128.57143%;
+    line-height: 1.16667;
+    margin: 0 0 1.16667em 0;
+  }
+
+  h6 {
+    /* font-size: 16px; */
+    font-size: 110%;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 1.5em 0;
+  }
+
+  /* --- Lists | Listen  -------------------------------------------------------------------------------- */
+  ul,
+  ol,
+  dl {
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0 0 1.5em 0;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul ul {
+    list-style-type: circle;
+    margin-top: 0;
+  }
+
+  ol ol {
+    list-style-type: lower-latin;
+    margin-top: 0;
+  }
+
+  ol ul {
+    list-style-type: circle;
+    margin-top: 0;
+  }
+
+  li {
+    font-size: 100%;
+    line-height: 1.5;
+    margin-left: 1.2em;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin: 0 0 1.5em 0.8em;
+  }
+
+  /* --- general text formatting | Allgemeine Textauszeichnung ------------------------------------------ */
+  p {
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0 0 1.5em 0;
+  }
+
+  blockquote,
+  cite,
+  q {
+    font-family: "Droid Serif", Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+  }
+
+  blockquote {
+    background: transparent;
+    color: #666666;
+    margin: 1.5em 0 0 1.5em;
+  }
+
+  strong,
+  b {
+    font-weight: bold;
+  }
+
+  em,
+  i {
+    font-style: italic;
+  }
+
+  big {
+    /* font-size: 16px; */
+    font-size: 114.28571%;
+    line-height: 1.3125;
+  }
+
+  small {
+    /* font-size: 12px; */
+    font-size: 85.71429%;
+    line-height: 1.75;
+  }
+
+  pre,
+  code,
+  kbd,
+  tt,
+  samp,
+  var {
+    font-size: 100%;
+  }
+
+  pre {
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0 0 1.5em 0;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  pre,
+  code {
+    color: #880000;
+  }
+
+  kbd,
+  samp,
+  var,
+  tt {
+    color: #666666;
+    font-weight: bold;
+  }
+
+  var,
+  dfn {
+    font-style: italic;
+  }
+
+  acronr2wl,
+  abbr {
+    border-bottom: 1px #aaa dotted;
+    font-variant: small-caps;
+    letter-spacing: .07em;
+    cursor: help;
+  }
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  mark {
+    background: yellow;
+    color: black;
+  }
+
+  hr {
+    color: #fff;
+    background: transparent;
+    margin: 0 0 0.75em 0;
+    padding: 0 0 0.67857em 0;
+    border: 0;
+    border-bottom: 1px #eeeeee solid;
+  }
+  
+  img { outline: 0; max-width: 100%; height: auto; }
+
+  /*--- Links ----------------------------------------------------------------------------------------- */
+  a {
+    color: #4d4d4d;
+    background: transparent;
+    text-decoration: none;
+  }
+
+  a:active {
+    outline: none;
+  }
+
+  /* (en) maximum constrast for tab focus - change with great care */
+  /* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
+  a:hover,
+  a:focus {
+    background-color: #4d4d4d;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* --- images ------------------ */
+  img,
+  figure {
+    margin: 0;
+  }
+
+  .flexible {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* IE6 workaround - 2% space for possible borders */
+  * html .flexible {
+    width: 98%;
+  }
+
+  .bordered {
+    margin-bottom: 1.5em;
+    border: 2px #eee solid;
+    border: 2px white solid;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  }
+
+  /**
+  * ----------------------------------------------------------------------- #
+  *
+  * Generic Content Classes
+  *
+  * (en) standard classes for positioning and highlighting
+  * (de) Standardklassen zur Positionierung und Hervorhebung
+  *
+  * @section content-generic-classes
+  */
+  .highlight {
+    color: #cc3300;
+  }
+
+  .dimmed {
+    color: #888888;
+  }
+
+  .box {
+    border-radius: 0.3em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #888;
+    border-color: rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+    color: #444;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 1.42857em;
+    margin: 0 0 1.5em 0;
+  }
+  .box > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .label {
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 1px 6px 2px;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: normal;
+    white-space: nowrap;
+    border-radius: 3px;
+    background: #06C;
+    color: #fff;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .info {
+    background: #aaaaaa;
+  }
+
+  .success {
+    background: #88cc88;
+  }
+
+  .warning {
+    background: #cccc88;
+  }
+
+  .error {
+    background: #cc8888;
+  }
+
+  .left {
+    float: left;
+    display: inline;
+    margin: 0 1em 1em 0;
+  }
+
+  .right {
+    float: right;
+    display: inline;
+    margin: 0 0 1em 1em;
+  }
+
+  .center {
+    display: block;
+    text-align: center;
+    margin: 0 auto 1em auto;
+  }
+
+  /**
+  * ------------------------------------------------------------------------------------------------- #
+  *
+  * Tables | Tabellen
+  *
+  * (en) Generic classes for table-width and design definition
+  * (de) Generische Klassen für die Tabellenbreite und Gestaltungsvorschriften für Tabellen
+  *
+  * @section content-tables
+  */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #4d4d4d;
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+    margin: 0 0 1.35714em 0;
+  }
+  table.narrow {
+    margin: 0 0 1.42857em 0;
+  }
+  table.narrow th,
+  table.narrow td {
+    padding: 0 0.5em;
+    line-height: 1.42857;
+  }
+  table.fixed {
+    table-layout: fixed;
+  }
+  table.bordertable {
+    border: 1px #ccc solid;
+  }
+  table.bordertable thead th {
+    background: #e0e0e0;
+    border-right: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+  }
+  table.bordertable tbody th[scope="row"] {
+    background: #f0f0f0;
+  }
+  table.bordertable tbody th {
+    border-right: 1px solid #ccc;
+  }
+  table.bordertable tbody td {
+    border-right: 1px solid #ccc;
+  }
+
+  caption {
+    font-variant: small-caps;
+  }
+
+  th,
+  td {
+    line-height: 1.5em;
+    vertical-align: top;
+    padding: 0.71429em 0.5em;
+  }
+
+  th *:first-child,
+  td *:first-child {
+    margin-top: 0;
+  }
+
+  th.nowrap,
+  td.nowrap {
+    white-space: nowrap;
+  }
+
+  thead th {
+    text-align: left;
+    color: #000;
+    border-bottom: 2px #000 solid;
+  }
+
+  tbody {
+    /* highlight row on mouse over */
+  }
+  tbody th {
+    text-align: left;
+    border-top: 1px solid #ccc;
+  }
+  tbody td {
+    text-align: left;
+    border-top: 1px solid #ccc;
+  }
+  tbody tr:hover th,
+  tbody tr:hover td {
+    background: #f8f8f8;
+  }
+}

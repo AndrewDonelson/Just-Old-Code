@@ -1,0 +1,59 @@
+<!-- I2TM Game Engine [Developer] -->
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>H5C3 Developer Window</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="/favicon.ico">
+		<!--[if lt IE 9]><script src="ext/html5shiv.js"></script><![endif]--> 	 
+		<link rel="stylesheet" href="css/i2tm_default.css" type="text/css" title="Style" />
+		<script src="http://h5c3.i2tmlabs.com/js/modernizr.all.release.js" title="Modernizr" ></script>
+		<script src="http://h5c3.i2tmlabs.com/js/jquery-1.10.2.release.js" title="jQuery" ></script>
+		<script src="http://h5c3.i2tmlabs.com/js/modernizr.all.release.js" title="Modernizr" ></script>
+		<script src="http://h5c3.i2tmlabs.com/js/jquery-1.10.2.release.js" title="jQuery" ></script>
+		<script src="http://h5c3.i2tmlabs.com/js/gamecore.min.js" title="gameCore"></script>
+		<script src="js/config.js" title="config"></script>	
+		<script src="../h5c3/h5c3.js" title="h5c3"></script>				
+	</head>
+
+	<body>
+	<div id="waDIV">
+		<div id="waDIV">
+			<div id="pcGameInfo">
+				<div id="cantplay" style="display:none">We're Sorry, But you are not using Google Chrome which is required.</div>
+			</div>
+		</div>	
+
+		<div id="waDebugDIV">
+			<div id="waDebugTitleBar">
+				<div style="display:inline-block;float:left;">
+						<a class="button pill darkblue sharp" href="javascript:h5c3.dbugger.button('log');">Log</a>
+						<a class="button pill darkblue sharp active" href="javascript:h5c3.dbugger.button('stats');">Graphs</a>
+						<a class="button pill darkblue sharp" href="javascript:h5c3.dbugger.button('profiler');">Profiler</a>
+						<a class="button pill yellow sharp long" href="javascript:h5c3.dbugger.button('pooldump');">Pool Dump</a>
+						<a class="button pill red sharp" href="javascript:h5c3.dbugger.button('physics');">Physics</a>
+						<a class="button pill red sharp" href="javascript:h5c3.dbugger.button('sound');">Sound</a>
+				</div>
+				<div style="padding-top:4px;"></div>
+			</div>
+			<div id="waDebugProfiler" style="display: block;">
+				<span id="pcDebugCurFPS" style="width: 90px; display: inline-block;">CUR: 0</span>
+				<span id="pcDebugAvgFPS" style="width: 90px; display: inline-block;">AVG: 0</span>
+				<span id="pcDebugMinFPS" style="width: 90px; display: inline-block;">MIN: 0</span>
+				<span id="pcDebugMaxFPS" style="width: 90px; display: inline-block;">MAX: 0</span>
+				<span id="pcDebugFrame" style="width: 90px; display: inline-block;">FRM: 0ms</span>
+				<span id="pcDebugCurFPS" style="width: 90px; display: inline-block;">CUR: 0</span>
+				<span id="pcDebugAvgFPS" style="width: 90px; display: inline-block;">AVG: 0</span>
+				<span id="pcDebugMinFPS" style="width: 90px; display: inline-block;">MIN: 0</span>
+				<span id="pcDebugMaxFPS" style="width: 90px; display: inline-block;">MAX: 0</span>
+				<span id="pcDebugFrame" style="width: 90px; display: inline-block;">FRM: 0</span>
+			</div>
+			<div id="waDebugConsole" style="display: none; width: 1000px; height: 700px;">
+				<textarea id="waConsoleLog" readonly=""></textarea>
+			</div>
+			<div><canvas id="waDebugStats"></canvas></div>
+		</div>	
+	</body>
+</html>

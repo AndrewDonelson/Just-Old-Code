@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Webpage Builder</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="/favicon.ico">
+		<!--[if lt IE 9]><script src="ext/html5shiv.js"></script><![endif]--> 
+		<!--
+		<link rel="stylesheet" href="http://h5c3.i2tmlabs.com/css/styles/style.absolute.1.css" type="text/css" title="Style" />
+		-->
+		<link rel="stylesheet" href="css/style.absolute.1.css" type="text/css" title="Style" />
+		<link rel="stylesheet" href="http://h5c3.i2tmlabs.com/css/ext/animate.min.css" type="text/css" title="Style" />
+		<link rel="stylesheet" href="http://h5c3.i2tmlabs.com/css/ext/i2tmfonts.min.css" type="text/css" title="Style" />
+		<link rel="stylesheet" href="css/default.css" type="text/css" title="Style" />
+		<script src="http://h5c3.i2tmlabs.com/js/modernizr.all.release.js" title="Modernizr" ></script>
+		<script src="http://h5c3.i2tmlabs.com/js/jquery-1.10.2.release.js" title="jQuery" ></script>
+		<script src="http://h5c3.i2tmlabs.com/js/jquery.dropotron.release.js" title="DropoTron" ></script>
+		<script src="../h5c3/3rdparty/gamecore/gamecore.js" title="gameCore"></script>
+		<script src="js/config.js" title="config"></script>	
+		<script src="../h5c3/h5c3.js" title="h5c3"></script>				
+	</head>
+    <body>
+		<div id="background">
+			<div id="wrapper">
+				<!-- Always on top: Position Fixed-->
+				<div id="header"><div id="logo"><h1 class="variable scale">H5C3 Compiler</h1></div></div>
+				
+				<!-- Fixed size after header-->
+				<div id="content">
+				
+					<!-- Always on top. Fixed position, fixed width, relative to content width-->
+					<div id="leftSidebar">
+						<div id="menu">
+							<div id="nav">
+								<h3>Create or Edit?</h3><br />
+								<ul class="style3" style="padding: 20px;">
+									<li class="button button-style2"><a href="#">Home</a></li><br />
+									<li class="button button-style2"><a href="#">Personal</a></li><br />
+									<li class="button button-style2"><a href="#">Blog</a></li><br />
+									<li class="button button-style2"><a href="#">Forum</a></li><br />
+									<li class="button button-style2"><a href="#">Store</a></li><br />
+									<li class="button button-style2"><a href="#">Theme</a></li><br />
+									<li class="button button-style2"><a href="http://i2tmlabs.com/">Exit</a></li><br />
+								</ul>
+							</div>					
+						</div>
+						<div class="variable"></div>
+					</div>
+					
+					<!-- Scrollable div with main content -->
+					<div id="scrollable" class="variable animated fadeIn">
+						<form>
+																	
+					
+								<div id="myPreview">
+									<div id="monitor">
+										<img id="monitorImg" src="img/monitor.png" alt="monitor" />
+										<div id="monitorBtns">
+											<a href="javascript:$('#preview',window.parent.document).attr('src',$('#preview',window.parent.document).attr('src'));">Refresh</a><a href="#">Reset</a><a href="#">Save</a>
+										</div>
+										<!-- 
+										<iframe id="preview" frameborder="0"></iframe>
+										-->
+
+										<div id="waDIV"></div>
+									</div>
+								</div>
+								
+								<div class="cell"><!-- Layout -->
+									<label>Your Name</label>
+									<input id="myName" type="text" placeholder="Name" />
+								</div>
+								
+								<div class="cell">
+									<label>Birthday (MM/DD/YYYY)</label>
+									<input id="myBDay" type="text" placeholder="MM/DD/YYYY" />
+								</div>
+								
+								<div class="cell">
+									<label>Tagline (about 10-20 words)</label>
+									<input id="myTagLine" type="text" placeholder="I'm too sexy" />
+								</div>
+								
+								<div class="cell">
+									<label>Select Layout</label>
+									<select id = "myLayout">
+										<option selected value = "nosidebars">Simple - No Sidebars</option>
+										<option value = "leftsidebar">Simple - Left Sidebar</option>
+										<option value = "rightsidebar">Simple - Right Sidebar</option>
+										<option value = "leftrightsidebars">Simple - Both Sidebars</option>
+									</select>
+								</div>
+								
+								<div class="cell">
+									<label>Select Color Scheme</label>
+									<select id = "myColors">
+										<option selected value = "default">Black & White</option>
+										<option value = "shadesofgrey">Shades of Gray</option>
+										<option value = "shadesofred">Shades of Red</option>
+										<option value = "autumn">Autumn</option>
+										<option value = "i2tm">i2tm Labs</option>
+									</select>
+								</div>
+
+								<div class="cell">
+									<label>Select Typeography</label>
+									<select id = "myTypeography">
+										<option selected value = "default">Default</option>
+										<option value = "simple">Simple</option>
+										<option value = "autumn3">Autumn</option>
+									</select>
+								</div>
+								
+								<div class="cell"><!-- Colors -->
+									<label>Twitter</label>
+									<input id="myTwitter" type="text" placeholder="ID" />
+								</div>
+								
+								<div class="cell">
+									<label>Facebook</label>
+									<input id="myFacebook" type="text" placeholder="ID" />
+								</div>
+								
+								<div class="cell">
+									<label>Google+</label>
+									<input id="myGooglePlus" type="text" placeholder="ID" />
+								</div>
+								
+								<div class="cell">
+									<label>About You</label>
+									<textarea id="aboutMe"></textarea>
+								</div>
+								
+								<div class="cell">					
+									<!-- Begin single Color Selector -->
+									<div>
+									<label>Foreground Colors</label>
+									<input id="fg1" class="color" type="text" readonly placeholder="Foreground Primary" />
+									<input id="fg2" class="color" type="text" readonly placeholder="Foreground Secondary" />
+									<input id="fg3" class="color" type="text" readonly placeholder="Foreground Trinary" />
+									<input id="fg4" class="color" type="text" readonly placeholder="Users Choice" />
+									</div>
+									<!-- End single Color Selector -->
+								</div>
+								
+								<div class="cell">					
+									<!-- Begin single Color Selector -->
+									<div>
+									<label>Foreground Colors</label>
+									<input id="bg1" class="color" type="text" readonly placeholder="Background Primary" />
+									<input id="bg2" class="color" type="text" readonly placeholder="Background Secondary" />
+									<input id="bg3" class="color" type="text" readonly placeholder="Background Trinary" />
+									<input id="bg4" class="color" type="text" readonly placeholder="Users Choice" />
+									</div>
+									<!-- End single Color Selector -->
+								</div>
+																
+
+						</form>
+					</div>
+					
+					<!-- Always on top. Fixed position, fixed width, relative to content width -->
+					<div id="rightSidebar"><div class="variable"></div></div>
+					
+				</div><!-- content -->
+				
+				<!-- Always at the end of the page -->
+				<div id="footer">
+					<!-- Copyright -->
+					<div id="copyright">
+						<span>&copy; <a href="http://i2tmlabs.com/">i2tm Labs</a> - All rights reserved.<br />Reusing any content on this site in not authorized without written permission.</span>
+						<p>
+						<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fme.i2tmlabs.com%2F"><img src="http://h5c3.i2tmlabs.com/img/icon_w3c-valid-html5.jpg" alt="HTML5 VALID" /></a>
+						<a href=""><img src="http://h5c3.i2tmlabs.com/img/icon_w3c-valid-css3.jpg" alt="CSS3 VALID" /></a>
+						</p>
+					</div>
+					<!-- /Copyright -->
+				</div><!-- footer -->
+			</div><!-- wrapper -->
+		</div><!-- background -->
+    </body>
+</html>

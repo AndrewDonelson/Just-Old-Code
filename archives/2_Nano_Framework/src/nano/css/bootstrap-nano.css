@@ -1,0 +1,134 @@
+/**
+ * @project Nano Framework
+ * @namespace 
+ * @name nano-css
+ * @author Andrew Donelson <andrew@i2tmlabs.com>
+ * @license http://i2tmlabs.com/license.html
+ *
+ * Features
+ * - Bootstrap Enhancements
+ * - a) Navbar Drop-Up Menu
+ * - b) Fluid Navbar
+ * - Nano Add-ons
+ * - a) defaultBox with many styles and colors
+ * - b) Perfect paragraph, All paragraphs are instantly Perfect!
+ * - c) Cross-Browser Opacity helper classes, 5 steps, 20, 40, 60, 80 and 100% 
+ */
+@media screen and (max-device-width: 2048px) {.mdw:before {content:'2048px'}}
+
+html,body {
+	font-size:100%;
+	line-height: 1.5;
+}
+
+/**
+ * Bootstrap Add-on: Navbar Dropup Menu
+ * @property .drop-menu
+ * @memberof nano-css
+ *
+ * Example
+ * ,,,
+ * <ul class="dropdown-menu dropup-menu">
+ *    <li>...</li>
+ * </ul>
+ * ,,,
+ */
+.dropup-menu {
+    bottom: 100%;
+    top: auto !important;
+}
+/* position the arrow downwards, pointing to the menu */
+.navbar .dropup-menu:before {
+    border-bottom: none;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid rgba(0, 0, 0, 0.2);
+    left: 7px;
+    top: 100%;
+}
+.navbar .dropup-menu:after {
+    border-bottom: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff;
+    left: 10px;
+    top: 100%;
+    left: 6px;
+}
+/* point the caret up*/
+.up {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #000000;
+    border-top: none;
+}
+/*===|End Bootstrap Navbar Drop-Up Menu |==============*/
+
+/**
+ * Bootstrap Add-on: Navbar Fluid
+ * @property .navbar-fluid
+ * @memberof nano-css
+ *
+ * Example
+ * ,,,
+ * <nav class="navbar navbar-left navbar-inverse navbar-fluid" role="navigation">
+ * ,,,
+ */
+.navbar-fluid {
+	width:100%;
+}
+/*===|End Bootstrap Navbar Fluid |=====================*/
+
+.defaultBox {
+	text-align: left;
+	display: block;
+	line-height: normal;
+	margin: 1.5em;
+	padding: 1.5em;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 3px 3px 5px 6px #000,inset 0px 0px 1px 1px gray;
+	-webkit-box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.85),inset 0px 0px 1px 1px gray;
+	box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.85),inset 0px 0px 1px 1px gray;
+}
+
+.defaultBox.left 	{ border-radius: 0em 2em 0em 2em; }
+.defaultBox.right  { border-radius: 2em 0em 2em 0em; }
+.defaultBox.top  	{ border-radius: 2em 2em 0em 0em; }
+.defaultBox.bottom { border-radius: 0em 0em 2em 2em; }
+.defaultBox.all 	{ border-radius: 2em 2em 2em 2em; }
+.defaultBox.pad 	{ padding:1.5em; }
+.defaultBox.black {background-color:rgba(0,0,0,.85);}
+.defaultBox.gray {background-color:rgba(128,128,128,.85);}
+.defaultBox.white {background-color:rgba(255,255,255,.85);}
+.defaultBox.red {background-color:rgba(32,0,0,0.85);}
+.defaultBox.green {background-color:rgba(0,32,0,0.85);}
+.defaultBox.blue {background-color:rgba(0, 11, 235,.85);}
+.defaultBox.orange {background-color:rgba(233, 137, 0, 0.85);}
+
+
+/* Modal Dialog one fifth HD = 384x*384 */
+.i2tmDialog {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width:400px;
+	height:400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	padding: .55em;
+	text-align: center;
+	color:black;
+	background-color:white;
+	-webkit-border-radius: .66em;
+	border-radius: .66em;
+	background-clip: padding-box;
+	-webkit-box-shadow: 0px 0px 3.33em 2px #666;
+	box-shadow: 0px 0px 3.33em 2px #666;
+}
+.formatted,p {font-size: 1em;text-indent: 1em;text-align: justify;padding:1em;line-height:1.75em;}
+
+/* ==|== Nano Framework ==================================================== */
+#page_test {position:static;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+#debug {z-index:4; opacity:0.6; position:fixed;bottom:0px;left:480px;background-color:#333; height:25%; width:50%; overflow:hidden;display:none;}
+#page_game {z-index:2;width:100%;height:100%;}
+#debug,#page_warning,#page_test,#page_game{display:none;}

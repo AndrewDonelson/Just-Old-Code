@@ -1,0 +1,98 @@
+<div 
+	data-role="applet" 
+	data-name="socialBar" 
+	data-version="1.1.0" 
+	data-uuid="d6daad34-ad60-433a-a1d6-df3610b02100"
+	data-author="Andrew Donelson" 
+	data-copyright="2013 by i2tm Labs - All rights reserved."
+	data-scale="1" 
+/>
+
+<!-- BEGIN i2tm labs socialBar -->
+<style data-role="applet">
+@charset 'UTF-8';
+@import url(http://h5c3.i2tmlabs.com/public/shared/css/ext/i2tmfonts.css);
+
+/*! DO NOT ALTER FROM HERE */
+#socialBar {
+	position:relative;
+	display: inline-block;
+	border-radius: 2em 0em 2em 0em;
+	line-height: normal;
+	box-shadow: inset 0px 0px 1px 1px gray;
+	margin: 0em 0.25em 0em 0.25em;
+} 
+#socialBar a  { text-decoration: none; }	
+#socialBar a.i2tm { color: #090; font-size:0.5em; float: right;letter-spacing:0.25em;margin-top:.25em;}
+
+	#socialBar .titleBar { 
+		height: 3.5em !important;
+		text-shadow: 0px 1px 1px #4d4d4d;
+		color: rgba(0,0,0, 0.95);
+	}
+	#socialBar .icon-comment { font-weight: 100; font-size: 2.5em; float: left; padding: 0em 0em 0em 0.3em;}
+	#socialBar span { font-weight: 800; font-size: 1.25em; float: right;padding-top:0.25em;padding-right:1em;padding-top:0.5em}
+
+#socialBar .iconBar { text-align: center; height: auto; float:right; margin:0.35em 0.35em 0.35em 0.35em;}
+	#socialBar .iconSkin1 {font-weight: 100; font-size: 1.7em; float: left; padding: .0em 0.6em 0em 0.6em; border-radius: 2em 0em 2em 0em; box-shadow: inset 0px 0px 8px -1px #666;}
+		#socialBar  .icon-twitter.iconSkin1 { color: cyan; }
+		#socialBar  .icon-twitter.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px cyan;}
+		#socialBar  .icon-linkedin.iconSkin1 { color: navy; }
+		#socialBar  .icon-linkedin.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px navy;}
+		#socialBar  .icon-google-plus.iconSkin1 { color: red; }
+		#socialBar  .icon-google-plus.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px red;}
+		#socialBar  .icon-facebook.iconSkin1 { color: blue; }
+		#socialBar  .icon-facebook.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px blue;}
+
+/*! TO HERE - Now you can choose a skin or create your own */
+#socialBar.normal { background: rgba(255, 255, 255, 0.85); color: rgba(60, 100, 190, 0.85); }
+#socialBar.light { background: rgba(235, 235, 235, 0.85); color: rgba(180, 180, 180, 0.85); }
+#socialBar.dark { background: rgba(20, 20, 20, 0.85); color: rgba(100, 100, 100, 0.85); }
+#socialBar.desert { background: rgba(255, 245, 235, 0.85); color: rgba(220, 190, 140, 0.85); }
+#socialBar.ladies { background: rgba(250, 210, 250, 0.85); color: rgba(145, 25, 45, 0.85); }
+#socialBar.i2tm { background: rgba(0, 0, 0, 0.85); color: rgba(0, 200, 0, 0.85); }
+</style>
+
+<script data-role="applet">
+	/* Check for H5C3 */
+	if(!window.h5c3) {
+		/* Check for jQuery; h5c3 loads jQuery so it probabaly is not present */
+		if(!window.jQuery) {
+			/* 
+			* No H5C3 and No jQuery - Runnign applet directly so...
+			* Lets load just what we need for them to preview.
+			*/
+			/* Load jQuery */
+		   var script = document.createElement('script');
+		   script.type = "text/javascript";
+		   script.src = "http://h5c3.i2tmlabs.com/shared/js/ext/jquery/jquery-1.10.2.min.js";
+			/* Catch onLoad event for jQuery */
+		   script.onload= function() {
+				/* if No h5c3 and no jquery - fontAwesome is probably missing also */
+				if ($('.icon-stack').length==0) {
+					//No Font-Awesome, must be previewing app directly
+					$('head').append('<link rel="stylesheet" href="http://i2tmlabs.com/h5c3/css/ext/i2tmfonts.css" type="text/css" />');			
+				}
+		   }
+		   document.getElementsByTagName('head')[0].appendChild(script);
+		} /* check for h5c3 */
+	} /* check for h5c3 */
+	
+	//$(window).ready(function() {});
+</script>
+
+<div id="socialBar" class="dark" data-role="applet">
+	<div class="titleBar">
+		<i class="icon icon-comment"></i><span>Social</span><br />
+		<!-- Do not remove/alter this as per lisense. Please at least give credit where it is due. -->
+		<a class="i2tm" href="http://i2tmlabs.com/?track=socialBar">i2tm Labs</a>
+	</div>
+	<!-- Change the below links [href] only! to your respective urls -->
+	<div class="iconBar">
+		<a href="https://twitter.com/AndrewDonelson" alt="Twitter"><i class="icon-twitter iconSkin1"></i></a>
+		<a href="http://www.linkedin.com/pub/andrew-donelson/5b/27/861" alt="LinkedIN"><i class="icon-linkedin iconSkin1"></i></a>
+		<a href="https://plus.google.com/114532266100403759577/about/p/pub" alt="Google+"><i class="icon-google-plus iconSkin1"></i></a>
+		<a href="https://www.facebook.com/andrew.donelson" alt="Facebook"><i class="icon-facebook iconSkin1"></i></a>
+	</div>
+</div>
+<!-- END i2tm labs socialBar -->

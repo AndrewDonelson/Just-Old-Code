@@ -1,0 +1,52 @@
+{
+	"app":{
+		"role":"application",
+		"base":"http://nanofw.com/",
+		"name":"Documentation Template",
+		"description":"Nano Framework Documentation.",
+		"keywords":"i2tm labs nano framework applets cloudlett cloudapp bootstrap jquery modernizr font-awesome games",
+		"version":"0.1.0",
+		"author":"Andrew Donelson",
+		"copyright":"2012-2014 by i2tm Labs - All rights reserved.",
+		"uuid":"eb221817-8fef-4d29-9fd6-c025fc9006c9",
+		"layout":"bootstrap",
+		"style":"default",
+		"applet":""
+	},
+	"modules":{
+		"gldl":false,
+		"dtul":false
+	},
+	"options":{
+		"fullscreen":false,
+		"orientation":"auto",
+		"analytics":true
+	},	
+	"google":{
+		"analytics":{
+			"trackingId":"UA-35732532-1",
+			"pageviews":true,
+			"clicks":true
+		},
+		"ads":{
+			"clientId":"ca-pub-7431399643348196",
+			"ads":{
+				"footerLeft":{
+					"style":"display:inline-block;width:234px;height:60px",
+					"slotId": "1347836869"
+				},
+				"footerRight":{
+					"style":"display:inline-block;width:234px;height:60px",
+					"slotId": "5778036465"
+				}
+			}
+		}
+	},	
+	"files":["default.css","parser.js"],
+	"applets":[],
+	"plugins":[],
+	"resources":{
+		"images":[],
+		"sounds":[]
+	}
+}

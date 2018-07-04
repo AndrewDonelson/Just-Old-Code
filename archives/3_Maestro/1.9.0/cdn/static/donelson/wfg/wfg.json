@@ -1,0 +1,47 @@
+{
+	"app":{
+		"role":"application",
+		"name":"wfg",
+		"fullname":"Finances made Simple",
+		"description":"WSB World System Builder Associate Carolyn Donelson",
+		"keywords":"WSB World System Builder Associate Carolyn Donelson Maestro nano Bootstrap jQuery Font-awesome",
+		"version":"1.0.0",
+		"author":"Andrew Donelson",
+		"copyright":"2012-2014 by i2tm Labs - All rights reserved.",
+		"uuid":"774924d4-a389-4679-8b56-494f05773497",
+		"publisher":"donelson",
+		"theme":"cyan",
+		"skin":"color"
+	},
+	"modules":{
+		"font-awesome":false,
+		"masonry":false,
+		"2dgl":false
+	},
+	"options":{
+		"fullscreen":false,
+		"orientation":"auto"
+	},	
+	"google":{
+		"analytics":{
+			"trackingId":"UA-35732532-1",
+			"pageviews":true,
+			"clicks":true
+		},
+		"ads":{
+			"clientId":"ca-pub-7431399643348196",
+			"light":{
+				"responsive1":"1595076468",
+				"responsive2":"8376860866"
+			},
+			"dark":{
+				"responsive1":"1951027661",
+				"responsive2":"3724063669"
+			}
+		}
+	},	
+	"resources":{
+		"images":[],
+		"sounds":[]
+	}
+}

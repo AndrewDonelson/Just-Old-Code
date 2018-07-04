@@ -1,0 +1,33 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+		"include": [ "d:/Android_Dev/GitHUB/com.I2TMLabs.h5c3.development/h5c3/" ],
+		"exclude": [ 
+			"d:/Android_Dev/GitHUB/com.I2TMLabs.h5c3.development/h5c3/3rdparty",
+			"d:/Android_Dev/GitHUB/com.I2TMLabs.h5c3.development/h5c3/dist",
+			"d:/Android_Dev/GitHUB/com.I2TMLabs.h5c3.development/h5c3/resources",
+			"d:/Android_Dev/GitHUB/com.I2TMLabs.h5c3.development/h5c3/tools"
+		],	
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": [],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "default": {
+            "outputSourceFiles": false
+        }
+    },
+	"opts": {
+		"template": "default",
+		"encoding": "utf8",
+		"destination": "d:/Android_Dev/GitHUB/com.I2TMLabs.h5c3.docs",
+		"recurse": true,
+		"tutorials": "d:/Android_Dev/GitHUB/com.I2TMLabs.h5c3.docs/tutorials",
+		"private": true,
+		"lenient": true
+	}	
+}

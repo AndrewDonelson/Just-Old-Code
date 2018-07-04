@@ -1,0 +1,528 @@
+@charset 'UTF-8';
+
+/*!
+default css 1:96 fixed ratio; 1dppx = 96dpi; or:
+	- a 1 inch wide image on a 1.0 ddpx screen is equal to 096px | font-size 18px = 18px (96/18=5.33 divider)
+	- a 1 inch wide image on a 1.5 ddpx screen is equal to 144px | font-size 18px = 27px
+	- a 1 inch wide image on a 2.0 ddpx screen is equal to 192px | font-size 18px = 36px
+	- a 1 inch wide image on a 3.0 ddpx screen is equal to 288px | font-size 19px = 54px
+	
+ */
+.hd {display:none;}
+
+/* ==|== media queries ====================================================== */
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (-moz-device-pixel-ratio: 3),
+only screen and (-moz-min-device-pixel-ratio: 3),
+only screen and (-o-min-device-pixel-ratio: 3/1),
+only screen and (min-device-pixel-ratio: 3),
+only screen and (min-resolution: 3dppx) {
+
+	@media screen and (max-width: 640px), screen and (max-device-width: 640px) { body {font-size:8px;} }
+	@media screen and (max-width: 480px), screen and (max-device-width: 480px) { body {font-size:6px;} }
+	@media screen and (max-width: 320px), screen and (max-device-width: 320px) { body {font-size:4px;} }  
+
+	.dpp{font-size:3px;}
+	body {font-size:10px;}
+}
+
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (-moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx) {
+
+	@media screen and (max-width: 640px), screen and (max-device-width: 640px) { body {font-size:10px;} }
+	@media screen and (max-width: 480px), screen and (max-device-width: 480px) { body {font-size:8px;} }
+	@media screen and (max-width: 320px), screen and (max-device-width: 320px) { body {font-size:6px;} }  
+
+	.dpp{font-size:2px;}
+	body {font-size:12px;}
+}
+
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
+
+	@media screen and (max-width: 640px), screen and (max-device-width: 640px) { body {font-size:12px;} }
+	@media screen and (max-width: 480px), screen and (max-device-width: 480px) { body {font-size:10px;} }
+	@media screen and (max-width: 320px), screen and (max-device-width: 320px) { body {font-size:8px;} }  
+
+	.dpp{font-size:1.5px;}
+	body {font-size:14px;}
+}
+
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 1),
+only screen and (-moz-device-pixel-ratio: 1),
+only screen and (-moz-min-device-pixel-ratio: 1),
+only screen and (-o-min-device-pixel-ratio: 1/1),
+only screen and (min-device-pixel-ratio: 1),
+only screen and (min-resolution: 1dppx) {
+
+	.dpp{font-size:1px;}
+	body {font-size:18px;}
+	@media screen and (max-width: 1921px) { .hd {display:none;} }
+	@media screen and (max-width: 1920px) { .hd {display:block;} body {font-size:21px;} }
+	@media only screen and (min-width : 641px) and (max-width : 1919px) { .hd {display:none;} body {font-size:18px;} }
+	@media screen and (max-width: 640px), screen and (max-device-width: 640px)   { .hd {display:none;} body {font-size:15px;} }
+	@media screen and (max-width: 480px), screen and (max-device-width: 480px)   { .hd {display:none;} body {font-size:12px;} }
+	@media screen and (max-width: 320px), screen and (max-device-width: 320px)   { .hd {display:none;} body {font-size:9px;} }		
+}
+/* GLOBAL STYLES
+-------------------------------------------------- 
+font-family: 'Snippet', sans-serif;
+font-family: 'Atomic Age', cursive;
+font-family: 'Exo', sans-serif;
+font-family: 'Orbitron', sans-serif;
+*/
+
+@font-face {
+	font-family: Neuropol;
+	font-weight: normal;
+	font-style: normal;
+	src: url('http://static.i2tmlabs.com/i2tm/assets/fonts/neuropol.ttf');
+}
+
+.neuropol {
+	font-family: Neuropol;
+	font-weight: 200;
+	letter-spacing: 12px; 
+}
+
+/* Padding below the footer and lighter body text */
+body {
+	color: #8D7654;
+}
+
+html,body {zoom:1;}
+
+/*
+ Logos
+---------------------------------------------------------- */
+#logos {display:block;z-index:10000;}
+	#h5c3-logo {font-size:5em;display: block;}
+	#hlmc {position: relative;display:block;top:0px;left:0px;width:100%;height:100%;font-family: Neuropol, sans-serif;text-transform: uppercase;text-align: center;}
+	#h5c3-logo .c_H { display:inline; font-size: 100%; color: #e98900; }
+	#h5c3-logo .c_5 { display:inline; font-size: 50%; color: #e98900; }
+	#h5c3-logo .c_C { display:inline; font-size: 100%; color: #000beb; }
+	#h5c3-logo .c_3	{ display:inline; font-size: 50%; color: #000beb; }
+	#h5c3-logo .w_FW { display:block; font-size: 42%; color: #444444;}
+#i2tm-logo{font-size:3em;display:block;}
+	#i2tm-logo .w_il{display:inline;font-size:100%;color:#00cc00;}
+	#ilmc {position:relative;display:block;top:0px;left:0px;width:100%;height:100%;font-family:Neuropol,sans-serif;text-transform:uppercase;text-align:center;padding-top:6.25%;}
+
+#page_warning,
+#page_main {position:static;top:0;left:0;width:100%;height:100%;display:none;overflow:hidden;}
+#page_main {
+	overflow:auto;
+}
+#page_warning {z-index:10;text-align:center;}
+
+#page_loader {
+	display: block;
+	position: fixed;
+	top: 0px;
+	margin: 0 auto;
+	z-index: 100000;
+	background: rgba(0,0,0,.9);
+	width: 100%;
+	height: 100%;
+}
+
+#debug {z-index:4; opacity:0.6; position:fixed;bottom:0px;left:480px;background-color:#333; height:25%; width:50%; overflow:hidden;display:none;}
+#page_game {z-index:2;width:100%;height:100%;display:none;}
+#hudText {
+	position: absolute;
+	z-index: 3000000000;
+	top: 50px;
+	width: 610px;
+	height: 124px;
+	background-color: transparent;
+	resize: none;
+	cursor: default;
+	color: powderblue;
+	border:none;
+	overflow:hidden;
+	font-size:0.6em;
+}
+
+.emboss {
+	text-shadow: -1px -1px 1px #eee, 1px 1px 1px #111;
+}
+
+.backlight {
+	text-shadow: 0 0 0px #cccccc, 0 0 .05em #D6D6D6, 0 0 .07em #868686, 0 0 .09em #aaaaaa, 0 0 .1em #000000;
+}
+
+:-webkit-full-screen, 
+:-moz-fullscreen,
+:-ms-fullscreen {
+	border: 1px solid red;
+}
+
+/*
+PERFORMANCE TEST
+-------------------------------------------------- */
+#testCanvas {
+	width:100%;
+	height:100px;
+	max-height:100px;
+	border: 1px solid green;
+	display:inline;
+}
+
+#testLog {
+	width:100%;
+	height: 100px;
+	resize: none;
+	cursor: default;
+	overflow:hidden;	
+	border: 1px solid green;
+	font-size:.5em;
+}
+
+/* LOADING ANINMATION
+-------------------------------------------------- */
+#loader {
+  position: relative;
+  top: 48%;
+  z-index: 3000000000;
+  width:70px;
+  height: 70px;
+  overflow: hidden;
+  background: transparent;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+#loader .circle {
+	position:relative;
+	background-color: rgba(0,0,0,0);
+	border:5px solid rgba(0,183,229,0.9);
+	opacity:.9;
+	border-right:5px solid rgba(0,0,0,0);
+	border-left:5px solid rgba(0,0,0,0);
+	border-radius:50px;
+	box-shadow: 0 0 35px #2187e7;
+	width:50px;
+	height:50px;
+	margin:0 auto;
+	-moz-animation:spinPulse 1s infinite ease-in-out;
+	-webkit-animation:spinPulse 1s infinite linear;
+	top:10px;
+}
+#loader .circle1 {
+	position:relative;
+	background-color: rgba(0,0,0,0);
+	border:5px solid rgba(0,183,229,0.9);
+	opacity:.9;
+	border-left:5px solid rgba(0,0,0,0);
+	border-right:5px solid rgba(0,0,0,0);
+	border-radius:50px;
+	box-shadow: 0 0 15px #2187e7; 
+	width:30px;
+	height:30px;
+	margin:0 auto;
+	position:relative;
+	top:-30px;
+	-moz-animation:spinoffPulse 1s infinite linear;
+	-webkit-animation:spinoffPulse 1s infinite linear;
+}
+
+#loader .stop {
+	-webkit-animation-play-state:paused;
+	-moz-animation-play-state:paused;
+}
+@-moz-keyframes spinPulse {
+	0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7;}
+	50% { -moz-transform:rotate(145deg); opacity:1; }
+	100% { -moz-transform:rotate(-320deg); opacity:0; }
+}
+@-moz-keyframes spinoffPulse {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(360deg);  }
+}
+@-webkit-keyframes spinPulse {
+	0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7; }
+	50% { -webkit-transform:rotate(145deg); opacity:1;}
+	100% { -webkit-transform:rotate(-320deg); opacity:0; }
+}
+@-webkit-keyframes spinoffPulse {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(360deg); }
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+h1 {
+	font-family: 'Orbitron', sans-serif;
+	font-size:2.5em;
+	letter-spacing:.25em;
+}
+
+/* Carousel base class */
+.carousel {
+	height: auto;
+	margin-bottom: 4em;
+	border: 0px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+	z-index: 10;
+	background-color: rgba(141, 118, 84, 0.6);
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  width:100%;
+  height: auto;
+  background-color: black;
+  border:0px;
+}
+.carousel-inner > .item > img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border:0px;
+  max-width:none!important;
+}
+
+.carousel .item { 
+	-webkit-transition: 1.0s ease-in-out opacity; 
+	-moz-transition: 1.0s ease-in-out opacity; 
+	-ms-transition: 1.0s ease-in-out opacity; 
+	-o-transition: 1.0s ease-in-out opacity; 
+	transition: 1.0s ease-in-out opacity; 
+	left: 0 !important; 
+}
+
+.carousel .active.left, .carousel .active.right { opacity: 0; z-index: 2; }
+
+.carousel .next.left, .carousel .prev.right {
+	opacity: 1; z-index: 1;
+}
+.carousel-control { z-index:3; }
+
+.carousel-caption p {
+	color: white;
+	font-family: 'Exo', sans-serif;
+	font-size:1em;
+	padding:1em;
+}
+
+.col-lg-4 p {font-size: 1em;text-indent: 1em;text-align: justify;padding:1em;line-height:1.5em;}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-left: .75em;
+  margin-right: .75em;
+}
+
+
+/* Featurettes
+------------------------- */
+.featurette-divider {
+  margin: 5em 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 1.5em;
+  }
+  .navbar-wrapper .container {
+    padding-left:  1em;
+    padding-right: 1em;
+  }
+  .navbar-wrapper .navbar {
+    padding-left:  0;
+    padding-right: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 0.25em;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin: 1.5em;
+    font-size: 1.5em;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 4em;
+  }
+
+}
+
+/* ==================================================
+   About Section
+================================================== */
+
+.profile-name {
+	margin-bottom: 15px;	
+}
+
+.profile-description {
+	margin-bottom: 25px;	
+}
+
+.image-wrap {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 25px;
+	cursor: pointer;
+}
+
+.image-wrap img {
+	width: 100%;	
+}
+
+.image-wrap  .hover-wrap {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	
+	opacity: 0;
+	filter: alpha(opacity=0);
+	
+	-webkit-transition: all 450ms ease-out 0s;	
+	   -moz-transition: all 450ms ease-out 0s;
+		 -o-transition: all 450ms ease-out 0s;
+		    transition: all 450ms ease-out 0s;
+		  
+	-webkit-transform: rotateY(180deg) scale(0.5,0.5);
+	   -moz-transform: rotateY(180deg) scale(0.5,0.5);
+		-ms-transform: rotateY(180deg) scale(0.5,0.5);
+		 -o-transform: rotateY(180deg) scale(0.5,0.5);
+			transform: rotateY(180deg) scale(0.5,0.5);	
+}
+
+.image-wrap:hover .hover-wrap,
+.image-wrap.active .hover-wrap {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	
+	-webkit-transform: rotateY(0deg) scale(1,1);
+	   -moz-transform: rotateY(0deg) scale(1,1);
+		-ms-transform: rotateY(0deg) scale(1,1);
+		 -o-transform: rotateY(0deg) scale(1,1);
+		    transform: rotateY(0deg) scale(1,1);
+}
+
+.image-wrap .hover-wrap .overlay-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #14410B;
+	opacity: 0.90;
+	filter: alpha(opacity=90);}
+
+.image-wrap .hover-wrap .overlay-text-thumb {
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	top: 50%;
+	margin: -16px 0 0 0;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 32px;
+	text-transform: uppercase;
+	text-align: center;
+	
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.social {
+	margin-top:1em;
+}
+
+.social-icons {
+	margin: 0;
+	padding: 0;
+}
+
+.social-icons li {
+	display: inline-block;
+	margin-left: 15px;	
+}
+
+.social-icons li:first-child {
+	margin-left: 0;
+}
+
+.social-icons li a{
+	color: #FFFFFF;
+	font-size: 16px;
+	line-height: 1em;
+	width: 16px;
+	height: 16px;
+	
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+	
+	-webkit-transition: opacity 0.1s linear 0s;	
+	   -moz-transition: opacity 0.1s linear 0s;
+		 -o-transition: opacity 0.1s linear 0s;
+		    transition: opacity 0.1s linear 0s;
+}
+
+.social-icons li a:hover{
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}

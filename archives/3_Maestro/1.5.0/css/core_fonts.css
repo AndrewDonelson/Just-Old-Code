@@ -1,0 +1,13 @@
+/* ==|== core fonts ========================================================= */
+
+@font-face {font-family: Neuropol;font-weight: normal;font-style: normal;src: url(http://cdn.i2tmlabs.com/content/i2tm/assets/fonts/neuropol.ttf);}
+.neuropol {font-family: Neuropol;font-weight: 200;letter-spacing: 12px; }
+
+@font-face {font-family: Ubuntu;font-weight: normal;font-style: normal;src: url(http://cdn.i2tmlabs.com/content/i2tm/assets/fonts/ubuntu-r.ttf);}
+.ubuntu {font-family: Ubuntu;font-weight: normal;}
+
+@font-face {font-family: TopGun;font-weight: normal;font-style: normal;src: url(http://cdn.i2tmlabs.com/content/i2tm/assets/fonts/top_gun.ttf);}
+.topgun {font-family: TopGun;font-weight: normal;}
+
+@font-face {font-family: Edwardian;font-weight: normal;font-style: normal;src: url(http://cdn.i2tmlabs.com/content/i2tm/assets/fonts/itcedscr.ttf);}
+.edwardian {font-family: Edwardian;font-weight: normal;}

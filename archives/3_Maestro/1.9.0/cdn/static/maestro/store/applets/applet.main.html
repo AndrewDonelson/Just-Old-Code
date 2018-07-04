@@ -1,0 +1,524 @@
+<ins id="main" 
+	data-uuid="5d031528-1aed-4399-a0d6-7f69879de59a"
+	data-component="applet"  
+	data-publisher="maestro" 
+	data-folder="store" 
+	data-target="wrapper" 
+	data-files="isotope.css,holder.js,init-isotope-portfolio.js,script.js" 
+	class=""
+>
+<style>
+.navbar {border-radius:0}
+#adbar{	max-height:52px}
+.bootstrap-tagsinput {padding: 4px 4px;margin-bottom: 4px;margin-top: 6px;border-radius: 0px;max-width: 100%;min-width: 300px}
+
+.dropdown-large {
+  position: static !important;
+}
+.dropdown-menu-large {
+  margin-left: 16px;
+  margin-right: 16px;
+  padding: 20px 0px;
+}
+.dropdown-menu-large > li > ul {
+  padding: 0;
+  margin: 0;
+}
+.dropdown-menu-large > li > ul > li {
+  list-style: none;
+}
+.dropdown-menu-large > li > ul > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333333;
+  white-space: normal;
+}
+.dropdown-menu-large > li ul > li > a:hover,
+.dropdown-menu-large > li ul > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+.dropdown-menu-large .disabled > a,
+.dropdown-menu-large .disabled > a:hover,
+.dropdown-menu-large .disabled > a:focus {
+  color: #999999;
+}
+.dropdown-menu-large .disabled > a:hover,
+.dropdown-menu-large .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+.dropdown-menu-large .dropdown-header {
+  color: #428bca;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .dropdown-menu-large {
+    margin-left: 0 ;
+    margin-right: 0 ;
+  }
+  .dropdown-menu-large > li {
+    margin-bottom: 30px;
+  }
+  .dropdown-menu-large > li:last-child {
+    margin-bottom: 0;
+  }
+  .dropdown-menu-large .dropdown-header {
+    padding: 3px 15px !important;
+  }
+}
+
+
+/*-=-|Start Metro Tiles|-=-*/
+.title{
+	font-size:22px;
+	text-align:right;
+	margin-top: 0px;
+	margin-bottom:8px;
+	-webkit-box-reflect: below -5px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
+}
+.tile p{
+	font-size:12px;
+	line-height: 1.6;
+}
+.tile .stats{
+	font-size:10px;
+	line-height: 1.0;
+	margin-top:20px;
+}
+.tile h4 {font-size:15px;font-family:neuropol;margin-bottom:4px}
+.tile h6 {font-size:9px;font-family:ubuntu;;margin-bottom:8px}
+
+.tile i{float:right}
+
+.tile {  
+	font-family: 'ubuntu';
+	line-height: 1.5em;
+	font-weight: 400;
+	display: inline-block;
+	box-sizing: border-box;
+	background: #fff;		
+	padding: 10px;
+    color: #fff;  
+	width:446px;
+	height:223px;
+	margin:8px;
+	text-rendering: optimizeLegibility;
+}
+.tile.purple{background: #5133AB}.tile .purple:hover{background:darken(#5133AB,10%)}		
+.tile.red{background:#AC193D}.tile:hover{background:darken(#AC193D, 10%)}		
+.tile.green{background: #00A600}.tile:hover{background: darken(#00A600, 10%)}		
+.tile.blue{background:#2672EC}.tile:hover{background: darken(#2672EC, 10%)}	
+.tile.orange{background:#DC572E}.tile.orange:hover{background:darken(#DC572E, 10%)}	
+.tile.teal{background: #008299}
+.tile:hover{background:darken(#008299, 10%)}	
+/*-=-|End Metro Tiles|-=-*/
+
+</style>
+
+</head>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	
+	
+	<div class="collapse navbar-collapse js-navbar-collapse">
+		<ul class="nav navbar-nav">
+			<li class="dropdown dropdown-large" style="min-width: 140px">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">i2tm AppSpoT <b class="caret"></b></a>
+				
+				<ul class="dropdown-menu dropdown-menu-large row">
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">Glyphicons</li>
+							<li><a href="#">Available glyphs</a></li>
+							<li class="disabled"><a href="#">How to use</a></li>
+							<li><a href="#">Examples</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Dropdowns</li>
+							<li><a href="#">Example</a></li>
+							<li><a href="#">Aligninment options</a></li>
+							<li><a href="#">Headers</a></li>
+							<li><a href="#">Disabled menu items</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">Button groups</li>
+							<li><a href="#">Basic example</a></li>
+							<li><a href="#">Button toolbar</a></li>
+							<li><a href="#">Sizing</a></li>
+							<li><a href="#">Nesting</a></li>
+							<li><a href="#">Vertical variation</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Button dropdowns</li>
+							<li><a href="#">Single button dropdowns</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">Input groups</li>
+							<li><a href="#">Basic example</a></li>
+							<li><a href="#">Sizing</a></li>
+							<li><a href="#">Checkboxes and radio addons</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Navs</li>
+							<li><a href="#">Tabs</a></li>
+							<li><a href="#">Pills</a></li>
+							<li><a href="#">Justified</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">Navbar</li>
+							<li><a href="#">Default navbar</a></li>
+							<li><a href="#">Buttons</a></li>
+							<li><a href="#">Text</a></li>
+							<li><a href="#">Non-nav links</a></li>
+							<li><a href="#">Component alignment</a></li>
+							<li><a href="#">Fixed to top</a></li>
+							<li><a href="#">Fixed to bottom</a></li>
+							<li><a href="#">Static top</a></li>
+							<li><a href="#">Inverted navbar</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+				<li><input type="text" class="tag-filter form-control" value="Amsterdam,Washington" data-role="tagsinput" /></li>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		
+			<li><a id="user-menu" href="#"><i class="fa fa-user"></i>&nbsp;Login or Register</a></li>
+			<!--
+			<li class="dropdown open">
+				<a id="user-menu" href="#" class="dropdown-toggle" data-toggle="dropdown">andrew@donelson.net <b class="caret"></b></a>
+				<ul id="user-dropdown-menu" class="dropdown-menu">
+					<li><a class="" onclick="" href="#"><i class="fa fa-user"></i>&nbsp;Profile</li>
+					<li><a class="" onclick="" href="#"><i class="fa fa-sliders"></i>&nbsp;Settings</li>
+					<li><a class="" href="" onclick=""><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
+				</ul>
+			</li>
+			-->
+		</ul>		
+	</div><!-- /.nav-collapse -->
+</nav>
+
+<div class="container-fluid" style="margin-top:52px">
+	<div class="row-fluid">
+		<div class="col-lg-12">
+			<div id="portfolio">
+				<ul id="portfolio-filter" class="nav nav-tabs">
+					<li class="active"><a href="#" class="filter" data-filter="*">All</a></li>
+					<li class=""><a href="#" class="filter" title="New and recently updated applications" data-filter=".newupdate">New & Updated</a></li>
+					<li class=""><a href="#" class="filter" title="Featured applications" data-filter=".featured">Featured</a></li>
+					<li class=""><a href="#" class="filter" title="Applications recommended for you" data-filter=".recommended">Recommended</a></li>
+					<li class=""><a href="#" class="filter" title="Applications that are on fire!" data-filter=".hot">Whats Hot!</a></li>
+					<li class=""><a href="#" class="filter" title="Applications by most installs" data-filter=".installs">By Installs</a></li>
+					<li class=""><a href="#" class="filter" title="Applications by user rating" data-filter=".rating">By Rating</a></li>
+				</ul>
+
+				<div class="row-fluid" id="portfolio-items">
+				
+					<div class="project" data-tags="newupdate">
+						<div class="tile purple horz lg container" data-gallery="">
+							<div class="row">
+								<div class="col-lg-6 pull-left">
+									<i class="fa fa-thumbs-down fa-lg"></i>
+									<i class="fa fa-thumbs-up fa-lg"></i>
+									<i class="fa fa-fire fa-lg"></i>
+									<i class="fa fa-cube fa-lg"></i>
+								</div>
+								<div class="col-lg-6">
+									<h3 class="title">TIP!&nbsp;<i class="fa fa-comment">&nbsp;</i></h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-8">
+									<h4>Item Short Title</h4>
+									<h6>A. Donelson - 25 may 2014 @ 05:23</h6>
+									<p>Hello i'm Purple and represent newupdate!</p>
+								</div>
+								<div class="col-lg-4 stats">
+									<label>Views: 0</label>
+								</div>
+							</div>
+						</div>					
+					</div>
+					<div class="project" data-tags="installs">
+						<div class="tile red horz lg" data-gallery="">
+							<div class="row">
+								<div class="col-lg-6">
+								</div>
+								<div class="col-lg-6">
+									<h3 class="title">JavaScript&nbsp;<i class="fa fa-file-text-o"></i></h3>
+								</div>
+							</div>
+							<p>Hello Red, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="rating">
+						<div class="tile orange horz lg" data-gallery="">
+							<div class="row">
+								<div class="col-lg-6">
+								</div>
+								<div class="col-lg-6">
+									<h3 class="title">CSS3&nbsp;<i class="fa fa-rating"></i></h3>
+								</div>
+							</div>
+
+							<p>Hello Orange, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="hot">
+						<div class="tile green horz lg" data-gallery="">
+							<div class="row">
+								<div class="col-lg-6">
+								</div>
+								<div class="col-lg-6">
+									<h3 class="title">PHP&nbsp;<i class="fa fa-file-text"></i></h3>
+								</div>
+							</div>
+							
+							<p>Hello Green, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="recommended">
+						<div class="tile blue horz lg" data-gallery="">
+							<div class="row">
+								<div class="col-lg-6">
+								</div>
+								<div class="col-lg-6">
+									<h3 class="title">HTML5&nbsp;<i class="fa fa-recommended">&nbsp;</i></h3>
+								</div>
+							</div>
+
+							<p>Hello Blue, this is a colored tile.</p>
+						</div>
+					</div>    
+
+					<div class="project" data-tags="featured">
+						<div class="tile teal horz lg" data-gallery="">
+							<div class="row">
+								<div class="col-lg-6">
+								</div>
+								<div class="col-lg-6">
+									<h3 class="title">HTACCESS&nbsp;<i class="fa fa-tasks">&nbsp;</i></h3>
+								</div>
+							</div>
+
+							<p>Hello Teal, this is a colored tile.</p>
+						</div>
+					</div>    
+					<div class="project" data-tags="newupdate">
+						<div class="tile purple horz lg" data-gallery="">
+							<h3 class="title">TIP!</h3>
+							<p>Hello i'm Purple and represent newupdate!</p>
+						</div>					
+					</div>
+					<div class="project" data-tags="installs">
+						<div class="tile red horz lg" data-gallery="">
+							<h3 class="title">JavaScript</h3>
+							<p>Hello Red, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="rating">
+						<div class="tile orange horz lg" data-gallery="">
+							<h3 class="title">CSS</h3>
+							<p>Hello Orange, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="hot">
+						<div class="tile green horz lg" data-gallery="">
+							<h3 class="title">PHP</h3>
+							<p>Hello Green, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="recommended">
+						<div class="tile blue horz lg" data-gallery="">
+							<h3 class="title">HTML</h3>
+							<p>Hello Blue, this is a colored tile.</p>
+						</div>
+					</div>    
+
+					<div class="project" data-tags="featured">
+						<div class="tile teal horz lg" data-gallery="">
+							<h3 class="title">HTACCESS</h3>
+							<p>Hello Teal, this is a colored tile.</p>
+						</div>
+					</div>    
+					
+					<div class="project" data-tags="newupdate">
+						<div class="tile purple horz lg" data-gallery="">
+							<h3 class="title">TIP!</h3>
+							<p>Hello i'm Purple and represent newupdate!</p>
+						</div>					
+					</div>
+					<div class="project" data-tags="installs">
+						<div class="tile red horz lg" data-gallery="">
+							<h3 class="title">JavaScript</h3>
+							<p>Hello Red, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="rating">
+						<div class="tile orange horz lg" data-gallery="">
+							<h3 class="title">CSS</h3>
+							<p>Hello Orange, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="hot">
+						<div class="tile green horz lg" data-gallery="">
+							<h3 class="title">PHP</h3>
+							<p>Hello Green, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="recommended">
+						<div class="tile blue horz lg" data-gallery="">
+							<h3 class="title">HTML</h3>
+							<p>Hello Blue, this is a colored tile.</p>
+						</div>
+					</div>    
+
+					<div class="project" data-tags="featured">
+						<div class="tile teal horz lg" data-gallery="">
+							<h3 class="title">HTACCESS</h3>
+							<p>Hello Teal, this is a colored tile.</p>
+						</div>
+					</div>    
+					<div class="project" data-tags="newupdate">
+						<div class="tile purple horz lg" data-gallery="">
+							<h3 class="title">TIP!</h3>
+							<p>Hello i'm Purple and represent newupdate!</p>
+						</div>					
+					</div>
+					<div class="project" data-tags="installs">
+						<div class="tile red horz lg" data-gallery="">
+							<h3 class="title">JavaScript</h3>
+							<p>Hello Red, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="rating">
+						<div class="tile orange horz lg" data-gallery="">
+							<h3 class="title">CSS</h3>
+							<p>Hello Orange, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="hot">
+						<div class="tile green horz lg" data-gallery="">
+							<h3 class="title">PHP</h3>
+							<p>Hello Green, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="recommended">
+						<div class="tile blue horz lg" data-gallery="">
+							<h3 class="title">HTML</h3>
+							<p>Hello Blue, this is a colored tile.</p>
+						</div>
+					</div>    
+
+					<div class="project" data-tags="featured">
+						<div class="tile teal horz lg" data-gallery="">
+							<h3 class="title">HTACCESS</h3>
+							<p>Hello Teal, this is a colored tile.</p>
+						</div>
+					</div>    
+					<div class="project" data-tags="rating">
+						<div class="tile orange horz lg" data-gallery="">
+							<h3 class="title">CSS</h3>
+							<p>Hello Orange, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="hot">
+						<div class="tile green horz lg" data-gallery="">
+							<h3 class="title">PHP</h3>
+							<p>Hello Green, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="recommended">
+						<div class="tile blue horz lg" data-gallery="">
+							<h3 class="title">HTML</h3>
+							<p>Hello Blue, this is a colored tile.</p>
+						</div>
+					</div>    
+
+					<div class="project" data-tags="featured">
+						<div class="tile teal horz lg" data-gallery="">
+							<h3 class="title">HTACCESS</h3>
+							<p>Hello Teal, this is a colored tile.</p>
+						</div>
+					</div>    
+					<div class="project" data-tags="newupdate">
+						<div class="tile purple horz lg" data-gallery="">
+							<h3 class="title">TIP!</h3>
+							<p>Hello i'm Purple and represent newupdate!</p>
+						</div>					
+					</div>
+					<div class="project" data-tags="installs">
+						<div class="tile red horz lg" data-gallery="">
+							<h3 class="title">JavaScript</h3>
+							<p>Hello Red, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="rating">
+						<div class="tile orange horz lg" data-gallery="">
+							<h3 class="title">CSS</h3>
+							<p>Hello Orange, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="hot">
+						<div class="tile green horz lg" data-gallery="">
+							<h3 class="title">PHP</h3>
+							<p>Hello Green, this is a colored tile.</p>
+						</div>
+					</div>
+					
+					<div class="project" data-tags="recommended">
+						<div class="tile blue horz lg" data-gallery="">
+							<h3 class="title">HTML</h3>
+							<p>Hello Blue, this is a colored tile.</p>
+						</div>
+					</div>    
+
+					<div class="project" data-tags="featured">
+						<div class="tile teal horz lg" data-gallery="">
+							<h3 class="title">HTACCESS</h3>
+							<p>Hello Teal, this is a colored tile.</p>
+						</div>
+					</div>    
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

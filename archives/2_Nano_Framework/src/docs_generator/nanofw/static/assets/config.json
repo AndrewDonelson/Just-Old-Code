@@ -1,0 +1,67 @@
+{
+	"app":{
+		"role":"application",
+		"base":"http://nanofw.com/",
+		"name":"Documentation Template",
+		"description":"Maestro Documentation.",
+		"keywords":"i2tm labs nano framework applets cloudlett cloudapp bootstrap jquery modernizr font-awesome games",
+		"version":"0.1.0",
+		"author":"Andrew Donelson",
+		"copyright":"2012-2014 by i2tm Labs - All rights reserved.",
+		"uuid":"eb221817-8fef-4d29-9fd6-c025fc9006c9",
+		"layout":"bootstrap",
+		"style":"default",
+		"applet":""
+	},
+	"modules":{
+		"gldl":false,
+		"dtul":false
+	},
+	"options":{
+		"fullscreen":false,
+		"orientation":"auto",
+		"analytics":true
+	},	
+	"google":{
+		"analytics":{
+			"trackingId":"UA-35732532-1",
+			"pageviews":true,
+			"clicks":true
+		},
+		"ads":{
+			"clientId":"ca-pub-7431399643348196",
+			"light":{
+				"responsive1":"1595076468",
+				"responsive2":"8376860866"
+			},
+			"dark":{
+				"responsive1":"1951027661",
+				"responsive2":"3724063669"
+			}
+		}
+	},	
+	"files":{
+		"styles":{
+			"local":"default.css",
+			"nanofw":""
+		},
+		"scripts":{
+			"local":"parser.js"
+		},
+		"applets":{
+			"local":"",
+			"nanofw":""
+		},
+		"libraries":{
+			"nanofw":"",
+			"vendor":"ace/ace.js",
+			"masonry":""
+		}
+	},	
+	"applets":[],
+	"plugins":[],
+	"resources":{
+		"images":[],
+		"sounds":[]
+	}
+}

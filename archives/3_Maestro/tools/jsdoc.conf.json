@@ -1,0 +1,48 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": [
+		"../maestro/js/maestro.javascript.js",
+		"../maestro/js/maestro.maestro.js",
+		"../maestro/js/maestro.core.js",
+		"../maestro/js/maestro.interface.js",
+		"../maestro/js/maestro.alias.js",
+		"../maestro/js/maestro.encoders.js"
+		],
+        "exclude": [],
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+	"plugins"   : ["plugins/markdown"],
+    "templates": {
+		"cleverLinks"     : false,
+		"monospaceLinks"  : false,
+		"default"         : {
+			"outputSourceFiles" : false
+		},
+		"systemName"      : "Maestro!",
+		"footer"          : "",
+		"copyright"       : "Maestro! Copyright © 2012-2014 by i2tm Labs",
+		"navType"         : "vertical",
+		"theme"           : "nanofw",
+		"linenums"        : true,
+		"collapseSymbols" : false,
+		"inverseNav"      : true
+    },
+    "opts": {
+        "template": "../../Nano-Framework/src/docs_generator/nanofw",  
+        "encoding": "utf8",               
+        "destination": "./out/",          
+        "recurse": false,                  
+        "tutorials": "", 
+        "query": "",                 		
+        "private": true,                  
+        "lenient": true
+    },
+	"markdown"  : {
+		"parser"   : "gfm",
+		"hardwrap" : true
+	}
+}

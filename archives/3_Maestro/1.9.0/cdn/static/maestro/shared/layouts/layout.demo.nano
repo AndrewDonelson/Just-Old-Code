@@ -1,0 +1,49 @@
+<div data-applet="fixed-nav-footer" data-role="layout" data-publisher="i2tm" data-local="no">
+
+	<div data-applet="demo_nav" data-role="nav" data-publisher="i2tm" data-local="yes" data-position="nav" data-vweight="15" data-hweight="50"></div>
+
+    <!-- Begin page content -->
+    <div class="container">
+		<div class="page-header">
+			<h1>Hardware & Infrastructure</h1>
+		</div>
+
+		<div class="row">
+
+			<!-- Callout Success [green] -->
+			<div class="col-md-6 bs-callout bs-callout-success">
+				<h2>Production Server</h2>
+				<ul>
+					<li>Dual Quad-core / Hexa-core Xeon CPU</li>  
+					<li>256 GB of DDR3 RAM</li>  
+					<li>SSD Accelerated Drives in RAID10</li>  
+					<li>1 Gbps Network Port</li>  
+					<li>NO single point of failure</li>
+				</ul>
+			</div>
+
+			<!-- Callout Danger [red] -->
+			<div class="col-md-6 bs-callout bs-callout-danger">
+				<h2>Development Server</h2>
+				<ul>
+					<li>Intel Core i7-3930K Hexa-Core Processor</li>  
+					<li>Stable O.C. @ 4.8Ghz</li>  
+					<li>64 GB of DDR3 RAM</li>  
+					<li>3 TB SSD Accelerated Drives</li>  
+					<li>1 Gbps Network Port</li>  
+				</ul>
+			</div>
+		</div>
+		
+      <p class="lead">Our network is 100% powered by Cisco routers and switches. The network utilizes star topology consisting of two Cisco Catalyst 6500 core routers with distribution handled by Cisco 3750 and access by 2950 switches. This results in a load balanced network with no single point of failure.</p>
+	  <p>Our data centers are top of the line in all aspects. With multiple UPS systems, backup generators, and enough Diesel fuel to last a full week, we can be confident that our servers will never lose power, even when the grid goes black. We have over 30Gbps of network connectivity, ensuring your services are always lightning fast around the globe! </p>
+		<button class="center-block" href="https://www.tmzvps.com/">
+		<h2 class="title-divider" style="background:transparent">
+			<span class="glyphicon glyphicon-check"></span><span>VPS Hosting Made Reliable</span><br />
+			<small>A few of the many reasons that set us ahead of the competition.</small>
+		</h2>	  
+		</button>
+    </div>
+
+	<div data-applet="i2tm_footer" publisher="i2tm" data-local="no"></div>
+</div>

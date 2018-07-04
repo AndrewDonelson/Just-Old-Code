@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+	<head>
+		<title>i2tm Labs</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="stylesheet" href="http://h5c3.i2tmlabs.com/css/ext/animate.min.css" type="text/css" title="Style" />
+		<link rel="stylesheet" href="http://h5c3.i2tmlabs.com/css/ext/i2tmfonts.css" type="text/css" title="Style" />
+		<link rel="stylesheet" href="../css/i2tm.base.page.css" type="text/css" title="Style" />
+		<link rel="stylesheet" href="../css/i2tm.skin.dark.css" type="text/css" title="Style" />
+		<script src="http://h5c3.i2tmlabs.com/js/modernizr.all.release.js" title="Modernizr" ></script>
+		<script src="http://h5c3.i2tmlabs.com/js/jquery-1.10.2.release.js" title="jQuery" ></script>
+		<script src="http://h5c3.i2tmlabs.com/js/jquery.dropotron.release.js" title="DropoTron" ></script>
+		<script src="http://h5c3.i2tmlabs.com/js/jquery.readmore-readless.js"></script>
+		<script src="http://h5c3.i2tmlabs.com/js/gamecore.min.js" title="gameCore"></script>
+		<!-- THIS CODE REQUIRED for Expand/Collapse	-->
+		<script src="resources/expander.js" title="Expander"></script>
+		<style>
+			#slideshow { 
+				position: relative;
+				float:left;
+				margin: 0px auto; 
+				width: 100%; 
+				height: 100%; 
+				padding: 0px; 
+				box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+			}
+
+			#slideshow > div { 
+				position: absolute; 
+				top: 0px; 
+				left: 0px; 
+				right: 0px; 
+				bottom: 0px; 
+			}
+			.slide { width:100%; height: 100%;}
+		</style>
+		<script>
+			$("#slideshow > div:gt(0)").hide();
+
+			setInterval(function() { 
+			  $('#slideshow > div:first')
+				.fadeOut(1500)
+				.next()
+				.fadeIn(1500)
+				.end()
+				.appendTo('#slideshow');
+			},  5000);
+		
+		</script>
+	</head>
+    <body>
+		<div id="wrapper">
+			<div id="content" class="container variable animated fadeInUpBig">
+				
+				<div class="row remove-top">
+					<div class="box full">
+						<h1 style="text-align: center">How-To: Pure HTML5/CSS3 Socialbar</h1>
+						<h3 style="text-align: center">Used in the upcomming release of H5C3 Framework.</h3>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="box full lightbox" style="min-height:24em; max-height: 24em;">
+						<div id="slideshow">
+							<div><img src="http://h5c3.i2tmlabs.com/img/i2tm/slideshow/homepage00.png" width="840px" height="320px"></div>
+							<div><img src="http://h5c3.i2tmlabs.com/img/i2tm/slideshow/homepage01.png" width="840px" height="320px"></div>
+							<div><img src="http://h5c3.i2tmlabs.com/img/i2tm/slideshow/homepage02.png" width="840px" height="320px"></div>
+							<div><img src="http://h5c3.i2tmlabs.com/img/i2tm/slideshow/homepage03.png" width="840px" height="320px"></div>
+							<div><img src="http://h5c3.i2tmlabs.com/img/i2tm/slideshow/homepage04.png" width="840px" height="320px"></div>
+						</div>
+					</div>
+					<div class="box half lightbox expander"><p><span style="line-height: 1.3em;">After many months of development we have a HTML5 &amp; CSS3 compliant Framework that provides WebApps that work on Mobile devices, Desktops and Even Game consoles.</span></p></div>
+					<div class="box half lightbox expander"><h5>This block is 1/3th</h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+					<div class="box third lightbox expander"><p>The entire framework was designed to be developer friendly. We provide you with the resources and support you need, We certifiy the WebApp (including ESRB if a game), We publish and then we handle the financial side for you, just tell us where to deposit your $$$.</p></div>
+					<div class="box half lightbox expander"><h5>This block is 1/2th</h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				</div>
+
+				<div class="row remove-bottom">
+					<div class="box full"><h3 style="text-align: center">That's all folks!</h3></div>
+				</div>
+				
+			</div><!-- content -->
+		</div><!-- wrapper -->
+    </body>	
+</html>
+</body>
+</html>

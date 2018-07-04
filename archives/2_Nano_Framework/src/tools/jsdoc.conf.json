@@ -1,0 +1,46 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": [
+		"../../../Maestro/maestro/js/maestro.js",
+		"../nano/js/accutimer.js",
+		"../nano/js/applet.js",
+		"../nano/js/cs2i.js"
+		],
+        "exclude": [],
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+	"plugins"   : ["plugins/markdown"],
+    "templates": {
+		"cleverLinks"     : false,
+		"monospaceLinks"  : false,
+		"default"         : {
+			"outputSourceFiles" : false
+		},
+		"systemName"      : "Nano Framework",
+		"footer"          : "",
+		"copyright"       : "Nano Framework Copyright © 2012-2014 by i2tm Labs",
+		"navType"         : "vertical",
+		"theme"           : "nanofw",
+		"linenums"        : true,
+		"collapseSymbols" : false,
+		"inverseNav"      : true
+    },
+    "opts": {
+        "template": "../docs_generator/nanofw",  
+        "encoding": "utf8",               
+        "destination": "./out/",          
+        "recurse": false,                  
+        "tutorials": "", 
+        "query": "",                 		
+        "private": true,                  
+        "lenient": true
+    },
+	"markdown"  : {
+		"parser"   : "gfm",
+		"hardwrap" : true
+	}
+}

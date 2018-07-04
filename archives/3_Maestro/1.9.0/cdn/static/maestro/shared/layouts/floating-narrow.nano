@@ -1,0 +1,23 @@
+<style>
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+</style>
+
+<body>
+	<div class="container">
+
+		<!-- Static navbar -->
+		<div data-applet="cover_nav" data-role="nav" publisher="i2tm" local="yes"></div>
+
+		<!-- Main component for a primary marketing message or call to action -->
+		<div data-applet="cover_home" data-role="content" publisher="i2tm" local="yes"></div>
+
+    </div> <!-- /container -->
+
+</body>

@@ -1,0 +1,44 @@
+/**	+-----------------------------------------------------------+
+	| File:		Accounts.txt									|
+	| Version:	0.0.1											|
+	| Author: Andrew Donelson	andrew@i2tmlabs.com				|
+	| H5C3 Framework - (c) 2013 <i2tm Labs http://i2tmlabs.com>	|
+	+-----------------------------------------------------------+*/
+/*
+Keyword: Accounts
+
+See Also:
+	<Filesystem>
+
+After you have registered a regualr <Member> account with I2TM Labs you have the option to request a an 
+upgrade to several other types of accounts we have. below is a list of the accounts and what they mean 
+or allow you to to.
+
+- <Visitor>				
+- <Member>				Regular default account; Access to <CloudMarket>, <CloudSupport>, etc.
+- 		<Author>		All rights as <Member> Access to <CloudCredits> however <Ads> are reduced based on your score.
+- 		<Publisher>		All rights as <Author> however <Ads> are reduced even further on your score and Access to <PriorityOne>
+- 		<SysAdmin>		All rights as <Publisher> but no Ads.
+- <Member>				Regular default account; Access to <CloudMarket>, <CloudSupport>, etc.
+- <Developer>			All rights as <Member> but allows access to the <DevPortal>
+- 		<Support>		All rights as <Developer> but <Ads> are reduced even further on your; score plus <CloudCredits> are increased off your score.
+- 		<DevAdmin>		All rights as <Support> but <Ads> are reduced even further on your; Added to Company About page as Senior Official.
+- <Commercial>			All rights as <Member> but no <Ads>, <PriorityOne> service 
+- <Non-Profit>			All rights as <Member> but access to <PriorityOne> service 
+
+
+
+Keyword: Member
+>	
+>	View|Edit
+
+
+Keyword: Developer
+
+
+
+Keyword: Commercial
+
+
+
+Keyword: Non-Profit

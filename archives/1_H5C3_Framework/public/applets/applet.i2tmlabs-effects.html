@@ -1,0 +1,74 @@
+<!--
++-----------------------------------------------------------+
+| File:		applet.i2tmlabs-effects.html					|
+| Version:	0.1.0											|
+| Author: Andrew Donelson	andrew@i2tmlabs.com				|
+| H5C3 Framework - (c) 2013 <i2tm Labs http://i2tmlabs.com>	|
+| 															|
+| This stylesheet contains some standard text effects that	|
+| is included in the H5C3 Framework.						|
++-----------------------------------------------------------+
+-->
+<div 
+	data-role="applet" 
+	data-name="i2tm-effects" 
+	data-version="0.1.0" 
+	data-uuid="50459254-63eb-4033-b381-13fd9af05a3a" 
+	data-author="Andrew Donelson" 
+	data-copyright="2013 i2tm Labs - All rights reserved." 
+/>
+
+<style data-role="applet">
+@charset 'UTF-8';
+
+@-webkit-keyframes greenPulse {
+  from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+  to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+.threeD-I2TM {
+	text-shadow: 
+		0 0.085em 0 #696, 0 0.095em 0 #585,
+		0 0.105em 0 #474, 0 0.115em 0 #363,
+		0 0.125em 0 #252, 0 0.135em 0 #141,
+		0 0.145em 0 #030, 0 0.155em 0.145em rgba(0, 0, 0, 0.4),
+		0 0.165em 0.175em rgba(0, 0, 0, 0.2);
+}
+.threeD {
+	text-shadow: 
+		0 0.085em 0 #666, 0 0.095em 0 #555,
+		0 0.105em 0 #444, 0 0.115em 0 #333,
+		0 0.125em 0 #222, 0 0.135em 0 #111,
+		0 0.145em 0 #000, 0 0.155em 0.145em rgba(0, 0, 0, 0.4),
+		0 0.165em 0.175em rgba(0, 0, 0, 0.2);
+}
+.letterpress {
+    text-shadow: 0px 1px 1px #4d4d4d;
+    color: rgba(0,0,0, 0.95);
+}
+
+.emboss {
+	text-shadow: -1px -1px 1px #eee, 1px 1px 1px #111;
+}
+
+.neon {
+	color: #D0F8FF;
+	text-shadow: 0 0 5px #A5F1FF, 0 0 1em #A5F1FF,
+		   0 0 2em #A5F1FF, 0 0 3em #A5F1FF,
+		   0 0 4em #A5F1FF;
+}
+
+.backlight {
+	text-shadow: 0 0 0px #cccccc, 0 0 .05em #D6D6D6, 0 0 .07em #868686, 0 0 .09em #aaaaaa, 0 0 .1em #000000;
+}
+
+.rainbow {
+	text-shadow: 
+		0px 1px 1px rgba(128, 0, 0, 0.99),
+		0px -1px 1px rgba(0, 128, 0, 0.99),
+		0px 2px 2px rgba(0, 0,128, 0.99),
+		0px -2px 2px rgba(128, 0,128, 0.99);
+	color: rgba(0,0,0, 0.99);
+}
+</style>

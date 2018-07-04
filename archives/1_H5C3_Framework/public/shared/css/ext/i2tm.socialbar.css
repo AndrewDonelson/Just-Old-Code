@@ -1,0 +1,48 @@
+/*!
+ *  I2TM Labs Social Bar 0.7.2
+ *  Simple, Elegant, Pure HTMl & CSS (NO Images)
+ *  ------------------------------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation can be
+ *  found at http://fontawesome.io.  Stay up to date on Twitter at
+ *  http://twitter.com/fontawesome.
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - The Font Awesome font is licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *
+ *  Author - Andrew Donelson <andrew@i2tmlabs.com>
+ *  ------------------------------------------------------------------------------
+ */
+@import('i2tmfonts.css');
+
+#socialBar {	
+	background: rgba(231, 218, 218, 0.5);
+	color: gray; 
+	text-align: center;
+	display: inline-block;
+	padding: 0.2em 0.7em 0.2em 0.7em;	
+	border-radius: 2em 0em 2em 0em;
+	line-height: normal;
+	font-size: .7em;	
+	letter-spacing: 0.35em;
+	box-shadow: inset 0px 0px 1px 1px gray;
+	margin: 0em .25em 0em .25em;
+} 
+#socialBar a  { text-decoration: none; }	
+#socialBar a.i2tm { color: #090; font-size:0.7em; letter-spacing:0.7em;} }
+
+#socialBar .titleBar { height: 2em;}
+	#socialBar .icon-comment { font-weight: 100; color: #fff; font-size: 3em; float: left; padding: 0em, .2em 0em .2em;}
+	#socialBar h3 { font-weight: 350; color: gray; font-size: 2em; letter-spacing: 0.4em; float: right;}
+
+#socialBar .iconBar { height: 2.5em; float:right;}
+	#socialBar .iconSkin1 {font-weight: 100; font-size: 1.7em; float: left; padding: 0em .6em 0em .6em; border-radius: 2em 0em 2em 0em; box-shadow: inset 0px 0px 8px -1px #666;}
+		#socialBar  .icon-twitter.iconSkin1 { color: cyan; }
+		#socialBar  .icon-twitter.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px cyan;}
+		#socialBar  .icon-linkedin.iconSkin1 { color: navy; }
+		#socialBar  .icon-linkedin.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px navy;}
+		#socialBar  .icon-google-plus.iconSkin1 { color: red; }
+		#socialBar  .icon-google-plus.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px red;}
+		#socialBar  .icon-facebook.iconSkin1 { color: blue; }
+		#socialBar  .icon-facebook.iconSkin1:hover { color: gray; box-shadow: inset 0px 0px 8px -1px blue;}

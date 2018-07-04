@@ -1,0 +1,66 @@
+<ifModule mod_headers.c>
+	Header set Connection keep-alive
+</ifModule>
+
+AddDefaultCharset UTF-8
+DefaultLanguage en-US
+
+### set default directory index files
+DirectoryIndex index.php index.html
+
+############################################################################################
+# ----------------------------------------------------------------------
+# CORS-enabled images (@crossorigin)
+# ----------------------------------------------------------------------
+# Send CORS headers if browsers request them; enabled by default for images.
+# developer.mozilla.org/en/CORS_Enabled_Image
+# blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html
+# hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/
+# wiki.mozilla.org/Security/Reviews/crossoriginAttribute
+<IfModule mod_setenvif.c>
+  <IfModule mod_headers.c>
+    # mod_headers, y u no match by Content-Type?!
+    <FilesMatch "\.(html|js|css|gif|png|jpe?g|svg|svgz|ico|webp|nano|json|fnt|eot|woff|ttf|)$">
+      SetEnvIf Origin ":" IS_CORS
+      Header set Access-Control-Allow-Origin "*" env=IS_CORS
+    </FilesMatch>
+  </IfModule>
+</IfModule>
+# ----------------------------------------------------------------------
+# Webfont access
+# ----------------------------------------------------------------------
+# Allow access from all domains for webfonts.
+# Alternatively you could only whitelist your
+# subdomains like "subdomain.example.com".
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css|nano|json|js|nano|json)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+
+### Enable file compression
+SetEnvIfNoCase Request_URI \.(og[gv]|mp4|m4v|webm|flv|m3u8|3gp|mov|avi|wmv)$ no-gzip dont-vary
+AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript image/jpg
+
+# caching year
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|mp3|mp4|ttf|woff|eot|otf|svg)$">
+Header set Cache-Control "public"
+Header set Expires "Thu, 15 Apr 2010 20:00:00 GMT"
+Header unset Last-Modified
+</FilesMatch>
+
+#24 hours
+<FilesMatch "\.(base-release.html|base-debug.html)$">
+Header set Cache-Control "max-age=86400, must-revalidate"
+</FilesMatch>
+
+#2 hours
+<FilesMatch "\.(html|htm|xml|txt|xsl)$">
+Header set Cache-Control "max-age=7200, must-revalidate"
+</FilesMatch>
+
+<FilesMatch "\.(js|css|json|nano)$">
+SetOutputFilter DEFLATE
+Header set Expires "Thu, 15 Apr 2010 20:00:00 GMT"
+</FilesMatch> 

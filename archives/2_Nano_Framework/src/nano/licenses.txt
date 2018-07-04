@@ -1,0 +1,5 @@
+ * Copyright 2012-2014 by i2tm Labs - All rights reserved.
+ * Bootstrap 	(http://getbootstrap.com) 	Copyright 2011-2014 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * jQuery 		(http://jquery.com)			Copyright 2005, 2014 jQuery Foundation, Inc. and other contributors. Released under the MIT license
+ * Modernizr	(http://modernizr.com)		Copyright (c) Faruk Ates, Paul Irish, Alex Sexton, Ryan Seddon, Alexander Farkas, Ben Alman, Stu Cox | MIT 
+ * Font-Awesome (http://fontawesome.io) 	License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

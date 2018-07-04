@@ -1,0 +1,37 @@
+
+cdn.i2tmlabs.com
+/					maestro.js, nano.[release|debug].[js|css]
+	*will be updated quarterly- old version will be available
+	
+/applets			Shared Applets
+	*permanent, even updated applets
+	
+/img				Shared Images
+/js					Shared JavaScripts
+/css				Shared Style-Sheets
+/snd				Shared Sounds
+	* permanent - assets will always be available
+	
+	
+LIBRARY			SIZE MINIMIZED		NANO FW	SIZE
+-------------------------------------------------
+BOOTSTRAP			127,637 bytes			?		
+JQUERY				 96,381 bytes			?
+MODERNIZR			 14,544 bytes			?
+FONT-AWESOME		 17,783 bytes			?
+NANO FRAMEWORK		 91,324 bytes  	318,026 bytes	
+-------------------------------------------------
+SUB-TOTAL			347,669 bytes	318,026 bytes	
+
+NANO FRAMEWORK		346,724 bytes
+  - maestro 	
+  - nano framework
+  - Bootstrap
+  - Modernizr
+  - jQuery
+
+  
+  201,708 bytes
+  116,318 bytes
+   28,698 bytes
+   

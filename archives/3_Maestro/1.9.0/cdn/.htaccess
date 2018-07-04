@@ -1,0 +1,8 @@
+Header set Access-Control-Allow-Origin "*"
+
+############################################################################################
+# Protect .htaccess
+<Files .htaccess>
+        order allow,deny
+        deny from all
+</Files>

@@ -1,0 +1,279 @@
+<ins 
+	id="main" 
+	data-uuid="acff1968-73ac-4469-ba66-bae3b09affd7"
+	data-component="applet" 
+	data-publisher="i2tm" 
+	data-folder="kuiperassult" 
+	data-target="wrapper" 
+	data-files="engine.js,game.min.js"
+>
+<style>
+body {
+	background-image: url(http://static.i2tmlabs.com/shared/img/bg/tiled/stars1.png)!important;
+	background-color: black!important;
+	background-repeat: repeat;
+	color: peachpuff;
+}
+#page_warning,
+#page_main {position:static;top:0;left:0;width:100%;height:100%;display:none;overflow:hidden;}
+#page_main {
+	overflow:auto;
+}
+#page_warning {z-index:10;text-align:center;}
+
+#debug {z-index:4; opacity:0.6; position:fixed;bottom:0px;left:480px;background-color:#333; height:25%; width:50%; overflow:hidden;display:none;}
+#page_game {z-index:2;width:100%;height:100%;display:none;}
+#hudText {
+	position: absolute;
+	z-index: 3000000000;
+	top: 50px;
+	width: 610px;
+	height: 124px;
+	background-color: transparent;
+	resize: none;
+	cursor: default;
+	color: powderblue;
+	border:none;
+	overflow:hidden;
+	font-size:0.6em;
+}
+/*
+PERFORMANCE TEST
+-------------------------------------------------- */
+#testCanvas {
+	width:100%;
+	height:100px;
+	max-height:100px;
+	border: 1px solid green;
+	display:inline;
+}
+
+#testLog {
+	width:100%;
+	height: 100px;
+	resize: none;
+	cursor: default;
+	overflow:hidden;	
+	border: 1px solid green;
+	font-size:.5em;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+h1 {
+	font-family: 'Orbitron', sans-serif;
+	font-size:2.5em;
+	letter-spacing:.25em;
+}
+
+/* Carousel base class */
+.carousel {
+	height: auto;
+	margin-bottom: 4em;
+	border: 0px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+	z-index: 10;
+	background-color: rgba(141, 118, 84, 0.6);
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  width:100%;
+  height: auto;
+  background-color: black;
+  border:0px;
+}
+.carousel-inner > .item > img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border:0px;
+  max-width:none!important;
+}
+
+.carousel .item { 
+	-webkit-transition: 1.0s ease-in-out opacity; 
+	-moz-transition: 1.0s ease-in-out opacity; 
+	-ms-transition: 1.0s ease-in-out opacity; 
+	-o-transition: 1.0s ease-in-out opacity; 
+	transition: 1.0s ease-in-out opacity; 
+	left: 0 !important; 
+}
+
+.carousel .active.left, .carousel .active.right { opacity: 0; z-index: 2; }
+
+.carousel .next.left, .carousel .prev.right {
+	opacity: 1; z-index: 1;
+}
+.carousel-control { z-index:3; }
+
+.carousel-caption p {
+	color: white;
+	font-family: 'Exo', sans-serif;
+	font-size:1em;
+	padding:1em;
+}
+
+.col-sm-4 p {font-size: 1em;text-indent: 1em;text-align: justify;padding:1em;line-height:1.5em;}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-sm-4 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-sm-4 p {
+  margin-left: .75em;
+  margin-right: .75em;
+}
+
+
+/* Featurettes
+------------------------- */
+.featurette-divider {
+  margin: 5em 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+</style>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			  <ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			  </ol>
+			  <div class="carousel-inner">
+				<div class="item active">
+				  <img src="{ROOT}img/slide1.jpg" alt="First slide" class="img-responsive dpiScale">
+				  <div class="container">
+					<div class="carousel-caption">
+					  <h1 style="color:indianred">Kuiper Assult</h1>
+					  <p>A modern asteroids style game, but on steroids. Designed in beautiful full HD.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="item">
+				  <img src="{ROOT}img/slide2.jpg" alt="Second slide" class="img-responsive dpiScale">
+				  <div class="container">
+					<div class="carousel-caption">
+					  <h1 style="color:cornflowerblue">Over 46 Levels</h1>
+					  <p>Packed with twelve stages and 46 plus levels that obviously get progressively harder with each one. Upgradable ship with up to five weapon systems.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="item">
+				  <img src="{ROOT}img/slide3.jpg" alt="Third slide" class="img-responsive dpiScale">
+				  <div class="container">
+					<div class="carousel-caption">
+					  <h1 style="color:lightpink">Are you up for the task?</h1>
+					  <p>Only a top notch pilot will do. We cannot and must not fail - the fate of the entire race is at stake.</p>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			  <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+	</div>
+	
+	  <div class="row">
+		<div class="col-sm-4">
+		  <img class="img-circle" style="width:80%;height:auto;" src="{ROOT}img/asteroid-small.png">
+		  <img src="{ROOT}img/hudenergy.png"  class="img-responsive" />
+		  <p>Everything on your ship uses energy. That being said, it is a Star Fighter and has has the same Hybrid system the Prius uses. It will recharge the batteries, just lay off the guns a bit and stop panicking!</p>
+		  <p>You can also pickup the power ups you see spawn around you and they will randomly give you energy or armour. You ship has shields and can take a beating.</p>
+		</div>
+		<div class="col-sm-4">
+		  <img class="img-circle" style="width:80%;height:auto;" src="{ROOT}img/asteroid-small.png">
+		  <h2>REQUIREMENTS</h2>
+		  <ul>
+		  <li>Medium Powered Desktop PC</li>
+		  <li>Fullscreen Mode</li>
+		  <li>Click Play Now Button</li>
+		  </ul>
+		  <ins class="adsbygoogle" style="display:inline-block;width:234px;height:60px" data-ad-client="ca-pub-7431399643348196" data-ad-slot="1347836869"></ins>
+		  <div id="test-panel" class="panel panel-warning">
+			<div class="panel-heading">Device Performance Index</div>
+			<div class="panel-body">
+				<canvas id="testCanvas"></canvas>
+				<textarea id="testLog" readonly></textarea>
+				<span>DPI: <i id="dpp" class="dpp"></i></span>
+				<br />
+				<button id="btnPlay" class="btn btn-lg btn-success" href="#" onclick="i2tmLauncher.play();">Play</button>
+				<button id="btnReset" class="btn btn-lg btn-primary" href="#" onclick="i2tmLauncher.reset();">Reset</button>
+				<button id="btnQuit" class="btn btn-lg btn-danger" href="#" onclick="i2tmLauncher.quit();">Quit</button>
+			</div>
+		  </div>
+		</div>
+		<div class="col-sm-4">
+		  <img class="img-circle" class="img-responsive dpiScale" style="max-width:80%" src="{ROOT}img/asteroid-small.png">
+		  <img src="{ROOT}img/hudarmor.png"  class="img-responsive" />
+		  <p>You can run out of energy and survive, but run out of armour and have a hull breach and may as well be a bug on another fighter jocks cockpit window. Take your time and think ahead.</p>
+		  <p>If your critical and about to clear an area, just coast around for a minute before finishing off the last couple of asteroids - let your ships auto repair system do thier job.</p>
+		</div>
+	  </div>
+	  <img class="img-circle" class="img-responsive" style="width:80%;height:auto;margin:2em;" src="{ROOT}img/asteroid-small.png">
+	  <div class="row featurette">
+		<div class="col-md-7">
+		  <h2 style="color:white">Please keep in mind... <span style="color:cyan">I am testing the Game Engine.</span></h2>
+		  <p class="lead">Please, if you find any bugs or have ny issues at all, complete the feedback form at the bottom of this page so that I can get it corrected.</p>
+		  <p>Provide the Operating System, Browser name and version and a brief explanation of what happened and where.</p>
+		  <p>Feel free to make any suggestion about the game if you would like. It is not priority at this time, It is just for testing the engineProvide the Operating System, Browser name and version and a brief explanation of what happened and where.</p>
+			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7431399643348196" data-ad-slot="3724063669" data-ad-format="auto"></ins>
+		</div>
+		<div class="col-md-5">
+		  <img class="featurette-image img-responsive dpiScale" src="{ROOT}img/ships.png">
+		 <table style="width:100%;color:darksalmon;border-radius:1em;background-color:rgba(64,64,64,.5);margin-top:1em;">
+		 <tr style="color:brown"><td><h3>Key</h3></td><td><h3>Function</h3></td></tr>
+		 <tr><td>Arrow Up</td><td>Forward Thrusters</td></tr>
+		 <tr><td>Arrow Down</td><td>Reverse Thrusters</td></tr>
+		 <tr><td>Arrow Left</td><td>Left Manoeuvring Jets</td></tr>
+		 <tr><td>Arrow Right</td><td>Right Manoeuvring Jets</td></tr>
+		 <tr><td>Number 1</td><td>Fire Mass Projector Weapon</td></tr>
+		 <tr><td>Number 2</td><td>Fire Dual Plasma Cannons Weapon</td></tr>
+		 <tr><td>Number 3</td><td>Fire Dual Pulsed Laser Weapon</td></tr>
+		 <tr><td>Number 4</td><td>Fire Dual Neutron Burst Weapon</td></tr>
+		 <tr><td>Number 5</td><td>WTF! Fire everything you got</td></tr>
+		 <tr><td>SPACEBAR</td><td>Pause</td></tr>
+		 </table>
+		</div>
+	  </div>
+	  <img class="img-circle" style="width:80%;height:auto;margin:2em;" src="{ROOT}img/asteroid-small.png">
+	  <div class="row">
+		<div class="col-sm-8"><p>&copy; Copyright 2013 by i2tm Labs - All rights reserved. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p></div>
+		<div class="col-sm-4"><p class="pull-right"><a href="#">Back to top</a></p></div>
+	</div>	
+</div>
+
+<div id="page_warning">
+	<h1>PAUSED</h1>
+	<h2>Please turn or place your device into landscape mode.</h2>
+</div>
+
+<canvas id="page_game"></canvas>
+<div id="debug"><canvas id="pcDebug"></canvas></div>
+</ins>

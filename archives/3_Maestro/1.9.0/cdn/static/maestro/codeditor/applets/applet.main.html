@@ -1,0 +1,72 @@
+<ins id="main" 
+	data-uuid="5d031528-1aed-4399-a0d6-7f69879de59a"
+	data-component="applet"  
+	data-publisher="maestro" 
+	data-folder="codeeditor" 
+	data-target="wrapper" 
+	data-files="ace/ace.js" 
+	class=""
+>
+<!-- Editor -->
+<style>
+.container-full {
+	margin-right: auto;
+	margin-left: auto;
+	height: 100%;
+	width: 100%;
+}
+
+#ide {position: absolute;left: 0px;right: 0px;height: 600px;border: 1px solid #F00;display: block;}
+/** #ide {position:fixed;top:20px;left:20px;right:20px;bottom:20px;border:1px solid red;display: block}**/
+#ide div.panel.panel-default {height:100%}
+#ide div.panel-body {padding:0px;height:auto}
+
+#editor {
+    /** Setting height is also important, otherwise editor wont showup**/
+    height: 1em;
+	width: 100%;
+	height:100%;
+	display:block;
+	background-color:green;
+}
+</style>
+
+<div id="ide">
+	<div class="container-full">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				 <h3 id="ideTitle" class="panel-title">Source Code Editor</h3>
+			</div>
+			<div id="ideBody" class="panel-body">
+				<div id="ideEditor">/* Code Here */</div>
+			</div>
+		</div>
+	</div>
+</div>
+		 
+<script>
+try{
+	M$['applet.main']={
+		onLoaded:function(){dbg('Applet onLoaded() event called.')},
+		onUnloaded:function(){dbg('Applet onUnloaded() event called.')}
+	};
+	var ide=document.getElementById('ide');
+	var ideTitle=document.getElementById('ideTitle');
+	var ideBody=document.getElementById('ideBody');
+	var ideEditor=document.getElementById('ideEditor');
+	ide.style.height=(window.innerHeight-ide.top-ideTitle.top)+'px';
+	alert(ide.style.height);
+	ideBody.style.height=(ide.clientHeight-ideTitle-ide.parentElement.clientHeight)+'px';
+	alert(ideBody.style.height);
+	ideEditor.style.height=(ideBody.clientHeight)+'px';
+	alert(ideEditor.style.height);
+
+	ace.config.set("basePath", "/shared/js/ace/");
+	var oEditor = ace.edit("ideEditor");
+	oEditor.setTheme("ace/theme/cobalt");
+	oEditor.getSession().setMode("ace/mode/javascript");
+} catch(e){
+	dbg('Applet Error: '+e.message);
+}
+</script>
+</ins>

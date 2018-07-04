@@ -1,0 +1,54 @@
+<div 
+	data-role="applet" 
+	data-name="i2tm-ide" 
+	data-version="0.3.1" 
+	data-uuid="6f971669-8001-4959-8206-5abb7493dd26" 
+	data-author="Andrew Donelson" 
+	data-copyright="2013 by i2tm Labs - All rights reserved."
+	data-scale="1" 
+/>
+
+<style data-role="applet" data-type="style">
+.ace_gutter-cell {
+	text-shadow: 0px 1px 1px #4d4d4d; color: #222;
+}
+.ace-ambiance .ace_cursor {
+	border-left: 1px solid #7DE879;
+}
+
+
+.titleBar {
+	color: rgba(90,90,90, 0.95);
+	letter-spacing: 0.4em;
+	text-shadow: 0px 1px 1px black;
+	text-transform: uppercase;
+	border: 1px solid #4d4d4d;
+}
+
+#editor { 
+	position: relative !important;
+	height: 60em;
+	width: 60em;
+	overflow:auto;
+	border: 1px solid #4d4d4d;
+}
+
+</style>
+
+
+<div id="i2tm-ide" data-role="applet" data-type="content">
+
+	<div>
+	<div class="clr-dark titleBar" style="width:60em">&nbsp;&nbsp;Integrated Development Enviroment v0.8.8</div>
+	<div id="editor" class="clr-dark border"></div>
+	
+	<script src="assets/js/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		if (typeof ace !== 'undefined') {
+			var editor = ace.edit("editor");
+			editor.setTheme("ace/theme/twilight");
+			editor.getSession().setMode("ace/mode/javascript");
+		}
+	</script>
+	</div>
+</div>
